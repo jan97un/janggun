@@ -195,17 +195,18 @@ header .head .headRight:hover li a span {
   opacity: 0.8;
   letter-spacing: -0.8px;
 }
-.mainBox .link,
-.blackBox .link {
+.mainBox .link a,
+.blackBox .link a {
   display: flex;
   gap: 12px;
+  color: #fff;
 }
-.mainBox .link h3,
-.blackBox .link h3 {
+.mainBox .link a h3,
+.blackBox .link a h3 {
   font-family: "JTBCGothic-Bold", sans-serif;
 }
-.mainBox .link .arrowWh,
-.blackBox .link .arrowWh {
+.mainBox .link a .arrowWh,
+.blackBox .link a .arrowWh {
   display: block;
   background: url(../images/arrowwh.svg) center/cover no-repeat;
   width: 36px;
@@ -234,7 +235,10 @@ header .head .headRight:hover li a span {
 #section4 .mainBox .txtBox section h2 {
   line-height: 55px;
 }
-#section4 .mainBox .txtBox .link span {
+#section4 .mainBox .txtBox .link a {
+  color: #1a1a1a;
+}
+#section4 .mainBox .txtBox .link a span {
   display: block;
   background: url(../images/arrowbl.svg) center/cover no-repeat;
   width: 36px;
