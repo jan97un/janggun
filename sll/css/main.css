@@ -1,0 +1,523 @@
+@charset "uft-8";
+
+@font-face {
+  font-family: "geomanist-book";
+  src: url(../webfonts/geomanist-book.woff2) format("woff2");
+}
+/* font-family: "geomanist-book", sans-serif; */
+@font-face {
+  font-family: "geomanist-regular";
+  src: url(../webfonts/geomanist-regular.woff2) format("woff2");
+}
+/* font-family: "geomanist-regular", sans-serif; */
+@font-face {
+  font-family: "geomanist-medium";
+  src: url(../webfonts/geomanist-medium.woff2) format("woff2");
+}
+/* font-family: "geomanist-medium", sans-serif; */
+@font-face {
+  font-family: "geomanist-bold";
+  src: url(../webfonts/geomanist-bold.woff2) format("woff2");
+}
+/* font-family: "geomanist-bold", sans-serif; */
+@font-face {
+  font-family: "geomanist-black";
+  src: url(../webfonts/geomanist-black.woff2) format("woff2");
+}
+/* font-family: "geomanist-black", sans-serif; */
+@font-face {
+  font-family: "JTBCGothic-SemiLight";
+  src: url(../webfonts/JTBCGothic-SemiLight.woff2) format("woff2");
+}
+/* font-family: "JTBCGothic-SemiLight", sans-serif; */
+@font-face {
+  font-family: "JTBCGothic-Regular";
+  src: url(../webfonts/JTBCGothic-Regular.woff2) format("woff2");
+}
+/* font-family: "JTBCGothic-Regular", sans-serif; */
+@font-face {
+  font-family: "JTBCGothic-Bold";
+  src: url(../webfonts/JTBCGothic-Bold.woff2) format("woff2");
+}
+/* font-family: "JTBCGothic-Bold", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  word-break: keep-all;
+  text-transform: uppercase;
+}
+body {
+  letter-spacing: -0.5px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* header(fixed) */
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 112px;
+  top: 0;
+  background-color: transparent;
+  z-index: 9000;
+}
+header a {
+  color: #fff;
+}
+header .head {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+header .head .headLeft {
+  display: flex;
+  align-items: center;
+}
+header .head .headLeft .logo a img {
+  display: block;
+  width: 100px;
+  height: 48px;
+}
+header .head .headLeft nav .dep1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 72px;
+  padding-left: 80px;
+}
+header .head .headLeft nav .dep1 > li > a {
+  display: block;
+  line-height: 112px;
+  letter-spacing: 0;
+  font-family: "geomanist-medium", sans-serif;
+}
+header .head .headLeft nav .dep1 > li .dep2 {
+  position: absolute;
+  top: 98px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+header .head .headLeft nav .dep1 > li .dep2 li a {
+  font-size: 0;
+  line-height: 16px;
+  font-family: "geomanist-book", sans-serif;
+  opacity: 0.75;
+}
+header .head .headLeft nav .dep1 > li:hover .dep2 li a {
+  font-size: 16px;
+}
+header .head .headRight li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: "geomanist-medium", sans-serif;
+}
+header .head .headRight li:last-child {
+  position: absolute;
+  opacity: 0.65;
+  display: none;
+}
+header .head .headRight:hover li:last-child {
+  display: block;
+}
+header .head .headRight li a span img {
+  display: block;
+  width: 18px;
+  height: 10px;
+}
+header .head .headRight:hover li a span {
+  transform: rotate(180deg);
+}
+
+/* main */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.section {
+  overflow: hidden;
+  color: #fff;
+}
+#section0 {
+  overflow: hidden;
+  /*solves problem with overflowing video in Mac with Chrome */
+}
+.myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  object-fit: cover;
+  z-index: 3;
+}
+.mainBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 74%;
+  height: 100%;
+  z-index: 4;
+  margin: 0 auto;
+  padding-top: 150px;
+  box-sizing: border-box;
+}
+.mainBox h1,
+.blackBox h1 {
+  font-family: "geomanist-black", sans-serif;
+  opacity: 0.2;
+  letter-spacing: -2px;
+}
+.mainBox .txt {
+  margin-top: 100px;
+}
+.mainBox h2,
+.blackBox h2 {
+  font-family: "JTBCGothic-Bold", sans-serif;
+}
+.mainBox p,
+.blackBox p {
+  font-family: "JTBCGothic-SemiLight";
+  opacity: 0.8;
+  letter-spacing: -0.8px;
+}
+.mainBox .link,
+.blackBox .link {
+  display: flex;
+  gap: 12px;
+}
+.mainBox .link h3,
+.blackBox .link h3 {
+  font-family: "JTBCGothic-Bold", sans-serif;
+}
+.mainBox .link .arrowWh,
+.blackBox .link .arrowWh {
+  display: block;
+  background: url(../images/arrowwh.svg) center/cover no-repeat;
+  width: 36px;
+  height: 21px;
+}
+
+/* section0 */
+/* section1 */
+/* section2 */
+/* section3 */
+/* section4 */
+
+#section4 {
+  background-color: #fff;
+}
+#section4 .mainBox {
+  display: flex;
+  color: #1a1a1a;
+}
+#section4 .mainBox .txtBox h1 {
+  opacity: 0.1;
+}
+#section4 .mainBox .txtBox section {
+  margin-top: 130px;
+}
+#section4 .mainBox .txtBox section h2 {
+  line-height: 55px;
+}
+#section4 .mainBox .txtBox .link span {
+  display: block;
+  background: url(../images/arrowbl.svg) center/cover no-repeat;
+  width: 36px;
+  height: 21px;
+}
+#section4 .mainBox .imgBox {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  gap: 16px;
+}
+#section4 .mainBox .imgBox p {
+  opacity: 1;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#section4 .mainBox .imgBox p img {
+}
+#section4 .mainBox .imgBox p:nth-child(1) img {
+  width: 220px;
+  height: 260px;
+}
+#section4 .mainBox .imgBox p:nth-child(2) img {
+  width: 220px;
+  height: 400px;
+}
+#section4 .mainBox .imgBox p:nth-child(3) img {
+  width: 337px;
+  height: 620px;
+}
+
+/* section5 */
+
+#section5 {
+  background: url(../images/main6-1.webp) center/cover no-repeat;
+  overflow: hidden;
+}
+#section5 .people img {
+  position: absolute;
+  top: 200px;
+  width: calc(100% - 200px);
+  height: auto;
+}
+#section5 .blackBox {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #191919;
+  width: 1440px;
+  height: 51.6%;
+  display: flex;
+  align-items: center;
+  padding-left: 260px;
+  box-sizing: border-box;
+}
+#section5 .blackBox .txtBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+}
+#section5 .blackBox .txtBox h1 {
+  opacity: 0.1;
+}
+#section5 .blackBox .txtBox .txt {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75px;
+  margin-right: 175px;
+}
+#section5 .blackBox .txtBox h2 {
+  line-height: 55px;
+}
+#section5 .blackBox .txtBox .txt .wrap {
+  margin-top: 0;
+}
+#section5 .blackBox .txtBox p {
+  margin-top: 0;
+}
+#section5 .blackBox .txtBox .link {
+  margin-top: 35px;
+}
+#section5 .blackBox .txtBox .link h3 {
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  letter-spacing: 0;
+}
+footer a {
+  color: #fff;
+}
+footer .foot {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+footer .foot .footTop {
+  display: flex;
+}
+footer .foot .footTop .global {
+  width: 50%;
+}
+footer .foot .footTop .global h2 {
+  font-size: 32px;
+  font-family: "geomanist-medium", sans-serif;
+  font-weight: normal;
+}
+footer .foot .footTop .footNav {
+  display: flex;
+  gap: 88px;
+}
+footer .foot .footTop .footNav > li a {
+  font-size: 18px;
+  font-family: "geomanist-medium", sans-serif;
+}
+footer .foot .footTop .footNav > li .footSub {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .foot .footTop .footNav > li .footSub li {
+  font-size: 16px;
+  line-height: 100%;
+  font-family: "geomanist-book", sans-serif;
+  opacity: 0.8;
+}
+footer .foot .footBot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 73px;
+  font-size: 14px;
+}
+footer .foot .footBot .logo {
+  width: 50%;
+}
+footer .foot .footBot .logo h1 {
+  background: url(../images/logowh.svg) center/cover no-repeat;
+  width: 160px;
+  height: 75px;
+}
+footer .foot .footBot .flex {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .foot .footBot .flex .txtBox .footLink {
+  display: flex;
+}
+footer .foot .footBot .flex .txtBox .footLink > li {
+  position: relative;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  font-family: "JTBCGothic-Regular", sans-serif;
+}
+footer .foot .footBot .flex .txtBox .footLink > li p {
+  padding-right: 4px;
+}
+.footLink > li:nth-child(1):after,
+.footLink > li:nth-child(2):after,
+.footLink > li:nth-child(3):after,
+.footLink > li:nth-child(4):after {
+  content: "";
+  position: absolute;
+  right: -6.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background-color: #fff;
+}
+footer .foot .footBot .flex .txtBox .footLink > li:nth-child(2) a {
+  font-weight: 800;
+}
+.footLink #family {
+  display: none;
+}
+.footLink .family label {
+  background: url(../images/arrowfamily.svg) center/cover no-repeat;
+  width: 10px;
+  height: 8px;
+  display: block;
+}
+footer .foot .footBot .flex .txtBox address {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  font-style: normal;
+  color: #f5f5f5;
+  opacity: 0.8;
+  margin: 6px 0 18px;
+}
+footer .foot .footBot .flex .txtBox address span {
+  font-family: "JTBCGothic-SemiLight", sans-serif;
+}
+footer .foot .footBot .flex .txtBox address p {
+  font-family: "geomanist-regular", sans-serif;
+  position: relative;
+  margin-left: 12px;
+}
+footer .foot .footBot .flex .txtBox address p:nth-of-type(1) {
+  text-transform: none;
+}
+footer .foot .footBot .flex .txtBox address p::before {
+  content: "";
+  position: absolute;
+  left: -6.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  opacity: 0.8;
+  background-color: #fff;
+}
+footer .foot .footBot .flex .txtBox address p:nth-of-type(2):after {
+  content: "";
+  position: absolute;
+  right: -6.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  opacity: 0.8;
+  background-color: #fff;
+}
+footer .foot .footBot .flex .txtBox .copyright {
+  text-transform: none;
+}
+footer .foot .footBot .flex .txtBox .copyright span {
+  font-family: "JTBCGothic-SemiLight", sans-serif;
+}
+footer .foot .footBot .flex .sns {
+  display: flex;
+  align-items: end;
+  gap: 20px;
+}
+footer .foot .footBot .flex .sns li a {
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+footer .foot .footBot .flex .sns li:nth-child(1) a {
+  background: url(../images/icoin.svg) center/cover no-repeat;
+}
+footer .foot .footBot .flex .sns li:nth-child(2) a {
+  background: url(../images/icoinsta.svg) center/cover no-repeat;
+}
+footer .foot .footBot .flex .sns li:nth-child(3) a {
+  background: url(../images/icoyt.svg) center/cover no-repeat;
+}
+@media screen and (min-width: 1920px) {
+  .mainBox h1,
+  .blackBox h1 {
+    font-size: 140px;
+    line-height: 120px;
+  }
+  .mainBox h2,
+  .blackBox h2 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .mainBox p,
+  .blackBox p {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 40px;
+  }
+  .mainBox .link,
+  .blackBox .link {
+    margin-top: 80px;
+  }
+  .mainBox .link h3,
+  .blackBox .link h3 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+}

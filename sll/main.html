@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script>
+      $(function () {
+        $("#fullpage").fullpage({
+          verticalCentered: true,
+          sectionsColor: ["", "", "", "", "#fff", "#fff", "#f00f0f"],
+          scrollingSpeed: 1700,
+          // navigation: true,
+          // navigationPosition: "right",
+          // navigationTooltips: [
+          //   "First page",
+          //   "Second page",
+          //   "Third page",
+          //   "Fourth page",
+          //   "Fifth page",
+          //   "Six and last page",
+          // ],
+          afterLoad: function (anchorLink, index) {
+            if (index == 5) {
+              $(".head .logo a").html(
+                '<img src="images/logobl.svg" alt="logobl" />'
+              );
+              $(".head .dep1>li>a")
+                .css({ opacity: "0.6", color: "#191919" })
+                .hover(
+                  function () {
+                    $(this).css("opacity", "1");
+                  },
+                  function () {
+                    $(this).css("opacity", "0.6");
+                  }
+                );
+              $(".head .dep2>li>a")
+                .css({ color: "#191919", opacity: "0.6" })
+                .hover(
+                  function () {
+                    $(this).css("opacity", "1");
+                  },
+                  function () {
+                    $(this).css("opacity", "0.6");
+                  }
+                );
+              $(".headRight li a").css("color", "#191919");
+              $(".headRight span").html(
+                '<img src="images/arrowlangbl.svg" alt="arrowlangbl"/>'
+              );
+            } else {
+              $(".head .logo a").html(
+                '<img src="images/logowh.svg" alt="logowh" />'
+              );
+              $(".head .dep1>li>a").css({ color: "#fff", opacity: "1" });
+              $(".head .dep2>li>a").css({ color: "#fff", opacity: "1" });
+              $(".headRight li a").css("color", "#fff");
+              $(".headRight span").html(
+                '<img src="images/arrowlangwh.svg" alt="arrowlangwh"/>'
+              );
+            }
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <div class="headLeft">
+          <div class="logo">
+            <a href=""><img src="images/logowh.svg" alt="logowh" /></a>
+          </div>
+          <nav>
+            <ul class="dep1">
+              <li>
+                <a href="">about</a>
+                <ul class="dep2">
+                  <li><a href="">about us</a></li>
+                  <li><a href="">company history</a></li>
+                  <li><a href="">labels</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">works</a>
+                <ul class="dep2">
+                  <li><a href="">tv</a></li>
+                  <li><a href="">ott</a></li>
+                  <li><a href="">digital original</a></li>
+                  <li><a href="">movie</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">newsroom</a>
+                <ul class="dep2">
+                  <li><a href="">notice</a></li>
+                  <li><a href="">news</a></li>
+                  <li><a href="">ir</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <ul class="headRight">
+          <li>
+            <a href="">
+              <p>kr</p>
+              <span
+                ><img src="images/arrowlangwh.svg" alt="arrowlangwh"
+              /></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>en</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main id="fullpage">
+      <div class="section" id="section0">
+        <video class="myVideo" loop muted data-autoplay>
+          <source src="video/main1.mp4" type="video/mp4" />
+        </video>
+        <div class="mainBox">
+          <h1 class="story">
+            STORIES<br />
+            OF SLL
+          </h1>
+          <div class="txt">
+            <h2>
+              하나,<br />
+              최고의 크리에이터
+            </h2>
+            <p>
+              경계 없는 콘텐트를 선보여온 국내외 최고의 크리에이터들과 함께<br />
+              새롭고 다채로운 이야기를 써내려갑니다.
+            </p>
+            <div class="link">
+              <h3>SLL 크리에이터 보기</h3>
+              <span class="arrowWh"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section1">
+        <video class="myVideo" loop muted data-autoplay>
+          <source src="video/main2.mp4" type="video/mp4" />
+        </video>
+        <div class="mainBox">
+          <h1 class="story">
+            STORIES<br />
+            OF SLL
+          </h1>
+          <div class="txt">
+            <h2>
+              둘,<br />
+              다채로운 이야기들
+            </h2>
+            <p>
+              드라마, 영화, OTT, 디지털 콘텐트 등<br />
+              장르와 플랫폼에 국한되지 않는 다양한 콘텐트를 만들어갑니다.
+            </p>
+            <div class="link">
+              <h3>SLL 작품 보기</h3>
+              <span class="arrowWh"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section2">
+        <video class="myVideo" loop muted data-autoplay>
+          <source src="video/main3.mp4" type="video/mp4" />
+        </video>
+        <div class="mainBox">
+          <h1 class="story">
+            STORIES<br />
+            OF SLL
+          </h1>
+          <div class="txt">
+            <h2>
+              셋,<br />
+              완성형 스튜디오 모델
+            </h2>
+            <p>
+              SLL은 기획 개발부터 제작, 투자, 유통까지 콘텐트 사업의<br />
+              모든 가치사슬을 아우르는 완성형 스튜디오로서,<br />
+              K-CONTENT의 새로운 지평을 열고 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section3">
+        <video class="myVideo" loop muted data-autoplay>
+          <source src="video/main4.mp4" type="video/mp4" />
+        </video>
+        <div class="mainBox">
+          <h1 class="story">
+            STORIES<br />
+            OF SLL
+          </h1>
+          <div class="txt">
+            <h2>
+              넷,<br />
+              글로벌 크리에이티브 스튜디오
+            </h2>
+            <p>
+              콘텐트 패러다임을 선도하는 글로벌 스튜디오 SLL은<br />
+              다양한 이야기로 몰입을 통한 즐거움과 감동을 선사하며,<br />
+              그 이야기를 바탕으로 새로운 시대를 만들어갑니다.
+            </p>
+            <div class="link">
+              <h3>ABOUT SLL 보기</h3>
+              <span class="arrowWh"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section4">
+        <div class="mainBox">
+          <div class="txtBox">
+            <h1 class="contents">
+              CONTENTS<br />
+              OF SLL
+            </h1>
+            <div class="txt">
+              <h2>이야기를 세계로 펼치는 힘</h2>
+              <p>
+                SLL은 세계 각국 파트너와의 협력을 통한 공동 제작<br />
+                역량으로 글로벌 크리에이티브 스튜디오를 지향합니다.
+              </p>
+              <div class="link">
+                <h3>SLL 글로벌 콘텐트 보기</h3>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="imgBox">
+            <p><img src="images/main5-1.webp" alt="main5-1" /></p>
+            <p><img src="images/main5-2.webp" alt="main5-2" /></p>
+            <p><img src="images/main5-3.webp" alt="main5-3" /></p>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section5">
+        <div class="people">
+          <img src="images/main6-2.webp" alt="main6-2" />
+        </div>
+        <div class="blackBox">
+          <div class="txtBox">
+            <h1>recruitment</h1>
+            <div class="txt">
+              <h2>
+                SLL과 함께할<br />
+                최고의 크리에이터
+              </h2>
+              <div class="wrap">
+                <p>
+                  SLL은 수준 높은 콘텐트를 통해 전 세계 어디에서나<br />
+                  몰입을 통한 즐거움을 선사할 크리에이터와 함께합니다.
+                </p>
+                <div class="link">
+                  <h3>채용 홈페이지 보기</h3>
+                  <span class="arrowWh"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="section fp-auto-height" id="section6">
+        <div class="foot">
+          <div class="footTop">
+            <div class="global">
+              <h2>GLOBAL CREATIVE STUDIO</h2>
+            </div>
+            <ul class="footNav">
+              <li>
+                <a href="">ABOUT</a>
+                <ul class="footSub">
+                  <li>ABOUT US</li>
+                  <li>COMPANY HISTORY</li>
+                  <li>LABELS</li>
+                </ul>
+              </li>
+              <li>
+                <a href="">WORKS</a>
+                <ul class="footSub">
+                  <li>TV</li>
+                  <li>OTT</li>
+                  <li>DIGITAL ORIGINAL</li>
+                  <li>MOVIE</li>
+                </ul>
+              </li>
+              <li>
+                <a href="">NEWSROOM</a>
+                <ul class="footSub">
+                  <li>NOTICE</li>
+                  <li>NEWS</li>
+                  <li>IR</li>
+                </ul>
+              </li>
+            </ul>
+            <div></div>
+          </div>
+          <div class="footBot">
+            <div class="logo">
+              <h1></h1>
+            </div>
+            <div class="flex">
+              <div class="txtBox">
+                <ul class="footLink">
+                  <li><a href="">이메일 무단수집 거부</a></li>
+                  <li><a href="">개인정보처리방침</a></li>
+                  <li><a href="">안전보건경영방침</a></li>
+                  <li><a href="">윤리경영</a></li>
+                  <li>
+                    <p>FAMILY SITE</p>
+                    <div class="family">
+                      <ul class="navBar">
+                        <li>
+                          <h5></h5>
+                          <ul>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5></h5>
+                          <ul>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5></h5>
+                          <ul>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                          </ul>
+                          <h5></h5>
+                          <ul>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h5></h5>
+                          <ul>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <input type="radio" name="radio" id="family" />
+                      <label for="family"></label>
+                    </div>
+                  </li>
+                </ul>
+                <address>
+                  <span>서울특별시 마포구 상암산로 38</span>
+                  <p>sll@sll.co.kr</p>
+                  <p>02-2031-8050</p>
+                  <p>사업자등록번호 120-81-93457</p>
+                </address>
+                <div class="copyright">
+                  Copyright <span>에스엘엘중앙(주)</span>. All Rights Reserved.
+                </div>
+              </div>
+              <ul class="sns">
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
