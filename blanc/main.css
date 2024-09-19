@@ -161,7 +161,7 @@ header .head .headRight .tel .telBg div {
   width: 50px;
   height: 50px;
 }
-header .head .headRight .snb {
+header .head .headRight .hamberger {
   width: 50px;
   height: 50px;
   border: 1px solid #fff;
@@ -169,22 +169,22 @@ header .head .headRight .snb {
   position: relative;
   cursor: pointer;
 }
-header .head .headRight .snb div {
+header .head .headRight .hamberger div {
   position: absolute;
   height: 1px;
   background: #fff;
 }
-header .head .headRight .snb div:nth-child(1) {
+header .head .headRight .hamberger div:nth-child(1) {
   left: 15px;
   top: 18px;
   width: 20px;
 }
-header .head .headRight .snb div:nth-child(2) {
+header .head .headRight .hamberger div:nth-child(2) {
   left: 23px;
   top: 50%;
   width: 12px;
 }
-header .head .headRight .snb div:nth-child(3) {
+header .head .headRight .hamberger div:nth-child(3) {
   left: 15px;
   bottom: 17px;
   width: 20px;
@@ -198,10 +198,10 @@ header .head .gnb:hover ~ .headRight .tel .telBg {
 header .head .gnb:hover ~ .headRight .tel div {
   background: url(images/telwhite.png) center no-repeat;
 }
-header .head .gnb:hover ~ .headRight .snb {
+header .head .gnb:hover ~ .headRight .hamberger {
   border: 1px solid #000;
 }
-header .head .gnb:hover ~ .headRight .snb div {
+header .head .gnb:hover ~ .headRight .hamberger div {
   background: #000;
 }
 
@@ -226,9 +226,9 @@ main {
   transform: translate(-50%, -50%);
 }
 
-/* section1 */
+/* section0 */
 
-#section1 .mainBg {
+#section0 .mainBg {
   position: absolute;
   background: url(images/main1.jpg) bottom/cover no-repeat;
   left: 0;
@@ -237,7 +237,7 @@ main {
   height: 100%;
   z-index: 1;
 }
-#section1 .shadow {
+#section0 .shadow {
   position: absolute;
   background: url(images/main1shadow.png) bottom/cover no-repeat;
   left: 0;
@@ -246,7 +246,7 @@ main {
   height: 100%;
   z-index: 2;
 }
-#section1 .mainTxt {
+#section0 .mainTxt {
   position: absolute;
   left: 20%;
   top: 18%;
@@ -254,19 +254,19 @@ main {
   color: #fff;
   text-align: center;
 }
-#section1 .mainTxt p {
+#section0 .mainTxt p {
   font-family: "blanc", sans-serif;
 }
-#section1 .mainTxt p:nth-of-type(1) {
+#section0 .mainTxt p:nth-of-type(1) {
   font-size: 21px;
 }
-#section1 .mainTxt .line {
+#section0 .mainTxt .line {
   position: relative;
   width: 1.5px;
   height: 60px;
   margin: 30px auto 20px;
 }
-#section1 .mainTxt .line::after {
+#section0 .mainTxt .line::after {
   content: "";
   position: absolute;
   left: 0;
@@ -277,15 +277,15 @@ main {
   opacity: 0.7;
   z-index: 3;
 }
-#section1 .mainTxt p:nth-of-type(2) {
+#section0 .mainTxt p:nth-of-type(2) {
   font-size: 30px;
   line-height: 43px;
 }
-#section1 .mainTxt p:nth-of-type(3) {
+#section0 .mainTxt p:nth-of-type(3) {
   font-size: 24px;
   margin-top: 50px;
 }
-#section1 .whiteBox {
+#section0 .whiteBox {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -296,7 +296,7 @@ main {
   display: flex;
   align-items: center;
 }
-#section1 .whiteBox .flex {
+#section0 .whiteBox .flex {
   display: flex;
   width: 90%;
   max-width: 1480px;
@@ -304,29 +304,29 @@ main {
   margin: 0 auto;
   align-items: center;
 }
-#section1 .whiteBox .flex .txtLeft p:first-child {
+#section0 .whiteBox .flex .txtLeft p:first-child {
   font-size: 28px;
   font-family: "blanc", sans-serif;
 }
-#section1 .whiteBox .flex .txtLeft p:last-child {
+#section0 .whiteBox .flex .txtLeft p:last-child {
   font-size: 14px;
   margin-top: 25px;
   line-height: 25px;
   opacity: 0.7;
 }
-#section1 .whiteBox .flex .txtRight {
+#section0 .whiteBox .flex .txtRight {
   display: flex;
   align-items: center;
   height: 100%;
 }
-#section1 .whiteBox .flex .txtRight p:first-child {
+#section0 .whiteBox .flex .txtRight p:first-child {
   font-size: 21px;
   font-family: "blanc", sans-serif;
   padding-right: 20px;
   line-height: 100%;
   position: relative;
 }
-#section1 .whiteBox .flex .txtRight p:first-child:after {
+#section0 .whiteBox .flex .txtRight p:first-child:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -337,23 +337,23 @@ main {
   background: #000;
   z-index: 5;
 }
-#section1 .whiteBox .flex .txtRight p:last-child {
+#section0 .whiteBox .flex .txtRight p:last-child {
   font-size: 34px;
   font-family: "FuturaStdBook", sans-serif;
   margin-left: 20px;
   letter-spacing: 2.5px;
 }
-#section1 .whiteBox .flex .txtRight p:last-child span {
+#section0 .whiteBox .flex .txtRight p:last-child span {
   font-family: "FuturaStdBook", sans-serif;
   letter-spacing: -2px;
 }
 
-/* section2 */
+/* section1 */
 
-#section2 {
+#section1 {
   background: url(images/main2.jpg) bottom/cover no-repeat;
 }
-#section2 .mainTxt {
+#section1 .mainTxt {
   width: 90%;
   max-width: 1480px;
   margin: 0 auto;
@@ -364,52 +364,52 @@ main {
   top: 200px;
   height: calc(100vh - 200px);
 }
-#section2 .mainTxt .txtTop h1 {
+#section1 .mainTxt .txtTop h1 {
   font-size: 52px;
   font-weight: 700;
   font-family: "Noto Sans KR", sans-serif;
   line-height: 60px;
   letter-spacing: -4px;
 }
-#section2 .mainTxt .txtTop p {
+#section1 .mainTxt .txtTop p {
   font-size: 15px;
   opacity: 0.8;
   line-height: 200%;
   margin-top: 45px;
 }
-#section2 .mainTxt .txtBot {
+#section1 .mainTxt .txtBot {
   display: flex;
   justify-content: flex-end;
   margin-top: 200px;
 }
-#section2 .mainTxt .txtBot div {
+#section1 .mainTxt .txtBot div {
   display: flex;
   flex-direction: column;
   padding: 0 30px;
   gap: 6px;
   position: relative;
 }
-#section2 .mainTxt .txtBot div:nth-child(3) {
+#section1 .mainTxt .txtBot div:nth-child(3) {
   padding-right: 0;
 }
-#section2 .mainTxt .txtBot div p {
+#section1 .mainTxt .txtBot div p {
   font-size: 15px;
   margin-left: 4px;
   line-height: 100%;
 }
-#section2 .mainTxt .txtBot div h1 {
+#section1 .mainTxt .txtBot div h1 {
   font-size: 108px;
   font-family: "FuturaStdHeavy", sans-serif;
   line-height: 100%;
   letter-spacing: 2px;
 }
-#section2 .mainTxt .txtBot div:nth-child(1) h1,
-#section2 .mainTxt .txtBot div:nth-child(3) h1 {
+#section1 .mainTxt .txtBot div:nth-child(1) h1,
+#section1 .mainTxt .txtBot div:nth-child(3) h1 {
   color: transparent;
   -webkit-text-stroke: 0.8px #000;
 }
-#section2 .mainTxt .txtBot div:nth-child(1):after,
-#section2 .mainTxt .txtBot div:nth-child(2):after {
+#section1 .mainTxt .txtBot div:nth-child(1):after,
+#section1 .mainTxt .txtBot div:nth-child(2):after {
   content: "";
   position: absolute;
   right: 0;
@@ -420,12 +420,12 @@ main {
   opacity: 0.3;
 }
 
-/* section3 */
+/* section2 */
 
-#section3 {
+#section2 {
   background: url(images/main3.jpg) bottom/cover no-repeat;
 }
-#section3 .mainBox {
+#section2 .mainBox {
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
@@ -437,71 +437,67 @@ main {
   top: 180px;
   mix-blend-mode: screen;
 }
-#section3 .mainBox .mainLeft {
+#section2 .mainBox .mainLeft {
   flex: 1 1 55%;
 }
-#section3 .mainBox .mainLeft h1 {
+#section2 .mainBox .mainLeft h1 {
   font-size: 68px;
   font-family: "FuturaStdHeavy", sans-serif;
   font-weight: 600;
   line-height: 115%;
   letter-spacing: 0;
 }
-#section3 .mainBox .mainLeft p {
+#section2 .mainBox .mainLeft p {
   opacity: 0.5;
   font-weight: 300;
   line-height: 220%;
   margin-top: 45px;
   text-transform: none;
 }
-#section3 .mainBox .mainRight {
+#section2 .mainBox .mainRight {
   flex: 1 1 45%;
   display: flex;
   justify-content: space-between;
 }
-#section3 .mainBox .mainRight .col1 p:nth-child(1) {
+#section2 .mainBox .mainRight .col1 p:nth-child(1) {
   margin: 160px 0 30px;
 }
-#section3 .mainBox .mainRight .col1 p:nth-child(2) {
+#section2 .mainBox .mainRight .col1 p:nth-child(2) {
   margin-bottom: 60px;
 }
-#section3 .mainBox .mainRight .col2 {
-}
-#section3 .mainBox .mainRight .col2 > p {
+#section2 .mainBox .mainRight .col2 > p {
   display: flex;
   justify-content: flex-end;
   margin: 110px 0 90px;
 }
-#section3 .mainBox .mainRight .col2 div {
+#section2 .mainBox .mainRight .col2 div {
   display: flex;
   gap: 20px;
 }
-#section3 .mainBox .mainRight .col3 {
+#section2 .mainBox .mainRight .col3 {
   display: flex;
   flex-direction: column;
 }
-#section3 .mainBox .mainRight .col3 p:first-child {
+#section2 .mainBox .mainRight .col3 p:first-child {
   line-height: 215%;
   margin-top: 20px;
 }
-#section3 .mainBox .mainRight .col3 p:last-child {
-}
-#section3 .mainBox .mainRight .col3 p:last-child img {
+#section2 .mainBox .mainRight .col3 p:last-child img {
   position: absolute;
   height: 557px;
   right: 0;
   bottom: 0;
 }
-#section3 .mainBox .mainRight img {
+#section2 .mainBox .mainRight img {
   mix-blend-mode: screen;
 }
 
-/* section4 */
+/* section3 */
 
-#section4 {
+#section3 {
   background: #fff;
 }
-#section4 .mainBox {
+#section3 .mainBox {
   width: 90%;
   max-width: 1480px;
   margin: 0 auto;
@@ -510,51 +506,51 @@ main {
   position: relative;
   top: 160px;
 }
-#section4 .mainBox .mainLeft {
+#section3 .mainBox .mainLeft {
   position: relative;
   margin-top: 20px;
   z-index: 1;
 }
-#section4 .mainBox .mainLeft h1 {
+#section3 .mainBox .mainLeft h1 {
   font-size: 85px;
   font-weight: 600;
   font-family: "FuturaStdHeavy", sans-serif;
   line-height: 100%;
 }
-#section4 .mainBox .mainLeft h4 {
+#section3 .mainBox .mainLeft h4 {
   font-size: 20px;
   font-weight: 400;
   font-family: "FuturaStdMedium", sans-serif;
   line-height: 150%;
   margin: 40px 0 80px;
 }
-#section4 .mainBox .mainLeft strong {
+#section3 .mainBox .mainLeft strong {
   font-size: 20px;
   font-weight: 600;
   line-height: 100%;
 }
-#section4 .mainBox .mainLeft p {
+#section3 .mainBox .mainLeft p {
   font-size: 14px;
   opacity: 0.7;
   line-height: 180%;
   margin-top: 25px;
 }
-#section4 .mainBox .mainRight {
+#section3 .mainBox .mainRight {
   position: absolute;
   right: 0;
   display: flex;
   gap: 20px;
 }
-#section4 .mainBox .mainRight .flower p:first-child {
+#section3 .mainBox .mainRight .flower p:first-child {
   margin-top: 30px;
 }
-#section4 .mainBox .mainRight .flower p:last-child {
+#section3 .mainBox .mainRight .flower p:last-child {
   position: absolute;
   left: -190px;
   bottom: -50px;
 }
 
-/* section5 */
+/* section4 */
 
 .videoBox {
   position: relative;
@@ -572,48 +568,44 @@ main {
   align-items: flex-end;
   margin-bottom: 150px;
 }
-#section5 .mainBox .txtTop h3 {
+#section4 .mainBox .txtTop h3 {
   font-size: 32px;
   font-weight: 100;
   line-height: 100%;
 }
-#section5 .mainBox .txtTop h1 {
+#section4 .mainBox .txtTop h1 {
   font-size: 52px;
   font-weight: 700;
   line-height: 100%;
   margin-top: 5px;
 }
-#section5 .mainBox .txtTop p {
+#section4 .mainBox .txtTop p {
   font-size: 15px;
   opacity: 0.7;
   line-height: 200%;
   margin-top: 40px;
 }
 
-/* section6 */
+/* section5 */
 
-#section6 {
+#section5 {
   background: #fff;
 }
-#section6 .mainBox {
+#section5 .mainBox {
   display: flex;
 }
-#section6 .mainBox .mainLeft {
-}
-#section6 .mainBox .mainRight {
+#section5 .mainBox .mainRight {
   display: flex;
   flex-direction: column;
   gap: 7px;
   justify-content: center;
   margin: 0 auto;
 }
-#section6 .mainBox .mainRight ul {
+#section5 .mainBox .mainRight ul {
   display: flex;
   justify-content: space-between;
 }
-#section6 .mainBox .mainRight ul li p {
-}
-#section6 .mainBox .mainRight ul li h3 {
+#section5 .mainBox .mainRight ul li h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 120%;
@@ -621,7 +613,7 @@ main {
   padding-bottom: 20px;
   border-bottom: 1px solid #ababab;
 }
-#section6 .mainBox .mainRight ul li h5 {
+#section5 .mainBox .mainRight ul li h5 {
   font-size: 13px;
   font-weight: 400;
   line-height: 180%;
@@ -629,29 +621,29 @@ main {
   margin-top: 20px;
 }
 
-/* section7 */
+/* section6 */
 
-#section7 .mainBox .txtTop h3 {
+#section6 .mainBox .txtTop h3 {
   font-family: "blanc", sans-serif;
   font-size: 28px;
   font-weight: 100;
   line-height: 135%;
   margin-bottom: 40px;
 }
-#section7 .mainBox .txtTop p {
+#section6 .mainBox .txtTop p {
   font-size: 14px;
   line-height: 180%;
   opacity: 0.7;
   margin-bottom: 25px;
 }
 
-/* section8 */
+/* section7 */
 
-#section8 {
+#section7 {
   background: url(images/main8.jpg) bottom/cover no-repeat;
   color: #fff;
 }
-#section8 .mainTxt {
+#section7 .mainTxt {
   position: absolute;
   width: 90%;
   max-width: 1340px;
@@ -660,29 +652,29 @@ main {
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-#section8 .mainTxt .txtBox {
+#section7 .mainTxt .txtBox {
   transform: translateY(-20px);
 }
-#section8 .mainTxt .txtBox h4 {
+#section7 .mainTxt .txtBox h4 {
   font-size: 24px;
   font-weight: 300;
   line-height: 100%;
   text-align: left;
 }
-#section8 .mainTxt .txtBox h1 {
+#section7 .mainTxt .txtBox h1 {
   font-size: 222px;
   font-weight: 800;
   line-height: 100%;
   letter-spacing: 50px;
   text-align: center;
 }
-#section8 .mainTxt .txtBox p {
+#section7 .mainTxt .txtBox p {
   font-size: 14px;
   line-height: 180%;
   text-align: right;
   margin-top: 15px;
 }
-#section8 .tower {
+#section7 .tower {
   background: url(images/main8obj.png) bottom/cover no-repeat;
   position: absolute;
   left: 50%;
@@ -693,9 +685,9 @@ main {
   z-index: 2;
 }
 
-/* section9 */
+/* section8 */
 
-#section9 {
+#section8 {
   background: #fff;
 }
 .amenityWh {
@@ -707,10 +699,10 @@ main {
   top: 50%;
   transform: translateY(-50%);
 }
-#section9 .mainBox {
+#section8 .mainBox {
   justify-content: flex-end;
 }
-#section9 .mainBox .mainTxt {
+#section8 .mainBox .mainTxt {
   position: absolute;
   left: 0;
   height: 100%;
@@ -732,7 +724,7 @@ main {
   font-size: 14px;
   line-height: 180%;
 }
-#section9 .mainTxt .txtBox p:nth-of-type(2) {
+#section8 .mainTxt .txtBox p:nth-of-type(2) {
   position: absolute;
   left: 50%;
   bottom: -50px;
@@ -743,9 +735,9 @@ main {
   height: 100%;
 }
 
-/* section10 */
+/* section9 */
 
-#section10 {
+#section9 {
   background: #272727;
 }
 .amenityBl {
@@ -800,39 +792,39 @@ main {
   padding-top: 105px;
 }
 
-/* section11 */
+/* section10 */
 
-#section11 {
+#section10 {
   background: #fff;
 }
-#section11 .mainBox {
+#section10 .mainBox {
   position: relative;
   justify-content: flex-start;
 }
-#section11 .mainBox .mainTxt {
+#section10 .mainBox .mainTxt {
   position: absolute;
   right: 0;
   height: 100%;
   text-align: right;
 }
-#section11 .mainTxt .txtBox p:nth-of-type(2) {
+#section10 .mainTxt .txtBox p:nth-of-type(2) {
   position: absolute;
   right: 50px;
   bottom: -80px;
 }
 
-/* section12 */
+/* section11 */
 
-#section12 {
+#section11 {
   background: #272727;
 }
 
-/* section13 */
+/* section12 */
 
-#section13 {
+#section12 {
   background: #fff;
 }
-#section13 .mainBox .mainTxt {
+#section12 .mainBox .mainTxt {
   display: flex;
   position: relative;
   width: 70%;
@@ -842,24 +834,24 @@ main {
   top: 120px;
   gap: 25%;
 }
-#section13 .mainBox .mainTxt .mainLeft h3 {
+#section12 .mainBox .mainTxt .mainLeft h3 {
   font-size: 40px;
   font-weight: 100;
 }
-#section13 .mainBox .mainTxt .mainLeft h1 {
+#section12 .mainBox .mainTxt .mainLeft h1 {
   font-size: 70px;
   font-weight: 700;
 }
-#section13 .mainBox .mainTxt .mainLeft p {
+#section12 .mainBox .mainTxt .mainLeft p {
   font-size: 14px;
   opacity: 0.7;
 }
-#section13 .mainBox .mainTxt .mainRight {
+#section12 .mainBox .mainTxt .mainRight {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-#section13 .mainBox .mainTxt .mainRight > li h4 {
+#section12 .mainBox .mainTxt .mainRight > li h4 {
   padding: 6px 25px 6px 15px;
   color: #fff;
   font-size: 17px;
@@ -867,25 +859,25 @@ main {
   font-weight: 400;
   letter-spacing: 0;
 }
-#section13 .mainBox .mainTxt .mainRight > li:nth-child(1) h4 {
+#section12 .mainBox .mainTxt .mainRight > li:nth-child(1) h4 {
   background-color: #008dbc;
 }
-#section13 .mainBox .mainTxt .mainRight > li:nth-child(2) h4 {
+#section12 .mainBox .mainTxt .mainRight > li:nth-child(2) h4 {
   background-color: #10ad9c;
 }
-#section13 .mainBox .mainTxt .mainRight > li:nth-child(3) h4 {
+#section12 .mainBox .mainTxt .mainRight > li:nth-child(3) h4 {
   background-color: #9494b7;
 }
-#section13 .mainBox .mainTxt .mainRight > li ul li {
+#section12 .mainBox .mainTxt .mainRight > li ul li {
   font-size: 14px;
   font-weight: 500;
   padding-left: 15px;
   opacity: 0.9;
 }
 
-/* section14 */
+/* section13 */
 
-#section14 {
+#section13 {
   background: url(images/main14.jpg) center/cover no-repeat;
 }
 .high {
@@ -896,7 +888,7 @@ main {
   display: flex;
   align-items: center;
 }
-#section14 .high {
+#section13 .high {
   width: 60%;
   max-width: 1480px;
   justify-content: flex-end;
@@ -918,73 +910,73 @@ main {
   margin-top: 35px;
 }
 
-/* section15 */
+/* section14 */
 
-#section15 {
+#section14 {
   background: url(images/main15.jpg) center/cover no-repeat;
 }
-#section15 .high {
+#section14 .high {
   width: 68%;
   max-width: 1480px;
   transform: translateY(-50px);
 }
 
-/* section16 */
+/* section15 */
 
-#section16 {
+#section15 {
   background: url(images/main16.jpg) center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#section16 .mainBox {
+#section15 .mainBox {
   text-align: center;
 }
-#section16 .mainBox a {
+#section15 .mainBox a {
   color: #000;
   font-family: "Noto Sans KR", sans-serif;
 }
-#section16 .mainBox h1 {
+#section15 .mainBox h1 {
   font-size: 55px;
   font-weight: 300;
   font-family: "FuturaStdBook", sans-serif;
   line-height: 100%;
 }
-#section16 .mainBox h2 a {
+#section15 .mainBox h2 a {
   font-size: 40px;
   font-weight: 400;
   font-family: "FuturaStdMedium", sans-serif;
   line-height: 100%;
   letter-spacing: 1px;
 }
-#section16 .mainBox h3 {
+#section15 .mainBox h3 {
   font-size: 21px;
   font-weight: 400;
   font-family: "blanc", sans-serif;
   line-height: 100%;
   margin: 25px 0 20px;
 }
-#section16 .mainBox h4 {
+#section15 .mainBox h4 {
   font-size: 15px;
   font-weight: 400;
   line-height: 100%;
   opacity: 0.8;
   margin: 50px 0 12px;
 }
-#section16 .mainBox h6 {
+#section15 .mainBox h6 {
   font-size: 12px;
   font-weight: 500;
   line-height: 100%;
 }
-#section16 .mainBox .map {
+#section15 .mainBox .map {
   margin-top: 40px;
 }
-#section16 .mainBox .map .mapLink {
+#section15 .mainBox .map .mapLink {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
-#section16 .mainBox .map .mapLink a {
+#section15 .mainBox .map .mapLink a {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1160,4 +1152,49 @@ footer > p {
 footer h6:last-child {
   font-weight: normal;
   line-height: 100%;
+}
+.hamNav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 9000;
+}
+.hamNav .dep1 {
+  display: flex;
+  height: 100%;
+}
+.hamNav .dep1 > li {
+  width: 13.6%;
+  height: 100%;
+  background-color: #fff;
+  border-right: 1px solid #dedede;
+  z-index: 9001;
+  position: relative;
+}
+.hamNav .dep1 > li:hover {
+  background-color: #f1f1f1;
+}
+.hamNav .dep1 h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #191919;
+  margin: 77px 15% 40px;
+}
+.hamNav .dep2 li:hover {
+  background-color: #000;
+}
+.hamNav .dep2 li a {
+  position: relative;
+  display: block;
+  padding: 18px 15%;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: -0.4px;
+  transition: 0.3s;
+}
+.hamNav .dep2 li:hover a {
+  color: #fff;
 }
