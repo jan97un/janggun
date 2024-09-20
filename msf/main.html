@@ -8,20 +8,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       $(function () {
+        let majbar = document.querySelector(".major .bar");
+        let minbar = document.querySelector(".minor .bar");
         let bool = true;
         $("#field1").click(function () {
           if (bool) {
-            $(".major .bar").css("display", "block");
+            $(majbar).css("display", "block");
+            $(".bar li").click(function () {
+              $(majbar).css("display", "none");
+            });
+            $(".bar .all").click(function () {
+              $(".major label span").html("전체");
+            });
+            $(".bar .medi").click(function () {
+              $(".major label span").html("의료");
+            });
+            $(".bar .non").click(function () {
+              $(".major label span").html("비의료");
+            });
           } else {
-            $(".major .bar").css("display", "none");
+            $(majbar).css("display", "none");
           }
           bool = !bool;
         });
         $("#field2").click(function () {
           if (bool) {
-            $(".minor .bar").css("display", "block");
+            $(minbar).css("display", "block");
           } else {
-            $(".minor .bar").css("display", "none");
+            $(minbar).css("display", "none");
           }
           bool = !bool;
         });
@@ -76,7 +90,7 @@
                 <img src="images/maininputarrow.svg" alt="maininputarrow" />
               </label>
               <ul class="bar">
-                <li>전체</li>
+                <li class="all">전체</li>
                 <li class="medi">의료</li>
                 <li class="non">비의료</li>
               </ul>
