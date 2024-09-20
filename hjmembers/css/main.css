@@ -495,9 +495,6 @@ footer .foot .footBot p {
 
 /* floating nav */
 
-#float {
-  display: none;
-}
 .float {
   position: fixed;
   right: 80px;
@@ -537,6 +534,9 @@ footer .foot .footBot p {
 .float .navBar li:hover a {
   color: #111;
   font-weight: 700;
+}
+#float {
+  display: none;
 }
 .float label {
   position: relative;
