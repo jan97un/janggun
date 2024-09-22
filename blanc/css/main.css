@@ -4,22 +4,22 @@
 /* font-family: "Noto Sans KR", sans-serif; */
 @font-face {
   font-family: "FuturaStdBook";
-  src: url(webfonts/FuturaStdBook.woff) format("woff");
+  src: url(../webfonts/FuturaStdBook.woff) format("woff");
 }
 /* font-family: "FuturaStdBookR", sans-serif; */
 @font-face {
   font-family: "FuturaStdMedium";
-  src: url(webfonts/FuturaStdMedium.woff) format("woff");
+  src: url(../webfonts/FuturaStdMedium.woff) format("woff");
 }
 /* font-family: "FuturaStdMedium", sans-serif; */
 @font-face {
   font-family: "FuturaStdHeavy";
-  src: url(webfonts/FuturaStdHeavy.woff);
+  src: url(../webfonts/FuturaStdHeavy.woff);
 }
 /* font-family: "FuturaStdHeavy", sans-serif; */
 @font-face {
   font-family: "blanc";
-  src: url(webfonts/blanc.woff2) format("woff2");
+  src: url(../webfonts/blanc.woff2) format("woff2");
 }
 /* font-family: "blanc", sans-serif; */
 
@@ -64,12 +64,12 @@ header .head {
 }
 header .head .logo a {
   display: block;
-  background: url(images/logowhite.png) center/cover no-repeat;
+  background: url(../images/logowhite.png) center/cover no-repeat;
   width: 212px;
   height: 27px;
 }
 header .head .logo a.on {
-  background: url(images/logoblack.png) center/cover no-repeat;
+  background: url(../images/logoblack.png) center/cover no-repeat;
 }
 header .head .gnb .dep1 {
   display: flex;
@@ -154,7 +154,7 @@ header .head .headRight .tel .telBg {
   border-radius: 50%;
 }
 header .head .headRight .tel .telBg div {
-  background: url(images/telblack.png) center no-repeat;
+  background: url(../images/telblack.png) center no-repeat;
   position: absolute;
   left: 0;
   top: 0;
@@ -196,7 +196,7 @@ header .head .gnb:hover ~ .headRight .tel .telBg {
   background: #000;
 }
 header .head .gnb:hover ~ .headRight .tel div {
-  background: url(images/telwhite.png) center no-repeat;
+  background: url(../images/telwhite.png) center no-repeat;
 }
 header .head .gnb:hover ~ .headRight .hamberger {
   border: 1px solid #000;
@@ -230,7 +230,7 @@ main {
 
 #section0 .mainBg {
   position: absolute;
-  background: url(images/main1.jpg) bottom/cover no-repeat;
+  background: url(../images/main1.jpg) bottom/cover no-repeat;
   left: 0;
   top: -200px;
   width: 100%;
@@ -239,7 +239,7 @@ main {
 }
 #section0 .shadow {
   position: absolute;
-  background: url(images/main1shadow.png) bottom/cover no-repeat;
+  background: url(../images/main1shadow.png) bottom/cover no-repeat;
   left: 0;
   top: 0;
   width: 100%;
@@ -351,7 +351,7 @@ main {
 /* section1 */
 
 #section1 {
-  background: url(images/main2.jpg) bottom/cover no-repeat;
+  background: url(../images/main2.jpg) bottom/cover no-repeat;
 }
 #section1 .mainTxt {
   width: 90%;
@@ -423,7 +423,7 @@ main {
 /* section2 */
 
 #section2 {
-  background: url(images/main3.jpg) bottom/cover no-repeat;
+  background: url(../images/main3.jpg) bottom/cover no-repeat;
 }
 #section2 .mainBox {
   width: 90%;
@@ -640,7 +640,7 @@ main {
 /* section7 */
 
 #section7 {
-  background: url(images/main8.jpg) bottom/cover no-repeat;
+  background: url(../images/main8.jpg) bottom/cover no-repeat;
   color: #fff;
 }
 #section7 .mainTxt {
@@ -675,7 +675,7 @@ main {
   margin-top: 15px;
 }
 #section7 .tower {
-  background: url(images/main8obj.png) bottom/cover no-repeat;
+  background: url(../images/main8obj.png) bottom/cover no-repeat;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -878,7 +878,7 @@ main {
 /* section13 */
 
 #section13 {
-  background: url(images/main14.jpg) center/cover no-repeat;
+  background: url(../images/main14.jpg) center/cover no-repeat;
 }
 .high {
   position: relative;
@@ -913,7 +913,7 @@ main {
 /* section14 */
 
 #section14 {
-  background: url(images/main15.jpg) center/cover no-repeat;
+  background: url(../images/main15.jpg) center/cover no-repeat;
 }
 #section14 .high {
   width: 68%;
@@ -924,7 +924,7 @@ main {
 /* section15 */
 
 #section15 {
-  background: url(images/main16.jpg) center/cover no-repeat;
+  background: url(../images/main16.jpg) center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
