@@ -102,6 +102,17 @@
             return false;
           });
         });
+        let bool = true;
+        $(".navBox li").click(function () {
+          let i = $(this).index();
+          console.log(i);
+          if (bool) {
+            $(".navBox li").eq(i).find(".dep2").css("display", "block");
+          } else {
+            $(".navBox li").eq(i).find(".dep2").css("display", "none");
+          }
+          bool = !bool;
+        });
       });
     </script>
   </head>

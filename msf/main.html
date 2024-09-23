@@ -14,17 +14,23 @@
         $("#field1").click(function () {
           if (bool) {
             $(majbar).css("display", "block");
-            $(".bar li").click(function () {
+            $(".major .bar li").click(function () {
               $(majbar).css("display", "none");
             });
-            $(".bar .all").click(function () {
+            $(".major .bar .all").click(function () {
               $(".major label span").html("전체");
+              $(".minor .bar .medi").css("display", "block");
+              $(".minor .bar .non").css("display", "block");
             });
-            $(".bar .medi").click(function () {
+            $(".major .bar .medi").click(function () {
               $(".major label span").html("의료");
+              $(".minor .bar .non").css("display", "none");
+              $(".minor .bar .medi").css("display", "block");
             });
-            $(".bar .non").click(function () {
+            $(".major .bar .non").click(function () {
               $(".major label span").html("비의료");
+              $(".minor .bar .medi").css("display", "none");
+              $(".minor .bar .non").css("display", "block");
             });
           } else {
             $(majbar).css("display", "none");
@@ -34,6 +40,9 @@
         $("#field2").click(function () {
           if (bool) {
             $(minbar).css("display", "block");
+            $(".minor .bar li").click(function () {
+              $(minbar).css("display", "none");
+            });
           } else {
             $(minbar).css("display", "none");
           }
@@ -159,16 +168,12 @@
         } else {
           this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
-
         this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
         var that = this;
         var delta = 200 - Math.random() * 100;
-
         if (this.isDeleting) {
           delta /= 2;
         }
-
         if (!this.isDeleting && this.txt === fullTxt) {
           delta = this.period;
           this.isDeleting = true;
@@ -177,12 +182,10 @@
           this.loopNum++;
           delta = 500;
         }
-
         setTimeout(function () {
           that.tick();
         }, delta);
       };
-
       window.onload = function () {
         var elements = document.getElementsByClassName("typewrite");
         for (var i = 0; i < elements.length; i++) {
