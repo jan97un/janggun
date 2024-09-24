@@ -16,9 +16,6 @@
   word-break: keep-all;
   white-space: nowrap;
 }
-body {
-  overflow: hidden;
-}
 ul {
   list-style: none;
 }
@@ -266,6 +263,7 @@ header {
   z-index: 9990;
   background-color: #fff;
   overflow-y: auto;
+  display: none;
 }
 .job > li .mainBox {
   max-width: 1008px;
@@ -438,6 +436,16 @@ header {
 }
 .recruit span strong {
   color: #e30012;
+}
+.job > li .close {
+  position: fixed;
+  right: 48px;
+  top: 64px;
+  width: 48px;
+  height: 48px;
+  background: url(../images/close.svg) center/cover no-repeat;
+  z-index: 9991;
+  cursor: pointer;
 }
 
 /* mob btn */
