@@ -35,15 +35,15 @@
           // console.log(txt);
           $("#category2").find("span").text(txt);
           $(minbar).css("display", "none");
-          let i = $(this).index();
-          console.log(i);
+          let index = $(this).index();
+          console.log(index);
           let search = document.querySelectorAll(".job>li");
           $(".search strong").click(function () {
-            $(search[i]).css("display", "block");
+            $(search[index]).css("display", "block");
             $("body").css("overflow", "hidden");
           });
           $(".job .close").click(function () {
-            $(search[i]).css("display", "none");
+            $(search[index]).css("display", "none");
             $("body").css("overflow", "none");
           });
         });
@@ -64,6 +64,18 @@
         });
         $(".minor .non").click(function () {
           $("#category1").find("span").html("비의료");
+        });
+        $(".recruit .checklist li").click(function () {
+          let span = $(this).find("span");
+          if (span.css("background-color") == "rgb(227, 0, 18)") {
+            span
+              .css({ backgroundColor: "#fafafa", borderColor: "#e0e0e0" })
+              .html('<img src="images/checkboxbl.svg" alt="checkboxbl"/>');
+          } else {
+            span
+              .css({ backgroundColor: "#e30012", borderColor: "#e30012" })
+              .html('<img src="images/checkboxwh.svg" alt="checkboxwh"/>');
+          }
         });
       });
     </script>
@@ -429,5 +441,16 @@
       <li>조산사</li>
       <li>프로젝트 재무 및 인력 관리자</li>
     </ul>
+    <script>
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "",
+          pin: true,
+          start: "top top",
+          end: "",
+          scrub: true,
+        },
+      });
+    </script>
   </body>
 </html>
