@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>국경없는의사회 구호활동가 채용</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/slick.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       $(function () {
@@ -18,9 +19,9 @@
           }
         });
         $(".major .bar li").click(function () {
-          let txt = $(this).text();
+          let majtxt = $(this).text();
           // console.log(txt);
-          $("#category1").find("span").text(txt);
+          $("#category1").find("span").text(majtxt);
           $(majbar).css("display", "none");
         });
         $("#category2").click(function () {
@@ -31,9 +32,9 @@
           }
         });
         $(".minor .bar li").click(function () {
-          let txt = $(this).text();
+          let mintxt = $(this).text();
           // console.log(txt);
-          $("#category2").find("span").text(txt);
+          $("#category2").find("span").text(mintxt);
           $(minbar).css("display", "none");
           let index = $(this).index();
           console.log(index);
@@ -44,7 +45,7 @@
           });
           $(".job .close").click(function () {
             $(search[index]).css("display", "none");
-            $("body").css("overflow", "none");
+            $("body").css("overflow", "visible");
           });
         });
         $(".major .all").click(function () {
@@ -163,7 +164,22 @@
           <!-- <span class="mob">검색</span> -->
         </div>
       </div>
-      <div class="main2">
+      <div class="scrollTrigger">
+        <div class="main2">
+          <div class="mainTxt">
+            <h1>
+              하지만<br />
+              여러분 없이는 해낼 수 없는 일들
+            </h1>
+          </div>
+          <div class="videoBox">
+            <video muted autoplay loop playsinline>
+              <source src="video/mainscroll.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="mob">
         <div class="mainTxt">
           <h1>
             하지만<br />
@@ -171,61 +187,148 @@
           </h1>
         </div>
         <div class="videoBox">
-          <video muted autoplay loop>
+          <video muted autoplay loop playsinline>
             <source src="video/mainscroll.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
+      <div class="main3"></div>
+      <div class="main4">
+        <div class="mainBox">
+          <div class="tit">
+            <h1>함께 하는 사람들의 이야기</h1>
+            <div class="more">
+              <p>더 많은 이야기 보러가기</p>
+              <img src="images/mainstoryarrow.svg" alt="mainstoryarrow" />
+            </div>
+          </div>
+          <div class="story">
+            <ul class="quote">
+              <li></li>
+              <li></li>
+            </ul>
+            <div class="slick">
+              <ul class="slider-for">
+                <li>
+                  <blockquote>
+                    현장에 나갈 때마다 새로운 경험을 하게 됩니다. 새로운
+                    환경에서 나 자신을 발견하고, 다른 이들을 보면서 배우게
+                    되는데요.<br />
+                    매번 새로운 사람들과 색다른 환경을 마주하며 긍정적인 영향을
+                    받기 때문에 이 ‘새로움’이 다음 활동을 가게 만드는
+                    원동력이<br />
+                    돼요.
+                  </blockquote>
+                  <div class="mob">
+                    <div class="worker">
+                      <img src="images/worker1.png" alt="worker1" />
+                    </div>
+                    <div class="name">
+                      <h6>봉선아 활동가</h6>
+                      <p>기술직</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <blockquote>
+                    제가 가진 전문성과 역량으로 구호활동에 참여할 수 있다는
+                    사실이 큰 보람이 됐습니다. 현장 생활을 하며
+                    국경없는의사회가<br />
+                    실제로 가장 멀고, 가장 험하고, 가장 필요한 곳에서 일하고
+                    있다는 걸 느낄 수 있었습니다.
+                  </blockquote>
+                  <div class="mob">
+                    <div class="worker">
+                      <img src="images/worker2.png" alt="worker1" />
+                    </div>
+                    <div class="name">
+                      <h6>황선미 활동가</h6>
+                      <p>소송행정직</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <blockquote>
+                    국경없는의사회에서 일하면 온전히 환자만 생각할 수 있는
+                    환경에 놓이게 됩니다. 사기업에서 일하는 것보다 자유로운
+                    점이<br />
+                    있다고 할 수 있죠. 저는 일에 있어 흥미와 보람을 매우
+                    중요하게 여기는데, 이를 유지할 수 있어 감사하게 생각해요.
+                  </blockquote>
+                  <div class="mob">
+                    <div class="worker">
+                      <img src="images/worker3.png" alt="worker1" />
+                    </div>
+                    <div class="name">
+                      <h6>최정윤 활동가</h6>
+                      <p>약사</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <blockquote>
+                    의사로서 사는 삶이 재미가 없어 (웃음) 국경없는의사회 활동을
+                    시작하게 되었어요. 활동가로서의 삶이 이전의 삶보다 훨씬
+                    더<br />
+                    만족스럽기에 벌써 10년도 더 넘게 계속하고 있어요. 저마다
+                    다른 이유와 동기를 가지고 계시겠지만 꼭 한 번 참여해
+                    보시면<br />
+                    좋겠습니다.
+                  </blockquote>
+                  <div class="mob">
+                    <div class="worker">
+                      <img src="images/worker4.png" alt="worker1" />
+                    </div>
+                    <div class="name">
+                      <h6>이효민 활동가</h6>
+                      <p>마취통증의학과 전문의</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="slider-nav">
+                <li>
+                  <div class="worker">
+                    <img src="images/worker1.png" alt="worker1" />
+                  </div>
+                  <div class="name">
+                    <h6>봉선아 활동가</h6>
+                    <p>기술직</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="worker">
+                    <img src="images/worker2.png" alt="worker1" />
+                  </div>
+                  <div class="name">
+                    <h6>황선미 활동가</h6>
+                    <p>소송행정직</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="worker">
+                    <img src="images/worker3.png" alt="worker1" />
+                  </div>
+                  <div class="name">
+                    <h6>최정윤 활동가</h6>
+                    <p>약사</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="worker">
+                    <img src="images/worker4.png" alt="worker1" />
+                  </div>
+                  <div class="name">
+                    <h6>이효민 활동가</h6>
+                    <p>마취통증의학과 전문의</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <script>
-      var TxtType = function (el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 3000;
-        this.txt = "";
-        this.tick();
-        this.isDeleting = false;
-      };
-
-      TxtType.prototype.tick = function () {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-        if (this.isDeleting) {
-          delta /= 2;
-        }
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === "") {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
-        setTimeout(function () {
-          that.tick();
-        }, delta);
-      };
-      window.onload = function () {
-        var elements = document.getElementsByClassName("typewrite");
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute("data-type");
-          var period = elements[i].getAttribute("data-period");
-          if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-          }
-        }
-      };
-    </script>
     <footer></footer>
     <ul class="job">
       <li>
@@ -442,14 +545,74 @@
       <li>프로젝트 재무 및 인력 관리자</li>
     </ul>
     <script>
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "",
-          pin: true,
-          start: "top top",
-          end: "",
-          scrub: true,
-        },
+      var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 3000;
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+      window.onload = function () {
+        var elements = document.getElementsByClassName("typewrite");
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute("data-type");
+          var period = elements[i].getAttribute("data-period");
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+      };
+    </script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+      $(function () {
+        $(".slider-for").slick({
+          settingName: settingValue,
+          slidesToShow: 1,
+          fade: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          asNavFor: ".slider-nav",
+        });
+        $(".slider-nav").slick({
+          slidesToShow: 4,
+          dots: true,
+          dotsClass: ".slider-nav li",
+          focusOnSelect: true,
+          asNavFor: ".slider-for",
+        });
       });
     </script>
   </body>
