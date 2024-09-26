@@ -6,7 +6,6 @@
     <title>국경없는의사회 구호활동가 채용</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/slick.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       $(function () {
@@ -38,16 +37,19 @@
           $("#category2").find("span").text(mintxt);
           $(minbar).css("display", "none");
           let index = $(this).index();
-          console.log(index);
-          let search = document.querySelectorAll(".job>li");
-          $(".search strong").click(function () {
-            $(search[index]).css("display", "block");
-            $("body").css("overflow", "hidden");
-          });
-          $(".job .close").click(function () {
-            $(search[index]).css("display", "none");
-            $("body").css("overflow", "visible");
-          });
+          // console.log(index);
+          $(".search strong")
+            .off("click")
+            .on("click", function () {
+              $(".job>li").eq(index).css("display", "block");
+              $("body").css("overflow", "hidden");
+            });
+          $(".job .close")
+            .off("click")
+            .on("click", function () {
+              $(".job>li").eq(index).css("display", "none");
+              $("body").css("overflow", "visible");
+            });
         });
         $(".major .all").click(function () {
           $(".minor .medi").css("display", "block");
@@ -79,7 +81,22 @@
               .html('<img src="images/checkboxwh.svg" alt="checkboxwh"/>');
           }
         });
-        $(".people li").click(function () {});
+        $(".storyBox li blockquote").css("opacity", "0");
+        $(".people li").click(function () {
+          let p = $(this).index();
+          // console.log(p);
+          $(".storyBox li blockquote").css("opacity", "0");
+          $(".storyBox li").eq(p).find("blockquote").css("opacity", "1");
+          $(".people .worker img").css({ width: "80px", height: "80px" });
+          $(".people li")
+            .eq(p)
+            .find(".worker")
+            .css({ border: "2px solid #e30012", borderRadius: "50%" });
+          $(".people .worker")
+            .eq(p)
+            .find("img")
+            .css({ width: "112px", height: "112px" });
+        });
       });
     </script>
   </head>
