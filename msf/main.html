@@ -6,6 +6,10 @@
     <title>국경없는의사회 구호활동가 채용</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       $(function () {
@@ -81,22 +85,27 @@
               .html('<img src="images/checkboxwh.svg" alt="checkboxwh"/>');
           }
         });
-        $(".storyBox li blockquote").css("opacity", "0");
         $(".people li").click(function () {
+          $(".storyBox li blockquote").removeClass("on");
+          $(".people li").removeClass("on");
+          $(".people li .worker .bdRed").removeClass("on");
+          $(".people li .worker .bdRed img").removeClass("on");
+          $(".people li .name").removeClass("on");
           let p = $(this).index();
-          // console.log(p);
-          $(".storyBox li blockquote").css("opacity", "0");
-          $(".storyBox li").eq(p).find("blockquote").css("opacity", "1");
-          $(".people .worker img").css({ width: "80px", height: "80px" });
-          $(".people li")
-            .eq(p)
-            .find(".worker")
-            .css({ border: "2px solid #e30012", borderRadius: "50%" });
-          $(".people .worker")
-            .eq(p)
-            .find("img")
-            .css({ width: "112px", height: "112px" });
+          $(".storyBox li").eq(p).find("blockquote").addClass("on");
+          $(".people li").eq(p).addClass("on");
+          $(".people li").eq(p).find(".worker .bdRed").addClass("on");
+          $(".people li").eq(p).find(".worker .bdRed img").addClass("on");
+          $(".people li").eq(p).find(".name").addClass("on");
         });
+        let num = 1;
+        setTimeout(function () {
+          $(".people li").eq(0).trigger("click");
+        });
+        setInterval(function () {
+          $(".people li").eq(num).trigger("click");
+          num = (num + 1) % $(".people li").length;
+        }, 3000);
       });
     </script>
   </head>
@@ -152,7 +161,7 @@
                 <li class="medi">의료</li>
                 <li class="non">비의료</li>
               </ul>
-              <input type="radio" name="radio" id="field1" />
+              <input type="radio" id="field1" />
             </div>
             <div class="field minor">
               <label for="field2" id="category2">
@@ -176,7 +185,7 @@
                 <li class="medi">조산사</li>
                 <li class="non">프로젝트 재무 및 인력 관리자</li>
               </ul>
-              <input type="radio" name="radio" id="field2" />
+              <input type="radio" id="field2" />
             </div>
             <strong>검색</strong>
           </div>
@@ -224,8 +233,10 @@
           >
             <h1>함께 하는 사람들의 이야기</h1>
             <div class="more">
-              <p>더 많은 이야기 보러가기</p>
-              <img src="images/mainstoryarrow.svg" alt="mainstoryarrow" />
+              <a href="">
+                <p>더 많은 이야기 보러가기</p>
+                <img src="images/mainstoryarrow.svg" alt="mainstoryarrow" />
+              </a>
             </div>
           </div>
           <div
@@ -315,7 +326,9 @@
             <ul class="people">
               <li>
                 <div class="worker">
-                  <img src="images/worker1.png" alt="worker1" />
+                  <div class="bdRed">
+                    <img src="images/worker1.png" alt="worker1" />
+                  </div>
                 </div>
                 <div class="name">
                   <h6>봉선아 활동가</h6>
@@ -324,7 +337,9 @@
               </li>
               <li>
                 <div class="worker">
-                  <img src="images/worker2.png" alt="worker1" />
+                  <div class="bdRed">
+                    <img src="images/worker2.png" alt="worker1" />
+                  </div>
                 </div>
                 <div class="name">
                   <h6>황선미 활동가</h6>
@@ -333,7 +348,9 @@
               </li>
               <li>
                 <div class="worker">
-                  <img src="images/worker3.png" alt="worker1" />
+                  <div class="bdRed">
+                    <img src="images/worker3.png" alt="worker1" />
+                  </div>
                 </div>
                 <div class="name">
                   <h6>최정윤 활동가</h6>
@@ -342,7 +359,9 @@
               </li>
               <li>
                 <div class="worker">
-                  <img src="images/worker4.png" alt="worker1" />
+                  <div class="bdRed">
+                    <img src="images/worker4.png" alt="worker1" />
+                  </div>
                 </div>
                 <div class="name">
                   <h6>이효민 활동가</h6>
@@ -352,6 +371,215 @@
             </ul>
           </div>
         </div>
+      </div>
+      <div class="main5">
+        <h1>모집 분야</h1>
+        <div class="mainBox">
+          <div class="btn">
+            <label for="medi">
+              <input type="checkbox" id="medi" />
+              <h6>의료 직군</h6>
+              <span></span>
+            </label>
+            <label for="non">
+              <input type="checkbox" id="non" />
+              <h6>비의료 직군</h6>
+              <span></span>
+            </label>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job1.jpg" alt="job1" />
+                  <span>©Andrii Ovod</span>
+                </div>
+                <div class="txtBox">
+                  <p>의료</p>
+                  <h3>간호사</h3>
+                  <p>Nurse</p>
+                  <span
+                    >간호 관련 활동 기획과 조직, 현지 직원 훈련 및 감독</span
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job2.jpg" alt="job2" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job3.jpg" alt="job3" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job4.jpg" alt="job4" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job5.jpg" alt="job5" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job6.jpg" alt="job6" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job7.jpg" alt="job7" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job8.jpg" alt="job8" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job9.jpg" alt="job9" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job10.jpg" alt="job10" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job11.jpg" alt="job11" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job12.jpg" alt="job12" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job13.jpg" alt="job13" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job14.jpg" alt="job14" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="imgBox">
+                  <img src="images/job15.jpg" alt="job15" />
+                  <span></span>
+                </div>
+                <div class="txtBox">
+                  <p></p>
+                  <h3></h3>
+                  <p></p>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <p>
+          <span>*</span> 더 많은 직무와 잠재적인 경력경로는
+          <strong>career.ocb.msf.org</strong> 에서 확인하실 수 있습니다.
+        </p>
       </div>
     </main>
     <footer></footer>
@@ -622,6 +850,32 @@
     <script src="js/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        },
+      });
     </script>
   </body>
 </html>

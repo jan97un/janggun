@@ -259,7 +259,8 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: #fff;
+  /* background: #fff; */
+  background: #eee;
 }
 .main4 .mainBox {
   max-width: 1216px;
@@ -277,11 +278,11 @@ header {
   font-weight: 700;
   color: #212121;
 }
-.main4 .mainBox .tit .more {
+.main4 .mainBox .tit .more a {
   display: flex;
   align-items: center;
 }
-.main4 .mainBox .tit .more p {
+.main4 .mainBox .tit .more a p {
   font-weight: 700;
   line-height: 24px;
   color: #212121;
@@ -320,40 +321,194 @@ header {
   line-height: 32px;
   color: #212121;
   text-align: center;
+  opacity: 0;
+}
+.story blockquote.on {
+  opacity: 1;
 }
 .story .people {
+  position: relative;
+  height: 302px;
   margin-top: 185px;
-  padding-top: 85px;
-  border-top: 1px solid #000;
+  /* padding-top: 85px; */
+  border-top: 1px solid #9e9e9e;
   display: flex;
+  align-items: center;
   gap: 8px;
+}
+.story .people:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 24px;
+  background: url(../images/mainstoryico.svg) top/contain no-repeat;
 }
 .story .people li {
   display: flex;
   align-items: center;
   width: 298px;
+  cursor: pointer;
 }
 .story .people li .worker {
   padding-right: 24px;
   margin: 0 auto;
 }
-.story .people li .worker img {
-  width: 80px;
-  height: 80px;
+.story .people li.on {
+  padding-bottom: 18px;
+}
+.story .people li .worker .bdRed {
+  width: 132px;
+  height: 132px;
+  /* line-height: 132px; */
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.story .people li .worker .bdRed.on {
+  border: 2px solid #e30012;
+}
+.story .people li .worker .bdRed img {
+  width: 96px;
+  height: 96px;
   border: 8px solid #fff;
   border-radius: 50%;
+  box-sizing: border-box;
   transform: scale(1);
-  transition: 0.1s;
 }
-.story .people li .worker:hover img {
-  transform: scale(1.2);
+.story .people li .worker .bdRed img.on {
+  width: 128px;
+  height: 128px;
 }
 .story .people li .name {
-  display: none;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: width 0.65s ease-out;
+}
+.story .people li .name.on {
+  opacity: 1;
+  width: 250px;
+  display: block;
 }
 .story .people li .name h6 {
   margin-bottom: 8px;
 }
+
+/* main5 */
+
+.main5 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #433838;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+.main5 h1 {
+  max-width: 1216px;
+  margin: 0 auto;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  margin-bottom: 48px;
+}
+.main5 .mainBox {
+}
+.main5 .mainBox .btn {
+  max-width: 1216px;
+  margin: 0 auto 64px;
+  display: flex;
+  gap: 30px;
+}
+.main5 .mainBox .btn label {
+  display: flex;
+  align-items: center;
+}
+#medi,
+#non {
+  appearance: none;
+  /* display: inline-block; */
+  width: 24px;
+  height: 24px;
+  background-color: #fafafa;
+  background-image: url(../images/checkboxbl.svg);
+  background-position: 50%;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e0e0e0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin-right: 16px;
+}
+.main5 .mainBox .btn label h6 {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.main5 .swiper-slide .imgBox {
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+.main5 .swiper-slide .imgBox img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main5 .swiper-slide .imgBox span {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.main5 .swiper-slide .txtBox {
+  width: 280px;
+  height: 280px;
+}
+.main5 .swiper-slide .txtBox p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.main5 .swiper-slide .txtBox h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.main5 .swiper-slide .txtBox p:nth-of-type(2) {
+  opacity: 0.6;
+}
+.main5 .swiper-slide .txtBox span {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.main5 > p {
+  max-width: 1216px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 24px;
+  color: #9e9e9e;
+}
+.main5 > p span {
+  color: #e30012;
+}
+.main5 > p strong {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* main6 */
+/* main7 */
+/* main8 */
 
 /* footer */
 
@@ -486,13 +641,14 @@ header {
   right: 32px;
   top: 50%;
   transform: translateY(-50%);
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   background-color: #fafafa;
   border-width: 1px;
   border-style: solid;
   border-color: #e0e0e0;
   border-radius: 4px;
+  box-sizing: border-box;
   cursor: pointer;
 }
 .recruit .checklist span img {
