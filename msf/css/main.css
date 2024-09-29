@@ -401,7 +401,7 @@ header {
 .main5 {
   position: relative;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #433838;
   color: #fff;
   transition: background-color 0.5s ease;
@@ -409,25 +409,30 @@ header {
 .main5 h1 {
   max-width: 1216px;
   margin: 0 auto;
+  padding-top: 160px;
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
-  margin-bottom: 48px;
+  margin-bottom: 25px;
 }
-.main5 .mainBox {
-}
-.main5 .mainBox .btn {
+.main5 .btn {
   max-width: 1216px;
   margin: 0 auto 64px;
+  height: 47px;
   display: flex;
+  justify-content: space-between;
+}
+.main5 .btn .left {
+  display: flex;
+  align-items: end;
   gap: 30px;
 }
-.main5 .mainBox .btn label {
+.main5 .btn .left label {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
-#medi,
-#non {
+.main5 .btn .left label input {
   appearance: none;
   /* display: inline-block; */
   width: 24px;
@@ -445,11 +450,58 @@ header {
   cursor: pointer;
   margin-right: 16px;
 }
-.main5 .mainBox .btn label h6 {
+#medi.on,
+#non.on {
+  background-color: #e30012;
+  background-image: url(../images/checkboxwh.svg);
+  border-color: #e30012;
+}
+#medi.off,
+#non.off {
+  background-color: #fafafa;
+  background-image: url(../images/checkboxbl.svg);
+  border-color: #e0e0e0;
+}
+.main5 .btn .left label h6 {
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+}
+.main5 .btn .right {
+  position: relative;
+  width: 110px;
+}
+.main5 .btn .right .swiper-button-next,
+.main5 .btn .right .swiper-button-prev {
+  width: 47px;
+  height: 47px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.main5 .btn .right .swiper-button-next {
+  right: 0;
+}
+.main5 .btn .right .swiper-button-prev {
+  left: 0;
+}
+.main5 .btn .right .swiper-button-next:after {
+  content: url(../images/mainarrowright.svg);
+  width: 24px;
+  height: 24px;
+  line-height: 0px;
+}
+.main5 .btn .right .swiper-button-prev:after {
+  content: url(../images/mainarrowleft.svg);
+  width: 24px;
+  height: 24px;
+  line-height: 0px;
+}
+.main5 .swiper-slide {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
 }
 .main5 .swiper-slide .imgBox {
   position: relative;
@@ -472,15 +524,67 @@ header {
 .main5 .swiper-slide .txtBox {
   width: 280px;
   height: 280px;
+  padding: 24px 24px 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main5 .job1 .txtBox {
+  background-color: #847668;
+}
+.main5 .job2 .txtBox {
+  background-color: #900000;
+}
+.main5 .job3 .txtBox {
+  background-color: #9cacb9;
+}
+.main5 .job4 .txtBox {
+  background-color: #4a5973;
+}
+.main5 .job5 .txtBox {
+  background-color: #4f2600;
+}
+.main5 .job6 .txtBox {
+  background-color: #24614e;
+}
+.main5 .job7 .txtBox {
+  background-color: #00a7cc;
+}
+.main5 .job8 .txtBox {
+  background-color: #004ed3;
+}
+.main5 .job9 .txtBox {
+  background-color: #009a34;
+}
+.main5 .job10 .txtBox {
+  background-color: #425b42;
+}
+.main5 .job11 .txtBox {
+  background-color: #9cb934;
+}
+.main5 .job12 .txtBox {
+  background-color: #3d0082;
+}
+.main5 .job13 .txtBox {
+  background-color: #57a3e2;
+}
+.main5 .job14 .txtBox {
+  background-color: #49425b;
+}
+.main5 .job15 .txtBox {
+  background-color: #827557;
 }
 .main5 .swiper-slide .txtBox p {
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 16px;
 }
 .main5 .swiper-slide .txtBox h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
+  margin-bottom: 8px;
 }
 .main5 .swiper-slide .txtBox p:nth-of-type(2) {
   opacity: 0.6;
@@ -493,6 +597,7 @@ header {
 .main5 > p {
   max-width: 1216px;
   margin: 0 auto;
+  padding: 24px 0 112px;
   font-size: 14px;
   line-height: 24px;
   color: #9e9e9e;
@@ -500,8 +605,8 @@ header {
 .main5 > p span {
   color: #e30012;
 }
-.main5 > p strong {
-  font-weight: 700;
+.main5 > p a {
+  font-weight: 400;
   text-decoration: underline;
   color: #fff;
 }
