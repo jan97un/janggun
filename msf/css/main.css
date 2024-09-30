@@ -15,6 +15,7 @@
   font-family: "PretendardVariable";
   word-break: keep-all;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 ul {
   list-style: none;
@@ -40,7 +41,7 @@ header {
   margin: 0 auto;
   height: 112px;
   padding: 0 16px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -186,7 +187,7 @@ header {
   position: absolute;
   width: 100%;
   padding: 16px 16px 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   background-color: #fff;
   cursor: pointer;
   display: none;
@@ -258,19 +259,19 @@ header {
 .main4 {
   position: relative;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   /* background: #fff; */
   background: #eee;
 }
 .main4 .mainBox {
   max-width: 1216px;
   margin: 0 auto;
+  padding-top: 160px;
 }
 .main4 .mainBox .tit {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 160px;
   margin-bottom: 156px;
 }
 .main4 .mainBox .tit h1 {
@@ -365,7 +366,7 @@ header {
   height: 132px;
   /* line-height: 132px; */
   border-radius: 50%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 .story .people li .worker .bdRed.on {
   border: 2px solid #e30012;
@@ -375,7 +376,7 @@ header {
   height: 96px;
   border: 8px solid #fff;
   border-radius: 50%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   transform: scale(1);
 }
 .story .people li .worker .bdRed img.on {
@@ -409,12 +410,12 @@ header {
 }
 .main5 h1 {
   max-width: 1216px;
-  margin: 0 auto;
+  margin: 0 auto 25px;
   padding-top: 160px;
+  /* box-sizing: border-box; */
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
-  margin-bottom: 25px;
 }
 .main5 .btn {
   max-width: 1216px;
@@ -447,7 +448,7 @@ header {
   border-style: solid;
   border-color: #e0e0e0;
   border-radius: 4px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   cursor: pointer;
   margin-right: 16px;
 }
@@ -479,7 +480,7 @@ header {
   height: 47px;
   border: 2px solid #fff;
   border-radius: 50%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 .main5 .btn .right .swiper-button-next {
   right: 0;
@@ -532,7 +533,7 @@ header {
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   overflow: hidden;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -674,7 +675,7 @@ header {
   height: 24px;
   border: 2px solid #212121;
   border-radius: 50%;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   background-color: #fbf4f4;
   z-index: 2;
 }
@@ -775,6 +776,7 @@ header {
   height: 2px;
   background: #000;
   opacity: 1;
+  transition: 0.3s;
 }
 .main7 .qa li .quest span:after {
   content: "";
@@ -785,6 +787,7 @@ header {
   width: 2px;
   height: 30px;
   background: #000;
+  transition: 0.3s;
 }
 .main7 .qa li .quest span.on:before {
   content: "";
@@ -819,6 +822,72 @@ header {
 }
 
 /* main8 */
+
+.main8 {
+  position: relative;
+  width: 100%;
+  height: 672px;
+  background-color: #fbf4f4;
+}
+.main8 .mainBox {
+  max-width: 1216px;
+  margin: 0 auto;
+}
+.main8 .mainBox h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  color: #212121;
+}
+.main8 .mainBox h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #616161;
+}
+.subs {
+  display: flex;
+  text-align: center;
+}
+.subs .text input {
+  background-color: #fbf4f4;
+  border: none;
+}
+.subs .email input {
+  background-color: #fbf4f4;
+  border: none;
+}
+.subs .btn input {
+  background-color: #e30012;
+  color: #fff;
+  border: none;
+}
+.main8 .checkbox {
+  display: flex;
+  align-items: center;
+}
+.main8 .checkbox label {
+  line-height: 32px;
+  color: #3c4a54;
+}
+.main8 .checkbox label strong {
+  line-height: 24px;
+  color: #212121;
+  text-decoration: underline;
+}
+.main8 .imgBox {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 715px;
+  width: 50%;
+  height: 672px;
+}
+.main8 .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* footer */
 
@@ -958,7 +1027,7 @@ header {
   border-style: solid;
   border-color: #e0e0e0;
   border-radius: 4px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   cursor: pointer;
 }
 .recruit .checklist span img {

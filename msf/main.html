@@ -110,9 +110,17 @@
           $(".people li").eq(num).trigger("click");
           num = (num + 1) % $(".people li").length;
         }, 3000);
-        let ans = document.querySelectorAll(".answer");
         $(".qa li").click(function () {
-          if ($(".")) {
+          let q = $(this).index();
+          console.log(q);
+          if ($(".qa li").eq(q).find(".answer").css("display") == "block") {
+            $(".qa li").eq(q).find(".quest span").removeClass("on");
+            $(".qa li").eq(q).find(".answer").css("display", "none");
+          } else {
+            $(".quest span").removeClass("on");
+            $(".qa li").eq(q).find(".quest span").addClass("on");
+            $(".answer").css("display", "none");
+            $(".qa li").eq(q).find(".answer").css("display", "block");
           }
         });
       });
@@ -857,6 +865,40 @@
               </div>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="main8">
+        <div class="mainBox">
+          <h1>
+            국경을 넘는 구호활동가,<br />
+            다음은 당신입니다!
+          </h1>
+          <h5>국경없는의사회 구호활동가 채용 소식을 받아보세요</h5>
+          <div class="subs">
+            <div class="text">
+              <label for="text"></label>
+              <input type="text" placeholder="이름" required />
+            </div>
+            <div class="email">
+              <label for="email"></label>
+              <input type="email" placeholder="이메일" required />
+            </div>
+            <div class="btn">
+              <label for="btn"></label>
+              <input type="button" value="뉴스레터 구독하기" />
+            </div>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" required />
+            <label for="checkbox">
+              뉴스레터 구독을 위한 개인정보 수집 및
+              <strong>개인정보처리방침</strong>
+              에 동의합니다.
+            </label>
+          </div>
+        </div>
+        <div class="imgBox">
+          <img src="images/mainpeople.jpg" alt="mainpeople" />
         </div>
       </div>
     </main>
