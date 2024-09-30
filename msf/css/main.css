@@ -270,6 +270,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 160px;
   margin-bottom: 156px;
 }
 .main4 .mainBox .tit h1 {
@@ -498,15 +499,18 @@ header {
   height: 24px;
   line-height: 0px;
 }
+.main5 .swiper-wrapper {
+}
 .main5 .swiper-slide {
-  border-radius: 16px;
-  overflow: hidden;
   cursor: pointer;
 }
 .main5 .swiper-slide .imgBox {
   position: relative;
   width: 280px;
   height: 280px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  overflow: hidden;
 }
 .main5 .swiper-slide .imgBox img {
   display: block;
@@ -525,6 +529,9 @@ header {
   width: 280px;
   height: 280px;
   padding: 24px 24px 32px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  overflow: hidden;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -612,7 +619,205 @@ header {
 }
 
 /* main6 */
+
+.main6 {
+  background-color: #fbf4f4;
+}
+.main6 .mainBox {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding-bottom: 208px;
+}
+.main6 .mainBox h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  padding-top: 160px;
+  color: #212121;
+}
+.main6 .proc {
+  position: relative;
+  display: flex;
+  margin: 152px 0 16px;
+}
+.main6 .proc::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  width: 100%;
+  height: 2px;
+  background-color: #212121;
+  z-index: 1;
+}
+.main6 .proc li {
+  flex: 1 1 16%;
+  color: #212121;
+}
+.main6 .proc li.on {
+  color: #e30012;
+}
+.main6 .proc li:last-child {
+  position: relative;
+}
+.main6 .proc li:last-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 9px;
+  height: 14px;
+  background: url(../images/mainprocarrow.svg) center/cover no-repeat;
+}
+.main6 .proc .bdBl {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #212121;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: #fbf4f4;
+  z-index: 2;
+}
+.main6 .proc .bdBl.on {
+  border-color: #e30012;
+}
+.main6 .proc .bdBl .dotBl {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #212121;
+  border-radius: 50%;
+}
+.main6 .proc .bdBl .dotBl.on {
+  background-color: #e30012;
+}
+.main6 .proc .num,
+.main6 .proc .tit {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.main6 .proc .num {
+  font-family: "Poppins", serif;
+  margin: 24px 0 8px;
+}
+.main6 .subTxt {
+  display: flex;
+  margin-bottom: 48px;
+}
+.main6 .subTxt li {
+  flex: 1 1 16%;
+}
+.main6 .subTxt li p {
+  width: 176px;
+  white-space: wrap;
+  line-height: 24px;
+  opacity: 0.8;
+}
+.main6 .grayBox {
+  padding: 32px;
+  background-color: #4338380d;
+  border-radius: 16px;
+}
+.main6 .grayBox li {
+  line-height: 24px;
+  color: #616161;
+}
+
 /* main7 */
+
+.main7 {
+  width: 100%;
+  color: #212121;
+}
+.main7 .mainBox {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 160px 0;
+}
+.main7 h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  padding-bottom: 80px;
+  border-bottom: 2px solid #000;
+}
+.main7 .qa li {
+  border-bottom: 2px solid #000;
+}
+.main7 .qa li .quest {
+  padding: 48px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.main7 .qa li .quest h2 {
+  font-size: 24px;
+  line-height: 32px;
+}
+.main7 .qa li .quest span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.main7 .qa li .quest span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0);
+  width: 30px;
+  height: 2px;
+  background: #000;
+  opacity: 1;
+}
+.main7 .qa li .quest span:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) rotate(0);
+  width: 2px;
+  height: 30px;
+  background: #000;
+}
+.main7 .qa li .quest span.on:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  width: 30px;
+  height: 2px;
+  background: #000;
+  opacity: 0;
+}
+.main7 .qa li .quest span.on:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) rotate(90deg);
+  width: 2px;
+  height: 30px;
+  background: #000;
+}
+.main7 .qa li .answer {
+  margin-bottom: 48px;
+  display: none;
+}
+.main7 .qa li .answer h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #616161;
+}
+
 /* main8 */
 
 /* footer */
