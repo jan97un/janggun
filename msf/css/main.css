@@ -261,7 +261,7 @@ header {
   width: 100%;
   /* height: 100vh; */
   /* background: #fff; */
-  background: #eee;
+  background: #fff;
 }
 .main4 .mainBox {
   max-width: 1216px;
@@ -429,14 +429,24 @@ header {
   align-items: end;
   gap: 30px;
 }
-.main5 .btn .left label {
+.main5 .btn .left .inputBox {
+  position: relative;
   display: flex;
-  align-items: center;
+  gap: 16px;
   cursor: pointer;
 }
-.main5 .btn .left label input {
+.main5 .btn .left .inputBox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.main5 .btn .left .inputBox input {
   appearance: none;
-  /* display: inline-block; */
+  display: inline-block;
   width: 24px;
   height: 24px;
   background-color: #fafafa;
@@ -448,27 +458,24 @@ header {
   border-style: solid;
   border-color: #e0e0e0;
   border-radius: 4px;
-  /* box-sizing: border-box; */
-  cursor: pointer;
-  margin-right: 16px;
 }
-#medi.on,
-#non.on {
+.main5 .btn .left .inputBox input.on {
   background-color: #e30012;
   background-image: url(../images/checkboxwh.svg);
   border-color: #e30012;
 }
-#medi.off,
-#non.off {
-  background-color: #fafafa;
-  background-image: url(../images/checkboxbl.svg);
-  border-color: #e0e0e0;
+.main5 .btn .left .inputBox label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
-.main5 .btn .left label h6 {
-  display: inline-block;
+.main5 .btn .left .inputBox label h6 {
+  position: relative;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  display: inline-block;
+  z-index: 1;
 }
 .main5 .btn .right {
   position: relative;
@@ -499,8 +506,6 @@ header {
   width: 24px;
   height: 24px;
   line-height: 0px;
-}
-.main5 .swiper-wrapper {
 }
 .main5 .swiper-slide {
   cursor: pointer;
@@ -811,14 +816,17 @@ header {
   background: #000;
 }
 .main7 .qa li .answer {
-  margin-bottom: 48px;
-  display: none;
+  transition: 0.3s;
+  height: 0;
+  overflow: hidden;
 }
 .main7 .qa li .answer h5 {
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
   color: #616161;
+  padding-bottom: 48px;
+  box-sizing: border-box;
 }
 
 /* main8 */
@@ -973,6 +981,9 @@ footer a {
   font-weight: 700;
   line-height: 24px;
 }
+.foot .right .link a:hover {
+  color: #e30012;
+}
 .foot .right .link span {
   padding: 0 16px;
   font-weight: 100;
@@ -994,6 +1005,9 @@ footer a {
   background-color: #616161;
   border-radius: 50%;
 }
+.foot .right .sns li:hover {
+  background-color: #e30012;
+}
 .foot .right .sns li a {
   position: absolute;
   left: 50%;
@@ -1006,8 +1020,9 @@ footer a {
   z-index: 1;
 }
 .foot .right .sns li:last-child a {
-  width: 19px;
-  height: 19px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
 }
 .foot .right .sns li a img {
   width: 100%;
@@ -1135,7 +1150,7 @@ footer a {
   text-decoration: underline;
   color: #e30012;
 }
-.recruit .checklist .checkbox {
+.recruit .checklist input {
   display: none;
 }
 .recruit .checklist span {
