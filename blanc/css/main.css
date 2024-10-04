@@ -207,7 +207,9 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 
 /* main */
 
-main {
+#fullpage {
+  width: 100%;
+  height: 100%;
 }
 .section {
   width: 100%;
@@ -215,7 +217,17 @@ main {
   position: relative;
   overflow: hidden;
 }
-.mainVideo {
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 .mainVideo iframe {
   position: absolute;

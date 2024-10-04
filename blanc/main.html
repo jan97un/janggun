@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
+    <script src="js/scrolloverflow.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header>
@@ -90,17 +99,6 @@
         </div>
       </div>
     </header>
-    <script class="gnb">
-      let nav = document.querySelector(".gnb");
-      nav.onmouseenter = function () {
-        document.querySelector("header").style.backgroundColor = "#fff";
-        document.querySelector(".logo a").classList.add("on");
-      };
-      nav.onmouseleave = function () {
-        document.querySelector("header").style.backgroundColor = "transparent";
-        document.querySelector(".logo a").classList.remove("on");
-      };
-    </script>
     <!-- <div class="hamNav">
       <ul class="dep1">
         <li>
@@ -167,9 +165,8 @@
         </li>
       </ul>
     </div> -->
-    <script></script>
-    <main>
-      <div id="section0" class="section">
+    <main id="fullpage">
+      <div id="section0" class="section sec1">
         <div class="mainBg"></div>
         <div class="shadow"></div>
         <div class="mainTxt">
@@ -198,104 +195,111 @@
           </div>
         </div>
       </div>
-      <div id="section1" class="section">
-        <div class="mainTxt">
-          <div class="txtTop">
-            <h1>블랑 써밋 74,<br />순백의 동백처럼 고귀하게 피어나다</h1>
-            <p>
-              세상 무엇과도 섞이지 않은 순백의 아름다움으로 피어나는
-              백동백처럼<br />
-              세상 무엇과도 비교할 수 없는 당신만의 삶을 꽃 피우게 할 단 하나의
-              이름, 블랑 써밋 74입니다
-            </p>
-          </div>
-          <div class="txtBot">
-            <div>
-              <p>BLANC : 순백의</p>
-              <h1>BLANC</h1>
-            </div>
-            <div>
-              <p>SUMMIT : 정점</p>
-              <h1>SUMMIT</h1>
-            </div>
-            <div>
-              <p>74 : 랜드마크 층수</p>
-              <h1>74</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="section2" class="section">
-        <div class="mainBox">
-          <div class="mainLeft">
-            <h1>
-              From Camellia<br />
-              becoming<br />
-              SUMMIT BLANC WAVE
-            </h1>
-            <p>
-              White Camellia 백동백으로부터 영감을 받은<br />
-              ‘블랑 써밋 74’는 최고 69층의<br />
-              서로 다른 시선을 가진 4개의 타워가<br />
-              마치 아름다운 물결처럼 리듬감 있게 연결되어진<br />
-              부산을 대표할 초고층 랜드마크입니다
-            </p>
-          </div>
-          <div class="mainRight">
-            <div class="col1">
-              <p><img src="images/main3-1.jpg" alt="main3-1" /></p>
-              <p><img src="images/main3-2.jpg" alt="main3-2" /></p>
-              <p><img src="images/main3-3.jpg" alt="main3-3" /></p>
-            </div>
-            <div class="col2">
-              <p><img src="images/main3-4.jpg" alt="main3-4" /></p>
-              <div>
-                <p><img src="images/main3-5.jpg" alt="main3-5" /></p>
-                <p><img src="images/main3-6.jpg" alt="main3-6" /></p>
+      <div class="section sec2">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div id="section1" class="swiper-slide">
+              <div class="mainTxt">
+                <div class="txtTop">
+                  <h1>블랑 써밋 74,<br />순백의 동백처럼 고귀하게 피어나다</h1>
+                  <p>
+                    세상 무엇과도 섞이지 않은 순백의 아름다움으로 피어나는
+                    백동백처럼<br />
+                    세상 무엇과도 비교할 수 없는 당신만의 삶을 꽃 피우게 할 단
+                    하나의 이름, 블랑 써밋 74입니다
+                  </p>
+                </div>
+                <div class="txtBot">
+                  <div>
+                    <p>BLANC : 순백의</p>
+                    <h1>BLANC</h1>
+                  </div>
+                  <div>
+                    <p>SUMMIT : 정점</p>
+                    <h1>SUMMIT</h1>
+                  </div>
+                  <div>
+                    <p>74 : 랜드마크 층수</p>
+                    <h1>74</h1>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col3">
-              <p>
-                블랑 써밋 74,<br />
-                순백의 동백처럼<br />
-                당신의 삶에<br />
-                새로운 영감을 선사합니다
-              </p>
-              <p><img src="images/main3-7.jpg" alt="main3-7" /></p>
+            <div id="section2" class="swiper-slide">
+              <div class="mainBox">
+                <div class="mainLeft">
+                  <h1>
+                    From Camellia<br />
+                    becoming<br />
+                    SUMMIT BLANC WAVE
+                  </h1>
+                  <p>
+                    White Camellia 백동백으로부터 영감을 받은<br />
+                    ‘블랑 써밋 74’는 최고 69층의<br />
+                    서로 다른 시선을 가진 4개의 타워가<br />
+                    마치 아름다운 물결처럼 리듬감 있게 연결되어진<br />
+                    부산을 대표할 초고층 랜드마크입니다
+                  </p>
+                </div>
+                <div class="mainRight">
+                  <div class="col1">
+                    <p><img src="images/main3-1.jpg" alt="main3-1" /></p>
+                    <p><img src="images/main3-2.jpg" alt="main3-2" /></p>
+                    <p><img src="images/main3-3.jpg" alt="main3-3" /></p>
+                  </div>
+                  <div class="col2">
+                    <p><img src="images/main3-4.jpg" alt="main3-4" /></p>
+                    <div>
+                      <p><img src="images/main3-5.jpg" alt="main3-5" /></p>
+                      <p><img src="images/main3-6.jpg" alt="main3-6" /></p>
+                    </div>
+                  </div>
+                  <div class="col3">
+                    <p>
+                      블랑 써밋 74,<br />
+                      순백의 동백처럼<br />
+                      당신의 삶에<br />
+                      새로운 영감을 선사합니다
+                    </p>
+                    <p><img src="images/main3-7.jpg" alt="main3-7" /></p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div id="section3" class="section">
-        <div class="mainBox">
-          <div class="mainLeft">
-            <h1>
-              Like a<br />
-              white camellia
-            </h1>
-            <h4>
-              in your life We provide<br />
-              new inspiration
-            </h4>
-            <strong>써밋의 언어로 번역된 자연의 아름다움</strong>
-            <p>
-              부산을 대표하는 꽃, 백동백의 아름다움을 써밋만의 언어로
-              번역하여<br />
-              부산의 랜드마크가 될 ‘블랑 써밋 74’에 담았습니다
-            </p>
-            <p>
-              백동백의 꽃잎과 잎사귀는 파사드 디자인 컨셉, 봉오리의 곡선은<br />
-              옥탑 디자인으로 형상화되어 74층(지상 69층, 지하5층)<br />
-              초고층 랜드마크 타워로 표현하였습니다
-            </p>
-          </div>
-          <div class="mainRight">
-            <div class="flower">
-              <p><img src="images/main4-1.jpg" alt="main4-1" /></p>
-              <p><img src="images/main4txt.png" alt="main4txt" /></p>
-            </div>
-            <div class="tower">
-              <p><img src="images/main4-2.jpg" alt="main4-2" /></p>
+            <div id="section3" class="swiper-slide">
+              <div class="mainBox">
+                <div class="mainLeft">
+                  <h1>
+                    Like a<br />
+                    white camellia
+                  </h1>
+                  <h4>
+                    in your life We provide<br />
+                    new inspiration
+                  </h4>
+                  <strong>써밋의 언어로 번역된 자연의 아름다움</strong>
+                  <p>
+                    부산을 대표하는 꽃, 백동백의 아름다움을 써밋만의 언어로
+                    번역하여<br />
+                    부산의 랜드마크가 될 ‘블랑 써밋 74’에 담았습니다
+                  </p>
+                  <p>
+                    백동백의 꽃잎과 잎사귀는 파사드 디자인 컨셉, 봉오리의
+                    곡선은<br />
+                    옥탑 디자인으로 형상화되어 74층(지상 69층, 지하5층)<br />
+                    초고층 랜드마크 타워로 표현하였습니다
+                  </p>
+                </div>
+                <div class="mainRight">
+                  <div class="flower">
+                    <p><img src="images/main4-1.jpg" alt="main4-1" /></p>
+                    <p><img src="images/main4txt.png" alt="main4txt" /></p>
+                  </div>
+                  <div class="tower">
+                    <p><img src="images/main4-2.jpg" alt="main4-2" /></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -656,5 +660,81 @@
         <h6>ⓒ prugiosummit All rights reserved.</h6>
       </footer>
     </main>
+    <script>
+      $("#fullpage").fullpage({
+        // sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE"],
+        anchors: ["sec1", "sec2", "sec3"],
+        // menu: "#menu",
+        scrollingSpeed: 1000,
+        // scrollBar: true,
+        onLeave: function (origin, destination, direction) {
+          // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기
+          $("#fullpage").on("scroll touchmove mousewheel", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+          });
+          swiper.mousewheel.disable();
+        },
+        afterLoad: function (anchorLink, index) {
+          // 전환이 끝난후 이벤트풀기
+          $("#fullpage").off("scroll mousewheel");
+          if (!$(".fp-completely .swiper-wrapper").length > 0)
+            $("#fullpage").off("touchmove"); // 모바일분기
+          if (swiper) swiper.mousewheel.enable();
+          if (!$(".sec2").hasClass("active"))
+            $.fn.fullpage.setAllowScrolling(true); // 슬라이드 섹션을 벗어나면 휠풀어주기
+        },
+      });
+
+      // swiper
+      var length = $(".sec2 .swiper-slide").length;
+      var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        freeMode: false,
+        speed: 1000,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        mousewheel: true,
+        on: {
+          slideChange: function () {
+            var i = this.activeIndex;
+            // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
+            if (this.activeIndex != 0 && i != length)
+              $.fn.fullpage.setAllowScrolling(false);
+            if (length == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false); //슬라이드가 2개밖에 없을때
+            // console.log('즉시 : ' + i);
+          },
+          slideChangeTransitionEnd: function () {
+            var i = this.activeIndex;
+            // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
+            if (i == 0 || i >= length - 1)
+              $.fn.fullpage.setAllowScrolling(true);
+            // console.log('전환후 : ' + idx);
+          },
+          touchMove: function (e) {
+            var startY = e.touches.startY;
+            setTimeout(function () {
+              if (startY > e.touches.currentY) swiper.slideNext();
+              else swiper.slidePrev();
+            }, 100);
+          },
+        },
+      });
+    </script>
+    <script>
+      let nav = document.querySelector(".gnb");
+      nav.onmouseenter = function () {
+        document.querySelector("header").style.backgroundColor = "#fff";
+        document.querySelector(".logo a").classList.add("on");
+      };
+      nav.onmouseleave = function () {
+        document.querySelector("header").style.backgroundColor = "transparent";
+        document.querySelector(".logo a").classList.remove("on");
+      };
+    </script>
   </body>
 </html>
