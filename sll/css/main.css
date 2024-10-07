@@ -573,5 +573,59 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
     line-height: 21px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+  .mainBox h1,
+  .blackBox h1 {
+    font-size: calc(140 * 100vw / 1920);
+    line-height: calc(120 * 100vw / 1920);
+  }
+  .mainBox h2,
+  .blackBox h2 {
+    font-size: calc(48 * 100vw / 1920);
+    line-height: calc(60 * 100vw / 1920);
+  }
+  .mainBox p,
+  .blackBox p {
+    font-size: 18px;
+    line-height: calc(18px + 8 * 100vw / 1920);
+    margin-top: calc(40 * 100vw / 1920);
+  }
+  .mainBox .link,
+  .blackBox .link {
+    margin-top: calc(40 * 100vw / 1920);
+  }
+  .mainBox .link h3,
+  .blackBox .link h3 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+/* 수정필 */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .mainBox h1,
+  .blackBox h1 {
+    font-size: calc(140 * 100vw / 1920);
+    line-height: calc(120 * 100vw / 1920);
+  }
+  .mainBox h2,
+  .blackBox h2 {
+    font-size: calc(48 * 100vw / 1920);
+    line-height: calc(60 * 100vw / 1920);
+  }
+  .mainBox p,
+  .blackBox p {
+    font-size: 18px;
+    line-height: calc(18px + 8 * 100vw / 1920);
+    margin-top: calc(40 * 100vw / 1920);
+  }
+  .mainBox .link,
+  .blackBox .link {
+    margin-top: calc(40 * 100vw / 1920);
+  }
+  .mainBox .link h3,
+  .blackBox .link h3 {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
