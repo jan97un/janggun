@@ -412,7 +412,6 @@ header {
   max-width: 1216px;
   margin: 0 auto 25px;
   padding-top: 160px;
-  /* box-sizing: border-box; */
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
@@ -506,6 +505,22 @@ header {
   width: 24px;
   height: 24px;
   line-height: 0px;
+}
+.main5 .swiper-container {
+  position: relative;
+  width: 100%;
+  height: 560px;
+}
+.main5 .swiper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.main5 .slide-medi,
+.main5 .slide-non {
+  height: 0;
 }
 .main5 .swiper-slide {
   cursor: pointer;
@@ -606,7 +621,6 @@ header {
   font-size: 14px;
   line-height: 24px;
 }
-
 .main5 > p {
   max-width: 1216px;
   margin: 0 auto;
