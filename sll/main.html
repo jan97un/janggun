@@ -86,6 +86,24 @@
             }
           },
         });
+        $(".family").click(function () {
+          if ($(".family .navBar").css("visibility") == "visible") {
+            $(".family .navBar").css("visibility", "hidden");
+            $(".family label").css("transform", "translateY(-50%) rotate(0)");
+          } else {
+            $(".family .navBar").css("visibility", "visible");
+            $(".family label").css("translateY(-50%) rotate(180deg)");
+          }
+        });
+        $(".family label").click(function () {
+          if ($(".family .navBar").css("visibility") == "visible") {
+            $(".family .navBar").css("visibility", "hidden");
+            $(".family label").css("transform", "translateY(-50%) rotate(0)");
+          } else {
+            $(".family .navBar").css("visibility", "visible");
+            $(".family label").css("translateY(-50%) rotate(180deg)");
+          }
+        });
       });
     </script>
   </head>
@@ -350,55 +368,55 @@
                   <li><a href="">개인정보처리방침</a></li>
                   <li><a href="">안전보건경영방침</a></li>
                   <li><a href="">윤리경영</a></li>
-                  <li>
+                  <li class="family">
                     <p>FAMILY SITE</p>
-                    <div class="family">
+                    <div class="site">
                       <ul class="navBar">
                         <li>
-                          <h5></h5>
+                          <h5>방송군</h5>
                           <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">콘텐트리중앙</a></li>
+                            <li><a href="">JTBC</a></li>
+                            <li><a href="">JTBC2</a></li>
+                            <li><a href="">JTBC4</a></li>
+                            <li><a href="">JTBC GOLF&SPORTS</a></li>
+                            <li><a href="">JTBC GOLF</a></li>
+                            <li><a href="">JTBC Worldwide</a></li>
                           </ul>
                         </li>
                         <li>
-                          <h5></h5>
+                          <h5>신문군</h5>
                           <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">중앙일보</a></li>
+                            <li><a href="">중앙SUNDAY</a></li>
+                            <li><a href="">Korea Joongang Daily</a></li>
+                            <li><a href="">The Korea Daily</a></li>
                           </ul>
                         </li>
                         <li>
-                          <h5></h5>
+                          <h5>멀티플렉스군</h5>
                           <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">메가박스</a></li>
+                            <li><a href="">필름소사이어티</a></li>
+                            <li><a href="">클래식 소사이어티</a></li>
                           </ul>
-                          <h5></h5>
+                          <h5>레저군</h5>
                           <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">휘닉스 호텔앤드리조트</a></li>
+                            <li><a href="">휘닉스 파크</a></li>
+                            <li><a href="">휘닉스 아일랜드</a></li>
                           </ul>
                         </li>
                         <li>
-                          <h5></h5>
+                          <h5>잡지군</h5>
                           <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">월간중앙</a></li>
+                            <li><a href="">포브스코리아</a></li>
+                            <li><a href="">중앙북스</a></li>
+                            <li><a href="">엘르</a></li>
+                            <li><a href="">바자</a></li>
+                            <li><a href="">코스모폴리탄</a></li>
+                            <li><a href="">에스콰이어</a></li>
                           </ul>
                         </li>
                       </ul>

@@ -40,6 +40,11 @@
   src: url(../webfonts/JTBCGothic-Bold.woff2) format("woff2");
 }
 /* font-family: "JTBCGothic-Bold", sans-serif; */
+@font-face {
+  font-family: "NotoSansKR-Regular";
+  src: url(../webfonts/NotoSansKR-Regular.woff) format("woff2");
+}
+/* font-family: "NotoSansKR-Regular", sans-serif; */
 
 * {
   margin: 0;
@@ -145,7 +150,7 @@ header .head .headRight:hover li a span {
   height: 100%;
 }
 .section {
-  overflow: hidden;
+  /* overflow: hidden; */
   color: #fff;
 }
 #section0 {
@@ -276,7 +281,6 @@ header .head .headRight:hover li a span {
 
 #section5 {
   background: url(../images/main6-1.webp) center/cover no-repeat;
-  overflow: hidden;
 }
 #section5 .people img {
   position: absolute;
@@ -393,6 +397,7 @@ footer .foot .footBot .flex {
 }
 footer .foot .footBot .flex .txtBox .footLink {
   display: flex;
+  margin-bottom: 6px;
 }
 footer .foot .footBot .flex .txtBox .footLink > li {
   position: relative;
@@ -423,11 +428,52 @@ footer .foot .footBot .flex .txtBox .footLink > li:nth-child(2) a {
 .footLink #family {
   display: none;
 }
-.footLink .family label {
+.footLink .family > p {
+  cursor: pointer;
+}
+.footLink .site {
+  width: 10px;
+  height: 17px;
+  cursor: pointer;
+}
+.footLink .site .navBar {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  padding: 23px 28px;
+  background-color: #fff;
+  display: flex;
+  gap: 20px;
+  font-family: "NotoSansKR-Regular";
+  white-space: nowrap;
+  visibility: hidden;
+}
+.footLink .site .navBar h5 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 23px;
+  letter-spacing: -1px;
+  color: #333;
+  margin-bottom: 8px;
+}
+.footLink .site .navBar a {
+  font-size: 14px;
+  line-height: 23px;
+  color: #333;
+  text-transform: none;
+}
+.footLink .site .navBar > li:nth-child(3) > h5:nth-of-type(2) {
+  margin-top: 20px;
+}
+.footLink .site label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: url(../images/arrowfamily.svg) center/cover no-repeat;
   width: 10px;
   height: 8px;
   display: block;
+  cursor: pointer;
 }
 footer .foot .footBot .flex .txtBox address {
   display: flex;
@@ -437,6 +483,7 @@ footer .foot .footBot .flex .txtBox address {
   color: #f5f5f5;
   opacity: 0.8;
   margin: 6px 0 18px;
+  line-height: 16px;
 }
 footer .foot .footBot .flex .txtBox address span {
   font-family: "JTBCGothic-SemiLight", sans-serif;
@@ -445,6 +492,9 @@ footer .foot .footBot .flex .txtBox address p {
   font-family: "geomanist-regular", sans-serif;
   position: relative;
   margin-left: 12px;
+}
+footer .foot .footBot .flex .txtBox address p:last-child {
+  margin-top: 8px;
 }
 footer .foot .footBot .flex .txtBox address p:nth-of-type(1) {
   text-transform: none;
