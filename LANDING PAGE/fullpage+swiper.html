@@ -38,10 +38,12 @@
       <div class="section sec2">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href=""></a></div>
-            <div class="swiper-slide"><a href=""></a></div>
-            <div class="swiper-slide"><a href=""></a></div>
-            <div class="swiper-slide"><a href=""></a></div>
+            <div class="swiper-slide">
+              <a href="../hjmembers/">허스트중앙</a>
+            </div>
+            <div class="swiper-slide"><a href="../msf/">국경없는의사회</a></div>
+            <div class="swiper-slide"><a href="../sll/">SLL</a></div>
+            <div class="swiper-slide"><a href="../blanc/">블랑 써밋 74</a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -53,8 +55,7 @@
     <script>
       $(function () {
         $("#fullpage").fullpage({
-          sectionsColor: ["#1bbc9b", "#4BBFC3", "#7BAABE"],
-          anchors: ["sec1", "sec2", "sec3"],
+          sectionsColor: ["#fff", "#fff", "#fff"],
           scrollingSpeed: 1000,
           onLeave: function (origin, destination, direction) {
             // 빠른전환으로 이벤트중복시 fullpage와 swiper전환시점 분리막기

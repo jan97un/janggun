@@ -304,59 +304,65 @@
           </div>
         </div>
       </div>
-      <div id="section4" class="section">
-        <div class="mainVideo">
-          <iframe
-            src="https://player.vimeo.com/video/997701069?background=1&amp;loop=1&amp;autopause=0"
-            frameborder="0"
-            allowfullscreen=""
-            data-ready="true"
-          ></iframe>
-        </div>
-        <div class="mainBox videoBox">
-          <div class="txtTop">
-            <h3>당신의 자부심이 될</h3>
-            <h1>도시 속의 작품 하나</h1>
-            <p>
-              삶을 바라보는 눈높이가 다른 당신을 위해<br />
-              살수록 가치가 높아지는 인생의 작품을 선사합니다
-            </p>
-          </div>
-          <div class="txtBot">
-            <p><img src="images/main5txt.png" alt="main5txt" /></p>
-          </div>
-        </div>
-      </div>
-      <div id="section5" class="section">
-        <div class="mainBox">
-          <div class="mainLeft">
-            <p><img src="images/main6-1.jpg" alt="main6-1" /></p>
-          </div>
-          <div class="mainRight">
-            <div>
-              <p><img src="images/main6-2.jpg" alt="main6-2" /></p>
+      <!-- <div class="section sec3">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div id="section4" class="swiper-slide">
+              <div class="mainVideo">
+                <iframe
+                  src="https://player.vimeo.com/video/997701069?background=1&amp;loop=1&amp;autopause=0"
+                  frameborder="0"
+                  allowfullscreen=""
+                  data-ready="true"
+                ></iframe>
+              </div>
+              <div class="mainBox videoBox">
+                <div class="txtTop">
+                  <h3>당신의 자부심이 될</h3>
+                  <h1>도시 속의 작품 하나</h1>
+                  <p>
+                    삶을 바라보는 눈높이가 다른 당신을 위해<br />
+                    살수록 가치가 높아지는 인생의 작품을 선사합니다
+                  </p>
+                </div>
+                <div class="txtBot">
+                  <p><img src="images/main5txt.png" alt="main5txt" /></p>
+                </div>
+              </div>
             </div>
-            <ul>
-              <li>
-                <p><img src="images/main6-3.jpg" alt="main6-3" /></p>
-                <h3>삶의 품격을 높여주는 랜드마크 설계</h3>
-                <h5>
-                  지상 49층부터 69층의 리듬감 있는 스카이라인<br />Neutral계열의
-                  외장 패널과 커튼월룩이 적용된 고급스러운 입면
-                </h5>
-              </li>
-              <li>
-                <p><img src="images/main6-4.jpg" alt="main6-4" /></p>
-                <h3>자연의 곡선을 담아낸 써밋만의 디자인</h3>
-                <h5>
-                  푸른 자연과 우아한 곡선이 조화를 이루는 아름다운 단지<br />공간마다
-                  꽃과 물, 예술이 피어나는 갤러리 같은 단지 설계
-                </h5>
-              </li>
-            </ul>
+            <div id="section5" class="swiper-slide">
+              <div class="mainBox">
+                <div class="mainLeft">
+                  <p><img src="images/main6-1.jpg" alt="main6-1" /></p>
+                </div>
+                <div class="mainRight">
+                  <div>
+                    <p><img src="images/main6-2.jpg" alt="main6-2" /></p>
+                  </div>
+                  <ul>
+                    <li>
+                      <p><img src="images/main6-3.jpg" alt="main6-3" /></p>
+                      <h3>삶의 품격을 높여주는 랜드마크 설계</h3>
+                      <h5>
+                        지상 49층부터 69층의 리듬감 있는 스카이라인<br />Neutral계열의
+                        외장 패널과 커튼월룩이 적용된 고급스러운 입면
+                      </h5>
+                    </li>
+                    <li>
+                      <p><img src="images/main6-4.jpg" alt="main6-4" /></p>
+                      <h3>자연의 곡선을 담아낸 써밋만의 디자인</h3>
+                      <h5>
+                        푸른 자연과 우아한 곡선이 조화를 이루는 아름다운 단지<br />공간마다
+                        꽃과 물, 예술이 피어나는 갤러리 같은 단지 설계
+                      </h5>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div id="section6" class="section">
         <div class="mainVideo">
           <iframe
@@ -689,15 +695,43 @@
 
       // swiper
       var length = $(".sec2 .swiper-slide").length;
-      var swiper = new Swiper(".swiper-container", {
+      var swiper = new Swiper(".sec2 .swiper-container", {
         slidesPerView: 1,
         spaceBetween: 0,
         freeMode: false,
         speed: 1000,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        mousewheel: true,
+        on: {
+          slideChange: function () {
+            var i = this.activeIndex;
+            // 처음과 마지막 슬라이드가 아닐경우 fullpage전환 막기
+            if (this.activeIndex != 0 && i != length)
+              $.fn.fullpage.setAllowScrolling(false);
+            if (length == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false); //슬라이드가 2개밖에 없을때
+            // console.log('즉시 : ' + i);
+          },
+          slideChangeTransitionEnd: function () {
+            var i = this.activeIndex;
+            // 처음과 마지막 슬라이드일 경우 fullpage전환 풀기
+            if (i == 0 || i >= length - 1)
+              $.fn.fullpage.setAllowScrolling(true);
+            // console.log('전환후 : ' + idx);
+          },
+          touchMove: function (e) {
+            var startY = e.touches.startY;
+            setTimeout(function () {
+              if (startY > e.touches.currentY) swiper.slideNext();
+              else swiper.slidePrev();
+            }, 100);
+          },
         },
+      });
+      var length = $(".sec3 .swiper-slide").length;
+      var swiper = new Swiper(".sec3 .swiper-container", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        freeMode: false,
+        speed: 1000,
         mousewheel: true,
         on: {
           slideChange: function () {
