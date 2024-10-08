@@ -242,7 +242,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 
 #section0 .mainBg {
   position: absolute;
-  background: url(../images/main1.jpg) bottom/cover no-repeat;
+  background: url(../images/section0.jpg) bottom/cover no-repeat;
   left: 0;
   top: -200px;
   width: 100%;
@@ -251,7 +251,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 }
 #section0 .shadow {
   position: absolute;
-  background: url(../images/main1shadow.png) bottom/cover no-repeat;
+  background: url(../images/section1shadow.png) bottom/cover no-repeat;
   left: 0;
   top: 0;
   width: 100%;
@@ -363,7 +363,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 /* section1 */
 
 #section1 {
-  background: url(../images/main2.jpg) bottom/cover no-repeat;
+  background: url(../images/section1.jpg) bottom/cover no-repeat;
 }
 #section1 .mainTxt {
   width: 90%;
@@ -435,7 +435,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 /* section2 */
 
 #section2 {
-  background: url(../images/main3.jpg) bottom/cover no-repeat;
+  background: url(../images/section2.jpg) bottom/cover no-repeat;
 }
 #section2 .mainBox {
   width: 90%;
@@ -652,7 +652,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 /* section7 */
 
 #section7 {
-  background: url(../images/main8.jpg) bottom/cover no-repeat;
+  background: url(../images/section7.jpg) bottom/cover no-repeat;
   color: #fff;
 }
 #section7 .mainTxt {
@@ -687,7 +687,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
   margin-top: 15px;
 }
 #section7 .tower {
-  background: url(../images/main8obj.png) bottom/cover no-repeat;
+  background: url(../images/section7obj.png) bottom/cover no-repeat;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -890,7 +890,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 /* section13 */
 
 #section13 {
-  background: url(../images/main14.jpg) center/cover no-repeat;
+  background: url(../images/section13.jpg) center/cover no-repeat;
 }
 .high {
   position: relative;
@@ -925,7 +925,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 /* section14 */
 
 #section14 {
-  background: url(../images/main15.jpg) center/cover no-repeat;
+  background: url(../images/section14.jpg) center/cover no-repeat;
 }
 #section14 .high {
   width: 68%;
@@ -936,7 +936,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 /* section15 */
 
 #section15 {
-  background: url(../images/main16.jpg) center/cover no-repeat;
+  background: url(../images/section15.jpg) center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
