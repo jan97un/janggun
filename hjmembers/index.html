@@ -3,19 +3,25 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>허스트중앙 통합멤버십 | Hearst Joongang membership</title>
-    <link rel="stylesheet" href="css/teacher.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" href="css/aos.css" />
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
-    <link rel="stylesheet" href="css/aos.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="js/scrolloverflow.js"></script>
     <script src="js/jquery.fullPage.js"></script>
     <script src="js/aos.js"></script>
     <script>
       $(function () {
+        const sectionLength = $(".section").length;
+        let myV = $("#myVideo").get(0);
+        function init() {
+          $(".section").eq(0).find("[data-aos]").removeClass("aos-animate");
+          setTimeout(() => {
+            $(".section").eq(0).addClass("start");
+            $(".section").eq(0).find("[data-aos]").addClass("aos-animate");
+          }, 2200);
+        }
+        var wheelCount = 0;
         $("#fullpage").fullpage({
           verticalCentered: true,
           sectionsColor: [
@@ -33,48 +39,13 @@
             "#f7f7f7",
             "#fff",
           ],
-          scrollBar: true,
           afterLoad: function (anchorLink, index) {
-            if (
-              index == 4 ||
-              index == 5 ||
-              index == 9 ||
-              index == 10 ||
-              index == 12 ||
-              index == 13
-            ) {
-              $(".head .logo").html(
-                '<img src="images/logoblack.svg" alt="logoblack" />'
-              );
-              $(".dep1 > li > a").css("color", "#111");
-              $(".headRight li a").css("color", "#111");
-              $(".hamberger p").html(
-                '<img src="images/hambergerbl.png" alt="hambergerbl" />'
-              );
-              $(".gnb").hover(
-                function () {
-                  $("header").css("background-color", "#fff");
-                  $(".head .logo").html(
-                    '<img src="images/logoblack.svg" alt="logoblack" />'
-                  );
-                },
-                function () {
-                  $("header").css("background-color", "transparent");
-                  $(".head .logo").html(
-                    '<img src="images/logoblack.svg" alt="logowhite" />'
-                  );
-                }
-              );
-              let bool = true;
-            } else {
-              $(".head .logo").html(
-                '<img src="images/logowhite.svg" alt="logowhite" />'
-              );
-              $(".dep1 > li > a").css("color", "#fff");
-              $(".headRight li a").css("color", "#fff");
-              $(".hamberger p").html(
-                '<img src="images/hambergerwh.png" alt="hambergerwh" />'
-              );
+            const realIndex = index - 1;
+            sectionIndex = realIndex;
+            if (index !== sectionLength) {
+              $(".section").find("[data-aos]").removeClass("aos-animate");
+            }
+            if (realIndex === 0) {
               $(".gnb").hover(
                 function () {
                   $("header").css("background-color", "#fff");
@@ -89,7 +60,97 @@
                   );
                 }
               );
+              $(".section")
+                .eq(index - 1)
+                .addClass("after-load");
+              if (!$(".section").eq(index).hasClass("after-load")) {
+                AOS.init();
+              }
+              if (!myV === false) {
+                $("#myVideo").on("loadeddata", function () {
+                  init();
+                  setInterval(function () {
+                    if ($("#myVideo").prop("ended")) {
+                      init();
+                    }
+                  }, 200);
+                });
+              } else {
+                init();
+              }
+            } else {
+              $(".section")
+                .eq(realIndex)
+                .find("[data-aos]")
+                .addClass("aos-animate");
+              if (
+                index == 4 ||
+                index == 5 ||
+                index == 9 ||
+                index == 10 ||
+                index == 12 ||
+                index == 13
+              ) {
+                $(".head .logo").html(
+                  '<img src="images/logoblack.svg" alt="logoblack" />'
+                );
+                $(".dep1 > li > a").css("color", "#111");
+                $(".headRight li a").css("color", "#111");
+                $(".hamberger p").html(
+                  '<img src="images/hambergerbl.png" alt="hambergerbl" />'
+                );
+                $(".gnb").hover(
+                  function () {
+                    $("header").css("background-color", "#fff");
+                    $(".head .logo").html(
+                      '<img src="images/logoblack.svg" alt="logoblack" />'
+                    );
+                  },
+                  function () {
+                    $("header").css("background-color", "transparent");
+                    $(".head .logo").html(
+                      '<img src="images/logoblack.svg" alt="logowhite" />'
+                    );
+                  }
+                );
+                let bool = true;
+              } else {
+                $(".head .logo").html(
+                  '<img src="images/logowhite.svg" alt="logowhite" />'
+                );
+                $(".dep1 > li > a").css("color", "#fff");
+                $(".headRight li a").css("color", "#fff");
+                $(".hamberger p").html(
+                  '<img src="images/hambergerwh.png" alt="hambergerwh" />'
+                );
+                $(".gnb").hover(
+                  function () {
+                    $("header").css("background-color", "#fff");
+                    $(".head .logo").html(
+                      '<img src="images/logoblack.svg" alt="logoblack" />'
+                    );
+                  },
+                  function () {
+                    $("header").css("background-color", "transparent");
+                    $(".head .logo").html(
+                      '<img src="images/logowhite.svg" alt="logowhite" />'
+                    );
+                  }
+                );
+              }
             }
+          },
+          onLeave: function (origin, destination, direction, index) {
+            if (origin == 1 && wheelCount < 1) {
+              setTimeout(() => {
+                $(".txt1").find("[data-aos]").removeClass("aos-animate");
+              }, 750);
+            }
+
+            $(".section")
+              .eq(origin)
+              .find("[data-aos]")
+              .removeClass("aos-animate");
           },
         });
         $(".close").click(function () {
@@ -130,7 +191,9 @@
         <li>
           <div class="dep1">
             <h3>서비스 소개</h3>
-            <span><img src="images/mobnavplus.svg" alt="mobnavplus" /></span>
+            <span>
+              <img src="images/mobnavplus.svg" alt="mobnavplus" />
+            </span>
           </div>
           <div class="dep2">
             <a href="">About Us</a>
@@ -245,8 +308,10 @@
               엘르, 코스모폴리탄, 하퍼스 바자, 에스콰이어의 다채로운 콘텐츠와<br />
               에세이, 직업 정보, 아트 정보 등 취향 맞춤형 서비스까지
             </p>
-            <div class="mainLink" data-aos="fade-up" data-aos-delay="600">
-              <a href=""><span>멤버십 가입하기</span></a>
+            <div data-aos="fade-up" data-aos-delay="600">
+              <a href="" class="mainLink">
+                <span>멤버십 가입하기</span>
+              </a>
             </div>
           </div>
         </div>
@@ -275,14 +340,16 @@
               재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!
             </p>
             <div
-              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href=""><span>매거진 보러가기</span></a>
+              <a href="" class="mainLink">
+                <span>매거진 보러가기</span>
+              </a>
             </div>
           </div>
+          >
           <ul class="mob">
             <li>
               <p><img src="images/pointmobobj1.png" alt="pointmobobj1" /></p>
@@ -312,7 +379,7 @@
         </div>
       </div>
       <div class="section" id="section2">
-        <div class="mainPage darkPage memPage coupon">
+        <div class="mainPage memPage darkPage coupon">
           <div
             class="obj pc"
             data-aos="fade-in"
@@ -335,12 +402,13 @@
               똑똑하게 사용해보세요
             </p>
             <div
-              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href=""><span>포인트 샵 바로가기</span></a>
+              <a href="" class="mainLink">
+                <span>포인트 샵 바로가기</span>
+              </a>
             </div>
           </div>
         </div>
@@ -379,15 +447,21 @@
               세계 최대 네트워크를 자랑하는 No.1 패션 미디어
             </p>
             <div
-              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href=""><span>바로가기</span></a>
+              <a href="" class="mainLink">
+                <span>바로가기</span>
+              </a>
             </div>
           </div>
-          <ul class="mob">
+          <ul
+            class="mob"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <li>
               <p><img src="images/ellemob1.jpg" alt="ellemob1" /></p>
             </li>
@@ -420,15 +494,21 @@
               글로벌 라이프스타일 미디어
             </p>
             <div
-              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href=""><span>바로가기</span></a>
+              <a href="" class="mainLink">
+                <span>바로가기</span>
+              </a>
             </div>
           </div>
-          <ul class="mob">
+          <ul
+            class="mob"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <li>
               <p>
                 <img src="images/cosmopolitanmob1.jpg" alt="cosmopolitanmob1" />
@@ -467,15 +547,21 @@
               통찰력과 영감을 제공하는 전문 매거진
             </p>
             <div
-              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href=""><span>바로가기</span></a>
+              <a href="" class="mainLink">
+                <span>바로가기</span>
+              </a>
             </div>
           </div>
-          <ul class="mob">
+          <ul
+            class="mob"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <li>
               <p><img src="images/bazaarmob1.jpg" alt="bazaarmob1" /></p>
             </li>
@@ -508,15 +594,21 @@
               지적인 바이블
             </p>
             <div
-              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href=""><span>바로가기</span></a>
+              <a href="" class="mainLink">
+                <span>바로가기</span>
+              </a>
             </div>
           </div>
-          <ul class="mob">
+          <ul
+            class="mob"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <li>
               <p><img src="images/esquiremob1.jpg" alt="esquiremob1" /></p>
             </li>
@@ -553,8 +645,10 @@
                 동시대를 살아가는 여성들의 에세이<br class="mob" />
                 뉴스레터를 구독해보세요.
               </p>
-              <div class="mainLink">
-                <a href=""><span>바로가기</span></a>
+              <div>
+                <a href="" class="mainLink">
+                  <span>바로가기</span>
+                </a>
               </div>
             </div>
             <picture
@@ -565,7 +659,12 @@
             >
               <img src="images/ellevoicepc.png" alt="ellevoicepc" />
             </picture>
-            <picture class="mob">
+            <picture
+              class="mob"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
               <img src="images/ellevoicemob.png" alt="ellevoicemob" />
             </picture>
           </div>
@@ -584,8 +683,8 @@
                 지금 국내의 아트신에서 펼쳐지고 있는<br />
                 주요 전시와 이슈들을 확인해보세요!
               </p>
-              <div class="mainLink">
-                <a href=""><span>바로가기</span></a>
+              <div>
+                <a class="mainLink" href=""><span>바로가기</span></a>
               </div>
             </div>
             <picture
@@ -596,7 +695,12 @@
             >
               <img src="images/artwalkpc.png" alt="artwalkpc" />
             </picture>
-            <picture class="mob">
+            <picture
+              class="mob"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
               <img src="images/artwalkmob.png" alt="artwalkmob" />
             </picture>
           </div>
@@ -616,8 +720,10 @@
                 에디터의 시각으로 수집한 공간에서<br />
                 나만의 취향을 발견해보세요.
               </p>
-              <div class="mainLink">
-                <a href=""><span>바로가기</span></a>
+              <div>
+                <a href="" class="mainLink">
+                  <span>바로가기</span>
+                </a>
               </div>
             </div>
             <picture
@@ -628,7 +734,12 @@
             >
               <img src="images/eeepc.png" alt="eeepc" />
             </picture>
-            <picture class="mob">
+            <picture
+              class="mob"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
               <img src="images/eeemob.png" alt="eeemob" />
             </picture>
           </div>
