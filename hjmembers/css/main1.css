@@ -719,14 +719,11 @@ footer .foot .footBot p {
   main .point .mob {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  main .point .mob ul {
     display: flex;
     gap: 12px;
+    z-index: 1;
   }
-  main .point .mob ul li img {
+  main .point .mob li p img {
     width: 130px;
     height: auto;
   }
@@ -754,6 +751,36 @@ footer .foot .footBot p {
   }
   main .esquire .txt p:first-child {
     width: 211px;
+  }
+  footer .foot .footTop {
+    padding: 19px 0;
+    gap: 17px;
+  }
+  footer .foot .footTop li {
+    font-size: 12px;
+  }
+  footer .foot .footTop li a {
+    position: relative;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  footer .foot .footTop li a::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: -9px;
+    width: 1px;
+    height: 11px;
+    background-color: #dbdbdb;
+  }
+  footer .foot .footTop li:last-child a::after {
+    width: 0;
+  }
+  footer .foot .footBot {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
   }
   .float {
     right: 20px;

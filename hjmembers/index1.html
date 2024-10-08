@@ -46,6 +46,20 @@
               $(".section").find("[data-aos]").removeClass("aos-animate");
             }
             if (realIndex === 0) {
+              $(".gnb").hover(
+                function () {
+                  $("header").css("background-color", "#fff");
+                  $(".head .logo").html(
+                    '<img src="images/logoblack.svg" alt="logoblack" />'
+                  );
+                },
+                function () {
+                  $("header").css("background-color", "transparent");
+                  $(".head .logo").html(
+                    '<img src="images/logowhite.svg" alt="logowhite" />'
+                  );
+                }
+              );
               $(".section")
                 .eq(index - 1)
                 .addClass("after-load");
@@ -338,10 +352,10 @@
           >
           <ul class="mob">
             <li>
-              <img src="images/pointmobobj1.png" alt="pointmobobj1" />
+              <p><img src="images/pointmobobj1.png" alt="pointmobobj1" /></p>
             </li>
             <li>
-              <img src="images/pointmobobj2.png" alt="pointmobobj2" />
+              <p><img src="images/pointmobobj2.png" alt="pointmobobj2" /></p>
             </li>
             <li>
               <p><img src="images/pointmobobj3.png" alt="pointmobobj3" /></p>
@@ -442,7 +456,12 @@
               </a>
             </div>
           </div>
-          <ul class="mob">
+          <ul
+            class="mob"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <li>
               <p><img src="images/ellemob1.jpg" alt="ellemob1" /></p>
             </li>
@@ -484,7 +503,12 @@
               </a>
             </div>
           </div>
-          <ul class="mob">
+          <ul
+            class="mob"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <li>
               <p>
                 <img src="images/cosmopolitanmob1.jpg" alt="cosmopolitanmob1" />
@@ -532,7 +556,12 @@
               </a>
             </div>
           </div>
-          <ul class="mob">
+          <ul
+            class="mob"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <li>
               <p><img src="images/bazaarmob1.jpg" alt="bazaarmob1" /></p>
             </li>
@@ -574,7 +603,12 @@
               </a>
             </div>
           </div>
-          <ul class="mob">
+          <ul
+            class="mob"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
             <li>
               <p><img src="images/esquiremob1.jpg" alt="esquiremob1" /></p>
             </li>
@@ -625,7 +659,12 @@
             >
               <img src="images/ellevoicepc.png" alt="ellevoicepc" />
             </picture>
-            <picture class="mob">
+            <picture
+              class="mob"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
               <img src="images/ellevoicemob.png" alt="ellevoicemob" />
             </picture>
           </div>
@@ -656,7 +695,12 @@
             >
               <img src="images/artwalkpc.png" alt="artwalkpc" />
             </picture>
-            <picture class="mob">
+            <picture
+              class="mob"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
               <img src="images/artwalkmob.png" alt="artwalkmob" />
             </picture>
           </div>
@@ -690,7 +734,12 @@
             >
               <img src="images/eeepc.png" alt="eeepc" />
             </picture>
-            <picture class="mob">
+            <picture
+              class="mob"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="500"
+            >
               <img src="images/eeemob.png" alt="eeemob" />
             </picture>
           </div>
