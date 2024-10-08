@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>허스트중앙 통합멤버십 | Hearst Joongang membership</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/teacher.css" />
     <link rel="stylesheet" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
@@ -16,16 +16,6 @@
     <script src="js/aos.js"></script>
     <script>
       $(function () {
-        const sectionLength = $(".section").length;
-        let myV = $("#myVideo").get(0);
-        function init() {
-          $(".section").eq(0).find("[data-aos]").removeClass("aos-animate");
-          setTimeout(() => {
-            $(".section").eq(0).addClass("start");
-            $(".section").eq(0).find("[data-aos]").addClass("aos-animate");
-          }, 2200);
-        }
-        var wheelCount = 0;
         $("#fullpage").fullpage({
           verticalCentered: true,
           sectionsColor: [
@@ -43,104 +33,63 @@
             "#f7f7f7",
             "#fff",
           ],
+          scrollBar: true,
           afterLoad: function (anchorLink, index) {
-            const realIndex = index - 1;
-            sectionIndex = realIndex;
-            if (index !== sectionLength) {
-              $(".section").find("[data-aos]").removeClass("aos-animate");
-            }
-            if (realIndex === 0) {
-              $(".section")
-                .eq(index - 1)
-                .addClass("after-load");
-              if (!$(".section").eq(index).hasClass("after-load")) {
-                AOS.init();
-              }
-              if (!myV === false) {
-                $("#myVideo").on("loadeddata", function () {
-                  init();
-                  setInterval(function () {
-                    if ($("#myVideo").prop("ended")) {
-                      init();
-                    }
-                  }, 200);
-                });
-              } else {
-                init();
-              }
+            if (
+              index == 4 ||
+              index == 5 ||
+              index == 9 ||
+              index == 10 ||
+              index == 12 ||
+              index == 13
+            ) {
+              $(".head .logo").html(
+                '<img src="images/logoblack.svg" alt="logoblack" />'
+              );
+              $(".dep1 > li > a").css("color", "#111");
+              $(".headRight li a").css("color", "#111");
+              $(".hamberger p").html(
+                '<img src="images/hambergerbl.png" alt="hambergerbl" />'
+              );
+              $(".gnb").hover(
+                function () {
+                  $("header").css("background-color", "#fff");
+                  $(".head .logo").html(
+                    '<img src="images/logoblack.svg" alt="logoblack" />'
+                  );
+                },
+                function () {
+                  $("header").css("background-color", "transparent");
+                  $(".head .logo").html(
+                    '<img src="images/logoblack.svg" alt="logowhite" />'
+                  );
+                }
+              );
+              let bool = true;
             } else {
-              $(".section")
-                .eq(realIndex)
-                .find("[data-aos]")
-                .addClass("aos-animate");
-              if (
-                index == 4 ||
-                index == 5 ||
-                index == 9 ||
-                index == 10 ||
-                index == 12 ||
-                index == 13
-              ) {
-                $(".head .logo").html(
-                  '<img src="images/logoblack.svg" alt="logoblack" />'
-                );
-                $(".dep1 > li > a").css("color", "#111");
-                $(".headRight li a").css("color", "#111");
-                $(".hamberger p").html(
-                  '<img src="images/hambergerbl.png" alt="hambergerbl" />'
-                );
-                $(".gnb").hover(
-                  function () {
-                    $("header").css("background-color", "#fff");
-                    $(".head .logo").html(
-                      '<img src="images/logoblack.svg" alt="logoblack" />'
-                    );
-                  },
-                  function () {
-                    $("header").css("background-color", "transparent");
-                    $(".head .logo").html(
-                      '<img src="images/logoblack.svg" alt="logowhite" />'
-                    );
-                  }
-                );
-                let bool = true;
-              } else {
-                $(".head .logo").html(
-                  '<img src="images/logowhite.svg" alt="logowhite" />'
-                );
-                $(".dep1 > li > a").css("color", "#fff");
-                $(".headRight li a").css("color", "#fff");
-                $(".hamberger p").html(
-                  '<img src="images/hambergerwh.png" alt="hambergerwh" />'
-                );
-                $(".gnb").hover(
-                  function () {
-                    $("header").css("background-color", "#fff");
-                    $(".head .logo").html(
-                      '<img src="images/logoblack.svg" alt="logoblack" />'
-                    );
-                  },
-                  function () {
-                    $("header").css("background-color", "transparent");
-                    $(".head .logo").html(
-                      '<img src="images/logowhite.svg" alt="logowhite" />'
-                    );
-                  }
-                );
-              }
+              $(".head .logo").html(
+                '<img src="images/logowhite.svg" alt="logowhite" />'
+              );
+              $(".dep1 > li > a").css("color", "#fff");
+              $(".headRight li a").css("color", "#fff");
+              $(".hamberger p").html(
+                '<img src="images/hambergerwh.png" alt="hambergerwh" />'
+              );
+              $(".gnb").hover(
+                function () {
+                  $("header").css("background-color", "#fff");
+                  $(".head .logo").html(
+                    '<img src="images/logoblack.svg" alt="logoblack" />'
+                  );
+                },
+                function () {
+                  $("header").css("background-color", "transparent");
+                  $(".head .logo").html(
+                    '<img src="images/logowhite.svg" alt="logowhite" />'
+                  );
+                }
+              );
             }
-          },
-          onLeave: function (origin, destination, direction, index) {
-            if (origin == 1 && wheelCount < 1) {
-              setTimeout(() => {
-                $(".txt1").find("[data-aos]").removeClass("aos-animate");
-              }, 750);
-            }
-
-            $(".section")
-              .eq(origin)
-              .find("[data-aos]")
-              .removeClass("aos-animate");
           },
         });
         $(".close").click(function () {
@@ -296,10 +245,8 @@
               엘르, 코스모폴리탄, 하퍼스 바자, 에스콰이어의 다채로운 콘텐츠와<br />
               에세이, 직업 정보, 아트 정보 등 취향 맞춤형 서비스까지
             </p>
-            <div data-aos="fade-up" data-aos-delay="600">
-              <a href="" class="mainLink">
-                <span>멤버십 가입하기</span>
-              </a>
+            <div class="mainLink" data-aos="fade-up" data-aos-delay="600">
+              <a href=""><span>멤버십 가입하기</span></a>
             </div>
           </div>
         </div>
@@ -328,13 +275,12 @@
               재미있는 콘텐츠도 보고, 포인트도 쌓아보세요!
             </p>
             <div
+              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href="" class="mainLink">
-                <span>매거진 보러가기</span>
-              </a>
+              <a href=""><span>매거진 보러가기</span></a>
             </div>
           </div>
           <ul class="mob">
@@ -366,7 +312,7 @@
         </div>
       </div>
       <div class="section" id="section2">
-        <div class="mainPage memPage darkPage coupon">
+        <div class="mainPage darkPage memPage coupon">
           <div
             class="obj pc"
             data-aos="fade-in"
@@ -389,13 +335,12 @@
               똑똑하게 사용해보세요
             </p>
             <div
+              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href="" class="mainLink">
-                <span>포인트 샵 바로가기</span>
-              </a>
+              <a href=""><span>포인트 샵 바로가기</span></a>
             </div>
           </div>
         </div>
@@ -434,13 +379,12 @@
               세계 최대 네트워크를 자랑하는 No.1 패션 미디어
             </p>
             <div
+              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href="" class="mainLink">
-                <span>바로가기</span>
-              </a>
+              <a href=""><span>바로가기</span></a>
             </div>
           </div>
           <ul class="mob">
@@ -476,13 +420,12 @@
               글로벌 라이프스타일 미디어
             </p>
             <div
+              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href="" class="mainLink">
-                <span>바로가기</span>
-              </a>
+              <a href=""><span>바로가기</span></a>
             </div>
           </div>
           <ul class="mob">
@@ -524,13 +467,12 @@
               통찰력과 영감을 제공하는 전문 매거진
             </p>
             <div
+              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href="" class="mainLink">
-                <span>바로가기</span>
-              </a>
+              <a href=""><span>바로가기</span></a>
             </div>
           </div>
           <ul class="mob">
@@ -566,13 +508,12 @@
               지적인 바이블
             </p>
             <div
+              class="mainLink"
               data-aos="fade-in"
               data-aos-delay="500"
               data-aos-duration="1000"
             >
-              <a href="" class="mainLink">
-                <span>바로가기</span>
-              </a>
+              <a href=""><span>바로가기</span></a>
             </div>
           </div>
           <ul class="mob">
@@ -612,10 +553,8 @@
                 동시대를 살아가는 여성들의 에세이<br class="mob" />
                 뉴스레터를 구독해보세요.
               </p>
-              <div>
-                <a href="" class="mainLink">
-                  <span>바로가기</span>
-                </a>
+              <div class="mainLink">
+                <a href=""><span>바로가기</span></a>
               </div>
             </div>
             <picture
@@ -645,8 +584,8 @@
                 지금 국내의 아트신에서 펼쳐지고 있는<br />
                 주요 전시와 이슈들을 확인해보세요!
               </p>
-              <div>
-                <a class="mainLink" href=""><span>바로가기</span></a>
+              <div class="mainLink">
+                <a href=""><span>바로가기</span></a>
               </div>
             </div>
             <picture
@@ -677,10 +616,8 @@
                 에디터의 시각으로 수집한 공간에서<br />
                 나만의 취향을 발견해보세요.
               </p>
-              <div>
-                <a class="mainLink" href="">
-                  <span>바로가기</span>
-                </a>
+              <div class="mainLink">
+                <a href=""><span>바로가기</span></a>
               </div>
             </div>
             <picture

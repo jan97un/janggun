@@ -255,20 +255,21 @@ main .appPage .obj p {
   height: 100%;
   z-index: 3;
 }
+main .memPage .obj p img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 3;
+}
 main .brandPage .obj p img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-main .point .obj p img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
-main .coupon .obj p img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 main .brandPage .txt {
   position: absolute;
@@ -355,35 +356,31 @@ main .eee .wrap .txt p:nth-child(3) {
 }
 main .memPage .txt .mainLink {
   margin-top: 80px;
-  display: inline-block;
-  color: #fff;
-  padding: 16px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
 }
 main .brandPage .txt .mainLink,
 main .appPage .wrap .txt .mainLink {
   margin-top: 60px;
 }
-main .brightPage .txt .mainLink {
-  color: #111;
-  padding: 16px 24px;
-  border: 1px solid rgba(17, 17, 17, 0.6);
-  display: inline-block;
-}
-main .darkPage .txt .mainLink {
+main .darkPage .txt .mainLink a {
   color: #fff;
   padding: 16px 24px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   display: inline-block;
 }
-main .mainPage .txt .mainLink span {
+main .brightPage .txt .mainLink a {
+  color: #111;
+  padding: 16px 24px;
+  border: 1px solid rgba(17, 17, 17, 0.6);
+  display: inline-block;
+}
+main .mainPage .txt .mainLink a span {
   font-size: 16px;
   font-weight: 500;
   line-height: 23px;
   padding-right: 28px;
   position: relative;
 }
-main .darkPage .txt .mainLink span::after {
+main .darkPage .txt .mainLink a span::after {
   content: "";
   position: absolute;
   right: 0;
@@ -395,7 +392,7 @@ main .darkPage .txt .mainLink span::after {
   background-position: center;
   background-size: cover;
 }
-main .brightPage .txt .mainLink span::after {
+main .brightPage .txt .mainLink a span::after {
   content: "";
   position: absolute;
   right: 0;
