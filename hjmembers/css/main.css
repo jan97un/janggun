@@ -152,9 +152,14 @@ header .head .gnb .dep1 > li .dep2 {
 header .head .gnb .dep1 > li .dep2 li {
   line-height: 40px;
 }
+
 header .head .gnb .dep1 > li .dep2 li a {
   font-weight: 500;
   color: #666;
+}
+header .head .gnb .dep1 > li .dep2 li a:hover {
+  font-weight: bold;
+  color: #111;
 }
 
 /* head nav background */
@@ -636,14 +641,17 @@ footer .foot .footBot p {
   }
   main .memPage .txt p:nth-child(1) {
     font-size: 18px;
+    line-height: 1.2;
     font-weight: 500;
   }
   main .memPage .txt p:nth-child(2) {
     font-size: 28px;
+    line-height: 1.5;
     margin-top: 12px;
   }
   main .memPage .txt p:nth-child(3) {
     font-size: 14px;
+    line-height: 1.6;
     margin-top: 20px;
   }
   main .memPage .txt .mainLink {
