@@ -222,12 +222,9 @@ header .head .gnb:hover ~ .headRight .hamberger div {
   height: 100%;
 }
 .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 .mainVideo iframe {
   position: absolute;
@@ -362,8 +359,25 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 
 /* section1 */
 
-#section1 {
+#section1 .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background: url(../images/section1.jpg) bottom/cover no-repeat;
+  animation: sec2 9s 0s infinite;
+}
+@keyframes sec2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 #section1 .mainTxt {
   width: 90%;
@@ -434,8 +448,14 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 
 /* section2 */
 
-#section2 {
+#section2 .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background: url(../images/section2.jpg) bottom/cover no-repeat;
+  animation: sec2 9s 0s infinite;
 }
 #section2 .mainBox {
   width: 90%;
@@ -573,7 +593,7 @@ header .head .gnb:hover ~ .headRight .hamberger div {
   margin: 0 auto;
   height: calc(100vh - 200px);
   z-index: 1;
-  top: 200px;
+  top: 250px;
 }
 .videoBox .txtBot {
   display: flex;
@@ -606,6 +626,9 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 #section5 .mainBox {
   display: flex;
 }
+#section5 .mainBox .mainLeft p {
+  font-size: 0;
+}
 #section5 .mainBox .mainRight {
   display: flex;
   flex-direction: column;
@@ -634,7 +657,10 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 }
 
 /* section6 */
-
+#section6 .videoBox {
+  height: calc(100vh - 200px);
+  top: 100px;
+}
 #section6 .mainBox .txtTop h3 {
   font-family: "blanc", sans-serif;
   font-size: 28px;
@@ -842,26 +868,34 @@ header .head .gnb:hover ~ .headRight .hamberger div {
   width: 70%;
   max-width: 1480px;
   margin: 0 auto;
-  height: calc(100vh - 120px);
-  top: 120px;
-  gap: 25%;
+  height: calc(100vh - 320px);
+  top: 180px;
+  gap: 34%;
 }
 #section12 .mainBox .mainTxt .mainLeft h3 {
   font-size: 40px;
   font-weight: 100;
+  line-height: 100%;
 }
 #section12 .mainBox .mainTxt .mainLeft h1 {
   font-size: 70px;
   font-weight: 700;
+  line-height: 100%;
+  margin: 10px 0 0 -5px;
 }
 #section12 .mainBox .mainTxt .mainLeft p {
   font-size: 14px;
+  line-height: 180%;
   opacity: 0.7;
+  margin-top: 45px;
 }
 #section12 .mainBox .mainTxt .mainRight {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+#section12 .mainBox .mainTxt .mainRight > li {
+  background: #fff;
 }
 #section12 .mainBox .mainTxt .mainRight > li h4 {
   padding: 6px 25px 6px 15px;
@@ -880,10 +914,14 @@ header .head .gnb:hover ~ .headRight .hamberger div {
 #section12 .mainBox .mainTxt .mainRight > li:nth-child(3) h4 {
   background-color: #9494b7;
 }
+#section12 .mainBox .mainTxt .mainRight > li ul {
+  padding: 5px 0 25px 15px;
+}
 #section12 .mainBox .mainTxt .mainRight > li ul li {
   font-size: 14px;
   font-weight: 500;
-  padding-left: 15px;
+  line-height: 24px;
+  letter-spacing: -0.8px;
   opacity: 0.9;
 }
 
