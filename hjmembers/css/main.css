@@ -252,11 +252,11 @@ main .appPage .wrap {
   padding: 0 40px;
   box-sizing: border-box;
 }
+main .point {
+  font-size: 0;
+}
 main .coupon {
   background: url(../images/couponbg.png) center/cover no-repeat;
-}
-main .section .obj p {
-  font-size: 0;
 }
 main .appPage .obj p {
   position: absolute;

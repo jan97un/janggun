@@ -639,6 +639,7 @@
         </div>
       </div>
       <div id="section15" class="section sec8">
+        <div class="bg"></div>
         <div class="mainBox">
           <h1>contact</h1>
           <div class="map">
@@ -709,7 +710,7 @@
           <p>104-81-58180</p>
           <p>addr. 서울특별시 중구 을지로 170</p>
         </address>
-        <p>
+        <p class="note">
           ※ 본 홈페이지의 내용은 소비자의 이해를 돕기 위한 것으로 실제와 다를 수
           있습니다.<br />
           ※ 본 홈페이지에 사용된 CG, 이미지 및 영상은 소비자의 이해를 돕기 위해
@@ -723,11 +724,9 @@
       let nav = document.querySelector(".gnb");
       nav.onmouseenter = function () {
         document.querySelector("header").style.backgroundColor = "#fff";
-        document.querySelector(".logo a").classList.add("on");
       };
       nav.onmouseleave = function () {
         document.querySelector("header").style.backgroundColor = "transparent";
-        document.querySelector(".logo a").classList.remove("on");
       };
     </script>
   </body>

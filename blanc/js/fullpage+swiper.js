@@ -36,16 +36,110 @@ $("#fullpage").fullpage({
       $.fn.fullpage.setAllowScrolling(true);
     if (
       index == 2 ||
+      index == 3 ||
       index == 4 ||
-      index == 5 ||
       index == 6 ||
-      index == 7 ||
-      index == 9 ||
-      index == 11 ||
-      index == 13 ||
-      index == 16
+      index == 8 ||
+      index == 9
     ) {
+      $("header .head .logo a").addClass("on");
+      $("header .head .gnb .dep1 > li > a").css("color", "#333");
+      $("header .head .headRight .tel").css("color", "#000");
+      $("header .head .headRight .tel .telBg").css("background-color", "#000");
+      $("header .head .headRight .tel .telBg div").addClass("on");
+      $("header .head .headRight .hamberger").css("border-color", "#000");
+      $("header .head .headRight .hamberger div").css(
+        "background-color",
+        "#000"
+      );
+      $(".gnb").hover(
+        function () {
+          $("header .head .logo a").addClass("on");
+          $("header .head .gnb .dep1 > li > a").css("color", "#333");
+          $("header .head .headRight .tel").css("color", "#000");
+          $("header .head .headRight .tel .telBg").css(
+            "background-color",
+            "#000"
+          );
+          $("header .head .headRight .tel .telBg div").addClass("on");
+          $("header .head .headRight .hamberger").css("border-color", "#000");
+          $("header .head .headRight .hamberger div").css(
+            "background-color",
+            "#000"
+          );
+        },
+        function () {
+          $("header .head .logo a").addClass("on");
+          $("header .head .gnb .dep1 > li > a").css("color", "#333");
+          $("header .head .headRight .tel").css("color", "#000");
+          $("header .head .headRight .tel .telBg").css(
+            "background-color",
+            "#000"
+          );
+          $("header .head .headRight .tel .telBg div").addClass("on");
+          $("header .head .headRight .hamberger").css("border-color", "#000");
+          $("header .head .headRight .hamberger div").css(
+            "background-color",
+            "#000"
+          );
+        }
+      );
     } else {
+      $("header .head .logo a").removeClass("on");
+      $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+      $("header .head .headRight .tel").css("color", "#fff");
+      $("header .head .headRight .tel .telBg").css("background-color", "#fff");
+      $("header .head .headRight .tel .telBg div").removeClass("on");
+      $("header .head .headRight .hamberger").css("border-color", "#fff");
+      $("header .head .headRight .hamberger div").css(
+        "background-color",
+        "#fff"
+      );
+      $(".gnb").hover(
+        function () {
+          $("header .head .logo a").addClass("on");
+          $("header .head .gnb .dep1 > li > a").css("color", "#333");
+          $("header .head .headRight .tel").css("color", "#000");
+          $("header .head .headRight .tel .telBg").css(
+            "background-color",
+            "#000"
+          );
+          $("header .head .headRight .tel .telBg div").addClass("on");
+          $("header .head .headRight .hamberger").css("border-color", "#000");
+          $("header .head .headRight .hamberger div").css(
+            "background-color",
+            "#000"
+          );
+        },
+        function () {
+          $("header .head .logo a").removeClass("on");
+          $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+          $("header .head .headRight .tel").css("color", "#fff");
+          $("header .head .headRight .tel .telBg").css(
+            "background-color",
+            "#fff"
+          );
+          $("header .head .headRight .tel .telBg div").removeClass("on");
+          $("header .head .headRight .hamberger").css("border-color", "#fff");
+          $("header .head .headRight .hamberger div").css(
+            "background-color",
+            "#fff"
+          );
+        }
+      );
+    }
+    if (index == 9) {
+      $("header .head .logo").css("visibility", "hidden");
+      $("header .head .gnb").css("visibility", "hidden");
+      $("header .head .headRight .tel").css("cursor", "default");
+      $("header .head .headRight .tel p").css("visibility", "hidden");
+      $("header .head .headRight .tel .telBg").css("visibility", "hidden");
+    } else {
+      $("header .head .logo").css("visibility", "visible");
+      $("header .head .gnb").css("visibility", "visible");
+      $("header .head .headRight .tel").css("cursor", "pointer");
+      $("header .head .headRight .tel p").css("visibility", "visible");
+      $("header .head .headRight .tel .telBg").css("visibility", "visible");
     }
   },
 });
@@ -59,9 +153,104 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
   on: {
     slideChange: function () {
       var i = this.activeIndex;
+      console.log(i);
       if (this.activeIndex != 0 && i != length2)
         $.fn.fullpage.setAllowScrolling(false);
       if (length2 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
+      if (i == 0 || i == 2) {
+        $("header .head .logo a").addClass("on");
+        $("header .head .gnb .dep1 > li > a").css("color", "#333");
+        $("header .head .headRight .tel").css("color", "#000");
+        $("header .head .headRight .tel .telBg").css(
+          "background-color",
+          "#000"
+        );
+        $("header .head .headRight .tel .telBg div").addClass("on");
+        $("header .head .headRight .hamberger").css("border-color", "#000");
+        $("header .head .headRight .hamberger div").css(
+          "background-color",
+          "#000"
+        );
+        $(".gnb").hover(
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          },
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          }
+        );
+      }
+      if (i == 1) {
+        $("header .head .logo a").removeClass("on");
+        $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+        $("header .head .headRight .tel").css("color", "#fff");
+        $("header .head .headRight .tel .telBg").css(
+          "background-color",
+          "#fff"
+        );
+        $("header .head .headRight .tel .telBg div").removeClass("on");
+        $("header .head .headRight .hamberger").css("border-color", "#fff");
+        $("header .head .headRight .hamberger div").css(
+          "background-color",
+          "#fff"
+        );
+        $(".gnb").hover(
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          },
+          function () {
+            $("header .head .logo a").removeClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+            $("header .head .headRight .tel").css("color", "#fff");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#fff"
+            );
+            $("header .head .headRight .tel .telBg div").removeClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#fff");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#fff"
+            );
+          }
+        );
+      }
     },
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
@@ -116,6 +305,100 @@ var swiper5 = new Swiper(".sec5 .swiper-container", {
       if (this.activeIndex != 0 && i != length5)
         $.fn.fullpage.setAllowScrolling(false);
       if (length5 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
+      if (i == 1) {
+        $("header .head .logo a").addClass("on");
+        $("header .head .gnb .dep1 > li > a").css("color", "#333");
+        $("header .head .headRight .tel").css("color", "#000");
+        $("header .head .headRight .tel .telBg").css(
+          "background-color",
+          "#000"
+        );
+        $("header .head .headRight .tel .telBg div").addClass("on");
+        $("header .head .headRight .hamberger").css("border-color", "#000");
+        $("header .head .headRight .hamberger div").css(
+          "background-color",
+          "#000"
+        );
+        $(".gnb").hover(
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          },
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          }
+        );
+      }
+      if (i == 0 || i == 2) {
+        $("header .head .logo a").removeClass("on");
+        $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+        $("header .head .headRight .tel").css("color", "#fff");
+        $("header .head .headRight .tel .telBg").css(
+          "background-color",
+          "#fff"
+        );
+        $("header .head .headRight .tel .telBg div").removeClass("on");
+        $("header .head .headRight .hamberger").css("border-color", "#fff");
+        $("header .head .headRight .hamberger div").css(
+          "background-color",
+          "#fff"
+        );
+        $(".gnb").hover(
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          },
+          function () {
+            $("header .head .logo a").removeClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+            $("header .head .headRight .tel").css("color", "#fff");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#fff"
+            );
+            $("header .head .headRight .tel .telBg div").removeClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#fff");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#fff"
+            );
+          }
+        );
+      }
     },
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
@@ -143,6 +426,100 @@ var swiper6 = new Swiper(".sec6 .swiper-container", {
       if (this.activeIndex != 0 && i != length6)
         $.fn.fullpage.setAllowScrolling(false);
       if (length6 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
+      if (i == 0 || i == 2) {
+        $("header .head .logo a").addClass("on");
+        $("header .head .gnb .dep1 > li > a").css("color", "#333");
+        $("header .head .headRight .tel").css("color", "#000");
+        $("header .head .headRight .tel .telBg").css(
+          "background-color",
+          "#000"
+        );
+        $("header .head .headRight .tel .telBg div").addClass("on");
+        $("header .head .headRight .hamberger").css("border-color", "#000");
+        $("header .head .headRight .hamberger div").css(
+          "background-color",
+          "#000"
+        );
+        $(".gnb").hover(
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          },
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          }
+        );
+      }
+      if (i == 1) {
+        $("header .head .logo a").removeClass("on");
+        $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+        $("header .head .headRight .tel").css("color", "#fff");
+        $("header .head .headRight .tel .telBg").css(
+          "background-color",
+          "#fff"
+        );
+        $("header .head .headRight .tel .telBg div").removeClass("on");
+        $("header .head .headRight .hamberger").css("border-color", "#fff");
+        $("header .head .headRight .hamberger div").css(
+          "background-color",
+          "#fff"
+        );
+        $(".gnb").hover(
+          function () {
+            $("header .head .logo a").addClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#333");
+            $("header .head .headRight .tel").css("color", "#000");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#000"
+            );
+            $("header .head .headRight .tel .telBg div").addClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#000");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#000"
+            );
+          },
+          function () {
+            $("header .head .logo a").removeClass("on");
+            $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+            $("header .head .headRight .tel").css("color", "#fff");
+            $("header .head .headRight .tel .telBg").css(
+              "background-color",
+              "#fff"
+            );
+            $("header .head .headRight .tel .telBg div").removeClass("on");
+            $("header .head .headRight .hamberger").css("border-color", "#fff");
+            $("header .head .headRight .hamberger div").css(
+              "background-color",
+              "#fff"
+            );
+          }
+        );
+      }
     },
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
