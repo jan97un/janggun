@@ -67,6 +67,7 @@ header .head .logo a {
   background: url(../images/logowhite.png) center/cover no-repeat;
   width: 212px;
   height: 27px;
+  transition: 0.3s ease-out;
 }
 header .head .logo a.on {
   background: url(../images/logoblack.png) center/cover no-repeat;
@@ -78,11 +79,27 @@ header .head .gnb .dep1 {
 header .head .gnb .dep1 > li {
   position: relative;
 }
+header .head .gnb .dep1 > li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  width: 0;
+  margin: auto;
+  height: 2px;
+  background-color: #000;
+  transition: 0.35s;
+}
+header .head .gnb .dep1 > li:hover::after {
+  width: 90%;
+}
 header .head .gnb .dep1 > li > a {
   line-height: 120px;
   padding: 0 25px;
   font-size: 18px;
   color: #fff;
+  transition: 0.3s ease-out;
 }
 header .head .gnb .dep1 > li > .dep2 {
   position: absolute;
@@ -90,7 +107,6 @@ header .head .gnb .dep1 > li > .dep2 {
   top: 120px;
   width: 100%;
   z-index: 9000;
-  display: none;
 }
 header .head .gnb .dep1 > li > .dep2 li {
   line-height: 32px;
@@ -102,6 +118,8 @@ header .head .gnb .dep1 > li .dep2 li a {
   font-size: 14px;
   color: #262626;
   font-weight: 500;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 /* head nav background */
@@ -113,6 +131,7 @@ header .head .gnb .bgWhite {
   width: 100%;
   height: 0;
   z-index: 1010;
+  transition: 0.3s;
 }
 header .head .gnb:hover .dep1 ~ .bgWhite {
   height: 210px;
@@ -120,8 +139,8 @@ header .head .gnb:hover .dep1 ~ .bgWhite {
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
 }
-header .head .gnb:hover .dep1 > li .dep2 {
-  display: block;
+header .head .gnb:hover .dep1 > li .dep2 li a {
+  opacity: 1;
 }
 
 /* headRight */
@@ -142,6 +161,7 @@ header .head .headRight .tel p {
   font-family: "FuturaStdMedium", sans-serif;
   font-size: 12px;
   margin-right: 15px;
+  transition: 0.3s ease-out;
 }
 header .head .headRight .tel .telBg {
   position: relative;
@@ -149,6 +169,7 @@ header .head .headRight .tel .telBg {
   height: 50px;
   background-color: #fff;
   border-radius: 50%;
+  transition: 0.3s ease-out;
 }
 header .head .headRight .tel .telBg div {
   background: url(../images/telblack.png) center no-repeat;
@@ -157,6 +178,7 @@ header .head .headRight .tel .telBg div {
   top: 0;
   width: 50px;
   height: 50px;
+  transition: 0.3s ease-out;
 }
 header .head .headRight .tel .telBg div.on {
   background: url(../images/telwhite.png) center no-repeat;

@@ -256,13 +256,6 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
       var i = this.activeIndex;
       if (i == 0 || i >= length2 - 1) $.fn.fullpage.setAllowScrolling(true);
     },
-    touchMove: function (e) {
-      var startY = e.touches.startY;
-      setTimeout(function () {
-        if (startY > e.touches.currentY) swiper2.slideNext();
-        else swiper2.slidePrev();
-      }, 100);
-    },
   },
 });
 var length3 = $(".sec3 .swiper-slide").length;
@@ -282,13 +275,6 @@ var swiper3 = new Swiper(".sec3 .swiper-container", {
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
       if (i == 0 || i >= length3 - 1) $.fn.fullpage.setAllowScrolling(true);
-    },
-    touchMove: function (e) {
-      var startY = e.touches.startY;
-      setTimeout(function () {
-        if (startY > e.touches.currentY) swiper3.slideNext();
-        else swiper3.slidePrev();
-      }, 100);
     },
   },
 });
@@ -404,13 +390,6 @@ var swiper5 = new Swiper(".sec5 .swiper-container", {
       var i = this.activeIndex;
       if (i == 0 || i >= length5 - 1) $.fn.fullpage.setAllowScrolling(true);
     },
-    touchMove: function (e) {
-      var startY = e.touches.startY;
-      setTimeout(function () {
-        if (startY > e.touches.currentY) swiper5.slideNext();
-        else swiper5.slidePrev();
-      }, 100);
-    },
   },
 });
 var length6 = $(".sec6 .swiper-slide").length;
@@ -525,13 +504,6 @@ var swiper6 = new Swiper(".sec6 .swiper-container", {
       var i = this.activeIndex;
       if (i == 0 || i >= length6 - 1) $.fn.fullpage.setAllowScrolling(true);
     },
-    touchMove: function (e) {
-      var startY = e.touches.startY;
-      setTimeout(function () {
-        if (startY > e.touches.currentY) swiper6.slideNext();
-        else swiper6.slidePrev();
-      }, 100);
-    },
   },
 });
 var length7 = $(".sec7 .swiper-slide").length;
@@ -551,13 +523,6 @@ var swiper7 = new Swiper(".sec7 .swiper-container", {
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
       if (i == 0 || i >= length7 - 1) $.fn.fullpage.setAllowScrolling(true);
-    },
-    touchMove: function (e) {
-      var startY = e.touches.startY;
-      setTimeout(function () {
-        if (startY > e.touches.currentY) swiper7.slideNext();
-        else swiper7.slidePrev();
-      }, 100);
     },
   },
 });

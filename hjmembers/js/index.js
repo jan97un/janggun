@@ -129,7 +129,6 @@ $("#fullpage").fullpage({
         $(".txt1").find("[data-aos]").removeClass("aos-animate");
       }, 750);
     }
-
     $(".section").eq(origin).find("[data-aos]").removeClass("aos-animate");
   },
 });
