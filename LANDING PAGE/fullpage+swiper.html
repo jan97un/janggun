@@ -19,40 +19,54 @@
     <div id="fullpage">
       <div class="section sec1 active">
         <div class="mainBox">
-          <div class="left">
-            <div class="tit">
-              <div class="id"></div>
-              <h1></h1>
-              <blockquote></blockquote>
+          <div class="tit">
+            <div class="id"></div>
+            <div class="txt">
+              <blockquote>"끝없는 코드 바다에서 묵묵히 나아갑니다"</blockquote>
               <div class="name">
                 <strong>임장군</strong>
-                <p></p>
+                <p>&nbsp;| 코드 항해사</p>
               </div>
             </div>
           </div>
-          <div class="right">
-            <div class="tec">
-              <h2>ability</h2>
-              <ul>
-                <li>
-                  <img src="images/html_icon.png" alt="html_icon" />
-                </li>
-                <li>
-                  <img src="images/css_icon.png" alt="css_icon" />
-                </li>
-                <li>
-                  <img src="images/js_icon.webp" alt="js_icon" />
-                </li>
-                <li>
-                  <img src="images/jq_icon.png" alt="jq_icon" />
-                </li>
-                <li>
-                  <div>
-                    <img src="images/sincerity_icon.svg" alt="sincerity_icon" />
-                  </div>
-                  <p>근면성실</p>
-                </li>
-              </ul>
+          <div class="tec">
+            <div class="flex">
+              <div class="abil">
+                <h2>ability</h2>
+                <ul class="prog">
+                  <li>
+                    <img src="images/html_icon.png" alt="html_icon" />
+                  </li>
+                  <li>
+                    <img src="images/css_icon.png" alt="css_icon" />
+                  </li>
+                  <li>
+                    <img src="images/js_icon.webp" alt="js_icon" />
+                  </li>
+                  <li>
+                    <img src="images/jq_icon.png" alt="jq_icon" />
+                  </li>
+                  <li>
+                    <div>
+                      <img
+                        src="images/sincerity_icon.svg"
+                        alt="sincerity_icon"
+                      />
+                    </div>
+                    <p>근면성실</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="resu">
+                <h2>resume</h2>
+                <ul>
+                  <li>
+                    국민취업지원제도<br />[디지털디자인]UIUX반응형
+                    웹디자인&웹퍼블리셔(프론트엔드)양성A<br />
+                    24.05.29~24.10.28 이수
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -62,45 +76,45 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="mainBox">
+                <div class="link">
+                  <a href="../hjmembers/">허스트중앙</a>
+                </div>
                 <div class="thumbnail">
                   <a href="../hjmembers/">
                     <img src="images/hjmembers.jpg" alt="hjmembers" />
                   </a>
                 </div>
-                <div class="link">
-                  <a href="../hjmembers/">허스트중앙</a>
-                </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="mainBox">
-                <div class="thumbnail">
-                  <a href="../msf/"><img src="images/msf.jpg" alt="msf" /></a>
-                </div>
                 <div class="link">
                   <a href="../msf/">국경없는의사회</a>
                 </div>
+                <div class="thumbnail">
+                  <a href="../msf/"><img src="images/msf.jpg" alt="msf" /></a>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="mainBox">
-                <div class="thumbnail">
-                  <a href="../sll/"><img src="" alt="" /></a>
-                </div>
                 <div class="link">
                   <a href="../sll/">SLL</a>
                 </div>
+                <div class="thumbnail">
+                  <a href="../sll/"><img src="images/sll.jpg" alt="sll" /></a>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="mainBox">
+                <div class="link">
+                  <a href="../blanc/">블랑 써밋 74</a>
+                </div>
                 <div class="thumbnail">
                   <a href="../blanc/"
                     ><img src="images/blanc.jpg" alt="blanc"
                   /></a>
-                </div>
-                <div class="link">
-                  <a href="../blanc/">블랑 써밋 74</a>
                 </div>
               </div>
             </div>
@@ -124,7 +138,7 @@
           },
           afterLoad: function (anchorLink, index) {
             $("#fullpage").off("scroll mousewheel");
-            if (!$(".fp-completely .swiper-wrapper").length > 0)
+            if (!$(".fp-completely .sec2 swiper-wrapper").length > 0)
               $("#fullpage").off("touchmove");
             if (swiper) swiper.mousewheel.enable();
             if (!$(".sec2").hasClass("active"))
@@ -134,14 +148,15 @@
         var length = $(".sec2 .swiper-slide").length;
         var swiper = new Swiper(".swiper-container", {
           slidesPerView: 1,
-          spaceBetween: 0,
           freeMode: false,
           speed: 1000,
+          mousewheel: true,
+          allowTouchMove: false,
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
           },
-          mousewheel: true,
+
           on: {
             slideChange: function () {
               var i = this.activeIndex;
@@ -151,16 +166,8 @@
             },
             slideChangeTransitionEnd: function () {
               var i = this.activeIndex;
-              풀기;
               if (i == 0 || i >= length - 1)
                 $.fn.fullpage.setAllowScrolling(true);
-            },
-            touchMove: function (e) {
-              var startY = e.touches.startY;
-              setTimeout(function () {
-                if (startY > e.touches.currentY) swiper.slideNext();
-                else swiper.slidePrev();
-              }, 100);
             },
           },
         });

@@ -1,3 +1,12 @@
+// const sectionLength = $(".section").length;
+// function init() {
+//   $(".section").eq(0).find("[data-aos]").removeClass("aos-animate");
+//   setTimeout(() => {
+//     $(".section").eq(0).addClass("start");
+//     $(".section").eq(0).find("[data-aos]").addClass("aos-animate");
+//   }, 2200);
+// }
+// var wheelCount = 0;
 $("#fullpage").fullpage({
   anchors: [
     "sec1",
@@ -22,6 +31,12 @@ $("#fullpage").fullpage({
     swiper5.mousewheel.disable();
     swiper6.mousewheel.disable();
     swiper7.mousewheel.disable();
+    // if (origin == 1 && wheelCount < 1) {
+    //   setTimeout(() => {
+    //     $(".txt1").find("[data-aos]").removeClass("aos-animate");
+    //   }, 750);
+    // }
+    // $(".section").eq(origin).find("[data-aos]").removeClass("aos-animate");
   },
   afterLoad: function (anchorLink, index) {
     $("#fullpage").off("scroll mousewheel");
@@ -34,6 +49,176 @@ $("#fullpage").fullpage({
     if (swiper7) swiper7.mousewheel.enable();
     if (!$(".section").hasClass("active"))
       $.fn.fullpage.setAllowScrolling(true);
+    const realIndex = index - 1;
+    sectionIndex = realIndex;
+    // if (index !== sectionLength) {
+    //   $(".section").find("[data-aos]").removeClass("aos-animate");
+    // }
+    // if (realIndex === 0) {
+    //   $("header .head .logo a").removeClass("on");
+    //   $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+    //   $("header .head .headRight .tel").css("color", "#fff");
+    //   $("header .head .headRight .tel .telBg").css("background-color", "#fff");
+    //   $("header .head .headRight .tel .telBg div").removeClass("on");
+    //   $("header .head .headRight .hamberger").css("border-color", "#fff");
+    //   $("header .head .headRight .hamberger div").css(
+    //     "background-color",
+    //     "#fff"
+    //   );
+    //   $(".gnb").hover(
+    //     function () {
+    //       $("header .head .logo a").addClass("on");
+    //       $("header .head .gnb .dep1 > li > a").css("color", "#333");
+    //       $("header .head .headRight .tel").css("color", "#000");
+    //       $("header .head .headRight .tel .telBg").css(
+    //         "background-color",
+    //         "#000"
+    //       );
+    //       $("header .head .headRight .tel .telBg div").addClass("on");
+    //       $("header .head .headRight .hamberger").css("border-color", "#000");
+    //       $("header .head .headRight .hamberger div").css(
+    //         "background-color",
+    //         "#000"
+    //       );
+    //     },
+    //     function () {
+    //       $("header .head .logo a").removeClass("on");
+    //       $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+    //       $("header .head .headRight .tel").css("color", "#fff");
+    //       $("header .head .headRight .tel .telBg").css(
+    //         "background-color",
+    //         "#fff"
+    //       );
+    //       $("header .head .headRight .tel .telBg div").removeClass("on");
+    //       $("header .head .headRight .hamberger").css("border-color", "#fff");
+    //       $("header .head .headRight .hamberger div").css(
+    //         "background-color",
+    //         "#fff"
+    //       );
+    //     }
+    //   );
+    //   $(".section")
+    //     .eq(index - 1)
+    //     .addClass("after-load");
+    //   if (!$(".section").eq(index).hasClass("after-load")) {
+    //     AOS.init();
+    //   }
+    // } else {
+    //   $(".section").eq(realIndex).find("[data-aos]").addClass("aos-animate");
+    //   if (
+    //     index == 2 ||
+    //     index == 3 ||
+    //     index == 4 ||
+    //     index == 6 ||
+    //     index == 8 ||
+    //     index == 9
+    //   ) {
+    //     $("header .head .logo a").addClass("on");
+    //     $("header .head .gnb .dep1 > li > a").css("color", "#333");
+    //     $("header .head .headRight .tel").css("color", "#000");
+    //     $("header .head .headRight .tel .telBg").css(
+    //       "background-color",
+    //       "#000"
+    //     );
+    //     $("header .head .headRight .tel .telBg div").addClass("on");
+    //     $("header .head .headRight .hamberger").css("border-color", "#000");
+    //     $("header .head .headRight .hamberger div").css(
+    //       "background-color",
+    //       "#000"
+    //     );
+    //     $(".gnb").hover(
+    //       function () {
+    //         $("header .head .logo a").addClass("on");
+    //         $("header .head .gnb .dep1 > li > a").css("color", "#333");
+    //         $("header .head .headRight .tel").css("color", "#000");
+    //         $("header .head .headRight .tel .telBg").css(
+    //           "background-color",
+    //           "#000"
+    //         );
+    //         $("header .head .headRight .tel .telBg div").addClass("on");
+    //         $("header .head .headRight .hamberger").css("border-color", "#000");
+    //         $("header .head .headRight .hamberger div").css(
+    //           "background-color",
+    //           "#000"
+    //         );
+    //       },
+    //       function () {
+    //         $("header .head .logo a").addClass("on");
+    //         $("header .head .gnb .dep1 > li > a").css("color", "#333");
+    //         $("header .head .headRight .tel").css("color", "#000");
+    //         $("header .head .headRight .tel .telBg").css(
+    //           "background-color",
+    //           "#000"
+    //         );
+    //         $("header .head .headRight .tel .telBg div").addClass("on");
+    //         $("header .head .headRight .hamberger").css("border-color", "#000");
+    //         $("header .head .headRight .hamberger div").css(
+    //           "background-color",
+    //           "#000"
+    //         );
+    //       }
+    //     );
+    //   } else {
+    //     $("header .head .logo a").removeClass("on");
+    //     $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+    //     $("header .head .headRight .tel").css("color", "#fff");
+    //     $("header .head .headRight .tel .telBg").css(
+    //       "background-color",
+    //       "#fff"
+    //     );
+    //     $("header .head .headRight .tel .telBg div").removeClass("on");
+    //     $("header .head .headRight .hamberger").css("border-color", "#fff");
+    //     $("header .head .headRight .hamberger div").css(
+    //       "background-color",
+    //       "#fff"
+    //     );
+    //     $(".gnb").hover(
+    //       function () {
+    //         $("header .head .logo a").addClass("on");
+    //         $("header .head .gnb .dep1 > li > a").css("color", "#333");
+    //         $("header .head .headRight .tel").css("color", "#000");
+    //         $("header .head .headRight .tel .telBg").css(
+    //           "background-color",
+    //           "#000"
+    //         );
+    //         $("header .head .headRight .tel .telBg div").addClass("on");
+    //         $("header .head .headRight .hamberger").css("border-color", "#000");
+    //         $("header .head .headRight .hamberger div").css(
+    //           "background-color",
+    //           "#000"
+    //         );
+    //       },
+    //       function () {
+    //         $("header .head .logo a").removeClass("on");
+    //         $("header .head .gnb .dep1 > li > a").css("color", "#fff");
+    //         $("header .head .headRight .tel").css("color", "#fff");
+    //         $("header .head .headRight .tel .telBg").css(
+    //           "background-color",
+    //           "#fff"
+    //         );
+    //         $("header .head .headRight .tel .telBg div").removeClass("on");
+    //         $("header .head .headRight .hamberger").css("border-color", "#fff");
+    //         $("header .head .headRight .hamberger div").css(
+    //           "background-color",
+    //           "#fff"
+    //         );
+    //       }
+    //     );
+    //   }
+    //   if (index == 9) {
+    //     $("header .head .logo").css("visibility", "hidden");
+    //     $("header .head .gnb").css("visibility", "hidden");
+    //     $("header .head .headRight .tel").css("cursor", "default");
+    //     $("header .head .headRight .tel p").css("visibility", "hidden");
+    //     $("header .head .headRight .tel .telBg").css("visibility", "hidden");
+    //   } else {
+    //     $("header .head .logo").css("visibility", "visible");
+    //     $("header .head .gnb").css("visibility", "visible");
+    //     $("header .head .headRight .tel").css("cursor", "pointer");
+    //     $("header .head .headRight .tel p").css("visibility", "visible");
+    //     $("header .head .headRight .tel .telBg").css("visibility", "visible");
+    //   }
+    // }
     if (
       index == 2 ||
       index == 3 ||
@@ -526,3 +711,4 @@ var swiper7 = new Swiper(".sec7 .swiper-container", {
     },
   },
 });
+$(".hamberger").click(function () {});

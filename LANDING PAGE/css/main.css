@@ -41,56 +41,88 @@ a {
   margin: 0 auto;
   display: flex;
 }
-.sec1 .left {
-  width: 40%;
+.sec1 .tit {
+  width: 35%;
+  height: 100%;
 }
-.sec1 .left .tit {
-}
-.sec1 .left .tit .id {
-}
-.sec1 .right {
-  width: 60%;
-}
-.sec1 .right .tec {
+.sec1 .tit .id {
   width: 100%;
+  height: 500px;
+  background: url(../images/ijg1.jpeg) center/cover no-repeat;
+  transition: 0.2s;
 }
-.sec1 .right .tec h2 {
+.sec1 .tit .id:hover {
+  background: url(../images/ijg2.jpeg) center/cover no-repeat;
 }
-.sec1 .right .tec ul {
+.sec1 .tit .txt {
+  line-height: 24px;
+  padding-top: 24px;
+}
+.sec1 .tit .txt .name {
   display: flex;
 }
-.sec1 .right .tec ul li {
+.sec1 .tec {
+  width: 65%;
+}
+.sec1 .tec .flex {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 80px;
+}
+.sec1 .tec .flex h2 {
+  display: inline-block;
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 800;
+  margin-bottom: 32px;
+}
+.sec1 .tec .flex .abil .prog {
+  display: flex;
+}
+.sec1 .tec .flex .abil .prog li {
   width: 100px;
   height: 100px;
 }
-.sec1 .right .tec ul li img {
+.sec1 .tec .flex .abil .prog li img {
   width: 100%;
   height: 100%;
 }
-.sec1 .right .tec ul li:last-child {
+.sec1 .tec .flex .abil .prog li:last-child {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.sec1 .right .tec ul li:last-child div {
+.sec1 .tec .flex .abil .prog li:last-child div {
   width: 80px;
   height: 80px;
 }
-.sec1 .right .tec ul li:last-child p {
+.sec1 .tec .flex .abil .prog li:last-child p {
   font-size: 20px;
   font-weight: bold;
-  line-height: 20px;
+  line-height: 100%;
   font-family: "KCC-eunyoung-Regular";
 }
 
 /* sec2 */
 
 .sec2 .mainBox {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 .sec2 .link {
-  text-align: right;
+  position: absolute;
+  left: 0;
+  top: -64px;
+}
+.sec2 .link a {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 64px;
 }
 .sec2 .thumbnail {
 }
@@ -102,4 +134,7 @@ a {
 .sec2 .thumbnail a img {
   width: 100%;
   height: 100%;
+}
+.swiper-pagination-bullet-active {
+  background: rgba(0, 0, 0, 0.9) !important;
 }

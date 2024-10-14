@@ -30,6 +30,7 @@
   word-break: keep-all;
   white-space: nowrap;
   text-transform: uppercase;
+  box-sizing: border-box;
 }
 ul {
   list-style: none;
@@ -156,6 +157,8 @@ header .head .headRight .tel {
   color: #fff;
   align-items: center;
   cursor: pointer;
+  margin-right: 50px;
+  padding-right: 10px;
 }
 header .head .headRight .tel p {
   font-family: "FuturaStdMedium", sans-serif;
@@ -178,7 +181,6 @@ header .head .headRight .tel .telBg div {
   top: 0;
   width: 50px;
   height: 50px;
-  transition: 0.3s ease-out;
 }
 header .head .headRight .tel .telBg div.on {
   background: url(../images/telwhite.png) center no-repeat;
@@ -190,7 +192,7 @@ header .head .headRight .hamberger {
   border-style: solid;
   border-color: #fff;
   border-radius: 50%;
-  position: relative;
+  position: fixed;
   cursor: pointer;
 }
 header .head .headRight .hamberger div {
@@ -198,20 +200,83 @@ header .head .headRight .hamberger div {
   height: 1px;
   background: #fff;
 }
-header .head .headRight .hamberger div:nth-child(1) {
+header .head .headRight .hamberger .bar1 {
   left: 15px;
   top: 18px;
   width: 20px;
 }
-header .head .headRight .hamberger div:nth-child(2) {
+header .head .headRight .hamberger .bar2 {
   left: 23px;
   top: 50%;
   width: 12px;
 }
-header .head .headRight .hamberger div:nth-child(3) {
+header .head .headRight .hamberger .bar3 {
   left: 15px;
   bottom: 17px;
   width: 20px;
+}
+
+/* hamNav(fixed) */
+
+.hamNav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 9000;
+}
+.hamNav .dep1 {
+  display: flex;
+  height: 100%;
+}
+.hamNav .dep1 > li {
+  width: 13.5%;
+  height: 100%;
+  background-color: #fff;
+  border-right: 1px solid #dedede;
+  z-index: 9001;
+  position: relative;
+}
+.hamNav .dep1 > li:hover {
+  background-color: #f1f1f1;
+}
+.hamNav .dep1 h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #191919;
+  margin: 77px 40px 40px;
+}
+.hamNav .dep2 li {
+  position: relative;
+}
+.hamNav .dep2 li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #000;
+  transition: 0.3s;
+  z-index: 9001;
+}
+.hamNav .dep2 li:hover:after {
+  width: 100%;
+}
+.hamNav .dep2 li a {
+  position: relative;
+  display: block;
+  padding: 16px 40px;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: -0.5px;
+  transition: 0.3s;
+  z-index: 9002;
+}
+.hamNav .dep2 li:hover a {
+  color: #fff;
 }
 
 /* main */
@@ -646,15 +711,6 @@ header .head .headRight .hamberger div:nth-child(3) {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  animation: scale2 2.5s 0s;
-}
-@keyframes scale2 {
-  0% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 #section5 .mainBox .mainRight {
   display: flex;
@@ -1230,49 +1286,4 @@ footer .note {
 footer h6:last-child {
   font-weight: normal;
   line-height: 100%;
-}
-.hamNav {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 9000;
-}
-.hamNav .dep1 {
-  display: flex;
-  height: 100%;
-}
-.hamNav .dep1 > li {
-  width: 13.6%;
-  height: 100%;
-  background-color: #fff;
-  border-right: 1px solid #dedede;
-  z-index: 9001;
-  position: relative;
-}
-.hamNav .dep1 > li:hover {
-  background-color: #f1f1f1;
-}
-.hamNav .dep1 h2 {
-  font-size: 22px;
-  font-weight: 400;
-  color: #191919;
-  margin: 77px 15% 40px;
-}
-.hamNav .dep2 li:hover {
-  background-color: #000;
-}
-.hamNav .dep2 li a {
-  position: relative;
-  display: block;
-  padding: 18px 15%;
-  font-size: 16px;
-  color: #000;
-  letter-spacing: -0.4px;
-  transition: 0.3s;
-}
-.hamNav .dep2 li:hover a {
-  color: #fff;
 }
