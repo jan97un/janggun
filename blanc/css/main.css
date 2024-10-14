@@ -157,8 +157,6 @@ header .head .headRight .tel {
   color: #fff;
   align-items: center;
   cursor: pointer;
-  margin-right: 50px;
-  padding-right: 10px;
 }
 header .head .headRight .tel p {
   font-family: "FuturaStdMedium", sans-serif;
@@ -186,13 +184,13 @@ header .head .headRight .tel .telBg div.on {
   background: url(../images/telwhite.png) center no-repeat;
 }
 header .head .headRight .hamberger {
+  position: relative;
   width: 50px;
   height: 50px;
   border-width: 1px;
   border-style: solid;
   border-color: #fff;
   border-radius: 50%;
-  position: fixed;
   cursor: pointer;
 }
 header .head .headRight .hamberger div {
