@@ -149,7 +149,11 @@ $(".navBox li").click(function () {
   console.log(i);
   if ($(".navBox li").eq(i).find(".dep2").css("display") == "block") {
     $(".navBox li").eq(i).find(".dep2").css("display", "none");
+    $(".navBox li").eq(i).find(".plus").css("display", "block");
+    $(".navBox li").eq(i).find(".minus").css("display", "none");
   } else {
     $(".navBox li").eq(i).find(".dep2").css("display", "block");
+    $(".navBox li").eq(i).find(".plus").css("display", "none");
+    $(".navBox li").eq(i).find(".minus").css("display", "block");
   }
 });

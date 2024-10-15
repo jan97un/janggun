@@ -75,6 +75,9 @@ a {
   width: 16px;
   height: 16px;
 }
+.navBox li .dep1 span .minus {
+  display: none;
+}
 .navBox li .dep2 {
   display: none;
 }
