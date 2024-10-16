@@ -46,8 +46,8 @@ $("#fullpage").fullpage({
     ) {
       $("header .head .logo a").addClass("on");
       $("header .head .gnb .dep1 > li > a").css("color", "#333");
-      $("header .head  .tel").css("color", "#000");
-      $("header .head  .tel .telBg").css({
+      $("header .head .tel").css("color", "#000");
+      $("header .head .tel .telBg").css({
         borderColor: "#000",
         backgroundColor: "#000",
       });
@@ -58,24 +58,24 @@ $("#fullpage").fullpage({
         function () {
           $("header .head .logo a").addClass("on");
           $("header .head .gnb .dep1 > li > a").css("color", "#333");
-          $("header .head  .tel").css("color", "#000");
-          $("header .head  .tel .telBg").css({
+          $("header .head .tel").css("color", "#000");
+          $("header .head .tel .telBg").css({
             borderColor: "#000",
             backgroundColor: "#000",
           });
-          $("header .head  .tel .telBg div").addClass("on");
+          $("header .head .tel .telBg div").addClass("on");
           $(".headRight .hamberger").css("border-color", "#000");
           $(".headRight .hamberger div").css("background-color", "#000");
         },
         function () {
           $("header .head .logo a").addClass("on");
           $("header .head .gnb .dep1 > li > a").css("color", "#333");
-          $("header .head  .tel").css("color", "#000");
-          $("header .head  .tel .telBg").css({
+          $("header .head .tel").css("color", "#000");
+          $("header .head .tel .telBg").css({
             borderColor: "#000",
             backgroundColor: "#000",
           });
-          $("header .head  .tel .telBg div").addClass("on");
+          $("header .head .tel .telBg div").addClass("on");
           $(".headRight .hamberger").css("border-color", "#000");
           $(".headRight .hamberger div").css("background-color", "#000");
         }
@@ -102,6 +102,7 @@ $("#fullpage").fullpage({
           $("header .head .tel .telBg div").addClass("on");
         }
       );
+      $(".hamNav").css("display", "none");
       $(".headRight .hamberger").click(function () {
         if ($(".hamNav").css("display") == "block") {
           $(".headRight").css("right", "6.3%");
@@ -146,36 +147,36 @@ $("#fullpage").fullpage({
     } else {
       $("header .head .logo a").removeClass("on");
       $("header .head .gnb .dep1 > li > a").css("color", "#fff");
-      $("header .head  .tel").css("color", "#fff");
-      $("header .head  .tel .telBg").css({
+      $("header .head .tel").css("color", "#fff");
+      $("header .head .tel .telBg").css({
         borderColor: "#fff",
         backgroundColor: "#fff",
       });
-      $("header .head  .tel .telBg div").removeClass("on");
+      $("header .head .tel .telBg div").removeClass("on");
       $(".headRight .hamberger").css("border-color", "#fff");
       $(".headRight .hamberger div").css("background-color", "#fff");
       $(".gnb").hover(
         function () {
           $("header .head .logo a").addClass("on");
           $("header .head .gnb .dep1 > li > a").css("color", "#333");
-          $("header .head  .tel").css("color", "#000");
-          $("header .head  .tel .telBg").css({
+          $("header .head .tel").css("color", "#000");
+          $("header .head .tel .telBg").css({
             borderColor: "#000",
             backgroundColor: "#000",
           });
-          $("header .head  .tel .telBg div").addClass("on");
+          $("header .head .tel .telBg div").addClass("on");
           $(".headRight .hamberger").css("border-color", "#000");
           $(".headRight .hamberger div").css("background-color", "#000");
         },
         function () {
           $("header .head .logo a").removeClass("on");
           $("header .head .gnb .dep1 > li > a").css("color", "#fff");
-          $("header .head  .tel").css("color", "#fff");
-          $("header .head  .tel .telBg").css({
+          $("header .head .tel").css("color", "#fff");
+          $("header .head .tel .telBg").css({
             borderColor: "#fff",
             backgroundColor: "#fff",
           });
-          $("header .head  .tel .telBg div").removeClass("on");
+          $("header .head .tel .telBg div").removeClass("on");
           $(".headRight .hamberger").css("border-color", "#fff");
           $(".headRight .hamberger div").css("background-color", "#fff");
         }
@@ -202,6 +203,7 @@ $("#fullpage").fullpage({
           $("header .head .tel .telBg div").removeClass("on");
         }
       );
+      $(".hamNav").css("display", "none");
       $(".headRight .hamberger").click(function () {
         if ($(".hamNav").css("display") == "block") {
           $(".headRight").css("right", "6.3%");
@@ -247,15 +249,15 @@ $("#fullpage").fullpage({
     if (index == 9) {
       $("header .head .logo").css("visibility", "hidden");
       $("header .head .gnb").css("visibility", "hidden");
-      $("header .head  .tel").css("cursor", "default");
-      $("header .head  .tel p").css("visibility", "hidden");
-      $("header .head  .tel .telBg").css("visibility", "hidden");
+      $("header .head .tel").css("cursor", "default");
+      $("header .head .tel p").css("visibility", "hidden");
+      $("header .head .tel .telBg").css("visibility", "hidden");
     } else {
       $("header .head .logo").css("visibility", "visible");
       $("header .head .gnb").css("visibility", "visible");
-      $("header .head  .tel").css("cursor", "pointer");
-      $("header .head  .tel p").css("visibility", "visible");
-      $("header .head  .tel .telBg").css("visibility", "visible");
+      $("header .head .tel").css("cursor", "pointer");
+      $("header .head .tel p").css("visibility", "visible");
+      $("header .head .tel .telBg").css("visibility", "visible");
     }
   },
 });
@@ -279,36 +281,36 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
       if (i == 0 || i == 2) {
         $("header .head .logo a").addClass("on");
         $("header .head .gnb .dep1 > li > a").css("color", "#333");
-        $("header .head  .tel").css("color", "#000");
-        $("header .head  .tel .telBg").css({
+        $("header .head .tel").css("color", "#000");
+        $("header .head .tel .telBg").css({
           borderColor: "#000",
           backgroundColor: "#000",
         });
-        $("header .head  .tel .telBg div").addClass("on");
+        $("header .head .tel .telBg div").addClass("on");
         $(".headRight .hamberger").css("border-color", "#000");
         $(".headRight .hamberger div").css("background-color", "#000");
         $(".gnb").hover(
           function () {
             $("header .head .logo a").addClass("on");
             $("header .head .gnb .dep1 > li > a").css("color", "#333");
-            $("header .head  .tel").css("color", "#000");
-            $("header .head  .tel .telBg").css({
+            $("header .head .tel").css("color", "#000");
+            $("header .head .tel .telBg").css({
               borderColor: "#000",
               backgroundColor: "#000",
             });
-            $("header .head  .tel .telBg div").addClass("on");
+            $("header .head .tel .telBg div").addClass("on");
             $(".headRight .hamberger").css("border-color", "#000");
             $(".headRight .hamberger div").css("background-color", "#000");
           },
           function () {
             $("header .head .logo a").addClass("on");
             $("header .head .gnb .dep1 > li > a").css("color", "#333");
-            $("header .head  .tel").css("color", "#000");
-            $("header .head  .tel .telBg").css({
+            $("header .head .tel").css("color", "#000");
+            $("header .head .tel .telBg").css({
               borderColor: "#000",
               backgroundColor: "#000",
             });
-            $("header .head  .tel .telBg div").addClass("on");
+            $("header .head .tel .telBg div").addClass("on");
             $(".headRight .hamberger").css("border-color", "#000");
             $(".headRight .hamberger div").css("background-color", "#000");
           }
@@ -380,36 +382,36 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
       if (i == 1) {
         $("header .head .logo a").removeClass("on");
         $("header .head .gnb .dep1 > li > a").css("color", "#fff");
-        $("header .head  .tel").css("color", "#fff");
-        $("header .head  .tel .telBg").css({
+        $("header .head .tel").css("color", "#fff");
+        $("header .head .tel .telBg").css({
           borderColor: "#fff",
           backgroundColor: "#fff",
         });
-        $("header .head  .tel .telBg div").removeClass("on");
+        $("header .head .tel .telBg div").removeClass("on");
         $(".headRight .hamberger").css("border-color", "#fff");
         $(".headRight .hamberger div").css("background-color", "#fff");
         $(".gnb").hover(
           function () {
             $("header .head .logo a").addClass("on");
             $("header .head .gnb .dep1 > li > a").css("color", "#333");
-            $("header .head  .tel").css("color", "#000");
-            $("header .head  .tel .telBg").css({
+            $("header .head .tel").css("color", "#000");
+            $("header .head .tel .telBg").css({
               borderColor: "#000",
               backgroundColor: "#000",
             });
-            $("header .head  .tel .telBg div").addClass("on");
+            $("header .head .tel .telBg div").addClass("on");
             $(".headRight .hamberger").css("border-color", "#000");
             $(".headRight .hamberger div").css("background-color", "#000");
           },
           function () {
             $("header .head .logo a").removeClass("on");
             $("header .head .gnb .dep1 > li > a").css("color", "#fff");
-            $("header .head  .tel").css("color", "#fff");
-            $("header .head  .tel .telBg").css({
+            $("header .head .tel").css("color", "#fff");
+            $("header .head .tel .telBg").css({
               borderColor: "#fff",
               backgroundColor: "#fff",
             });
-            $("header .head  .tel .telBg div").removeClass("on");
+            $("header .head .tel .telBg div").removeClass("on");
             $(".headRight .hamberger").css("border-color", "#fff");
             $(".headRight .hamberger div").css("background-color", "#fff");
           }
