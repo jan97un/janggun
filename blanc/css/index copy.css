@@ -203,7 +203,7 @@ header .head .blank {
   letter-spacing: 0;
   display: flex;
   align-items: center;
-  transition: 0.5s ease-out;
+  transition: 0.3s ease-out;
 }
 .headRight .hamberger {
   position: relative;
@@ -225,18 +225,19 @@ header .head .blank {
   left: 15px;
   top: 18px;
   width: 20px;
-  transition: 0.5s ease-out;
+  transition: 0.3s ease-out;
 }
 .headRight .hamberger .bar2 {
   left: 23px;
   top: 50%;
   width: 12px;
+  transition: 0.3s ease-out;
 }
 .headRight .hamberger .bar3 {
   left: 15px;
   bottom: 17px;
   width: 20px;
-  transition: 0.5s ease-out;
+  transition: 0.3s ease-out;
 }
 
 /* hamNav(fixed) */
