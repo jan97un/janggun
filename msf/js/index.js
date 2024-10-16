@@ -1,0 +1,153 @@
+let majbar = document.querySelector(".major .bar");
+let minbar = document.querySelector(".minor .bar");
+$("#category1").click(function () {
+  if ($(majbar).css("display") == "block") {
+    $(majbar).css("display", "none");
+  } else {
+    $(majbar).css("display", "block");
+  }
+});
+$(".major .bar li").click(function () {
+  let majtxt = $(this).text();
+  // console.log(txt);
+  $("#category1").find("span").text(majtxt);
+  $(majbar).css("display", "none");
+});
+$("#category2").click(function () {
+  if ($(minbar).css("display") == "block") {
+    $(minbar).css("display", "none");
+  } else {
+    $(minbar).css("display", "block");
+  }
+});
+$(".minor .bar li").click(function () {
+  let mintxt = $(this).text();
+  // console.log(txt);
+  $("#category2").find("span").text(mintxt);
+  $(minbar).css("display", "none");
+  let index = $(this).index();
+  // console.log(index);
+  $(".search strong")
+    .off("click")
+    .on("click", function () {
+      $(".job>li").eq(index).css("display", "block");
+      $("body").css("overflow", "hidden");
+    });
+  $(".job .close")
+    .off("click")
+    .on("click", function () {
+      $(".job>li").eq(index).css("display", "none");
+      $("body").css("overflow", "visible");
+    });
+});
+$(".major .all").click(function () {
+  $(".minor .med").css("display", "block");
+  $(".minor .non").css("display", "block");
+});
+$(".major .medi").click(function () {
+  $(".minor .non").css("display", "none");
+  $(".minor .med").css("display", "block");
+});
+$(".major .non").click(function () {
+  $(".minor .med").css("display", "none");
+  $(".minor .non").css("display", "block");
+});
+$(".minor .med").click(function () {
+  $("#category1").find("span").html("의료");
+});
+$(".minor .non").click(function () {
+  $("#category1").find("span").html("비의료");
+});
+$(".people li").click(function () {
+  $(".storyBox li blockquote").removeClass("on");
+  $(".people li").removeClass("on");
+  $(".people li .worker .bdRed").removeClass("on");
+  $(".people li .worker .bdRed img").removeClass("on");
+  $(".people li .name").removeClass("on");
+  let p = $(this).index();
+  $(".storyBox li").eq(p).find("blockquote").addClass("on");
+  $(".people li").eq(p).addClass("on");
+  $(".people li").eq(p).find(".worker .bdRed").addClass("on");
+  $(".people li").eq(p).find(".worker .bdRed img").addClass("on");
+  $(".people li").eq(p).find(".name").addClass("on");
+});
+let num = 1;
+setTimeout(function () {
+  $(".people li").eq(0).trigger("click");
+});
+setInterval(function () {
+  $(".people li").eq(num).trigger("click");
+  num = (num + 1) % $(".people li").length;
+}, 3000);
+$(".slide-all").css("height", "560px");
+$(".inputBox").click(function () {
+  let lab = $(this).find("input");
+  lab.toggleClass("on");
+  if ($("#med").hasClass("on") == true && $("#non").hasClass("on") == false) {
+    $(".slide-all").css("height", "0");
+    $(".slide-med").css("height", "560px");
+    $(".slide-non").css("height", "0");
+  } else if (
+    $("#med").hasClass("on") == false &&
+    $("#non").hasClass("on") == true
+  ) {
+    $(".slide-all").css("height", "0");
+    $(".slide-med").css("height", "0");
+    $(".slide-non").css("height", "560px");
+  } else if (
+    $("#med").hasClass("on") == true &&
+    $("#non").hasClass("on") == true
+  ) {
+    $(".slide-all").css("height", "560px");
+    $(".slide-med").css("height", "0");
+    $(".slide-non").css("height", "0");
+  } else if (
+    $("#med").hasClass("on") == false &&
+    $("#non").hasClass("on") == false
+  ) {
+    $(".slide-all").css("height", "560px");
+    $(".slide-med").css("height", "0");
+    $(".slide-non").css("height", "0");
+  }
+});
+$(".slide-all .swiper-wrapper>div").click(function () {
+  let cl = $(this).attr("class");
+  //   console.log(cl);
+  let clnum = parseInt(cl.replace(/\D/g, ""));
+  console.log(clnum);
+  $(".job>li")
+    .eq(clnum - 1)
+    .css("display", "block");
+  $("body").css("overflow", "hidden");
+  $(".job .close").click(function () {
+    $(".job>li")
+      .eq(clnum - 1)
+      .css("display", "none");
+    $("body").css("overflow", "visible");
+  });
+});
+$(".qa li").click(function () {
+  let q = $(this).index();
+  //   console.log(q);
+  if ($(".qa li").eq(q).find(".answer").css("height") == "112px") {
+    $(".qa li").eq(q).find(".quest span").removeClass("on");
+    $(".qa li").eq(q).find(".answer").css("height", "0");
+  } else {
+    $(".quest span").removeClass("on");
+    $(".qa li").eq(q).find(".quest span").addClass("on");
+    $(".answer").css("height", "0");
+    $(".qa li").eq(q).find(".answer").css("height", "112px");
+  }
+});
+$(".recruit .checklist li").click(function () {
+  let span = $(this).find("span");
+  if (span.css("background-color") == "rgb(227, 0, 18)") {
+    span
+      .css({ backgroundColor: "#fafafa", borderColor: "#e0e0e0" })
+      .html('<img src="images/checkboxbl.svg" alt="checkboxbl"/>');
+  } else {
+    span
+      .css({ backgroundColor: "#e30012", borderColor: "#e30012" })
+      .html('<img src="images/checkboxwh.svg" alt="checkboxwh"/>');
+  }
+});

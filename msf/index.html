@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>국경없는의사회 구호활동가 채용</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/xeicon.min.css" />
     <link
@@ -16,150 +16,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script>
-      $(function () {
-        let majbar = document.querySelector(".major .bar");
-        let minbar = document.querySelector(".minor .bar");
-        $("#category1").click(function () {
-          if ($(majbar).css("display") == "block") {
-            $(majbar).css("display", "none");
-          } else {
-            $(majbar).css("display", "block");
-          }
-        });
-        $(".major .bar li").click(function () {
-          let majtxt = $(this).text();
-          // console.log(txt);
-          $("#category1").find("span").text(majtxt);
-          $(majbar).css("display", "none");
-        });
-        $("#category2").click(function () {
-          if ($(minbar).css("display") == "block") {
-            $(minbar).css("display", "none");
-          } else {
-            $(minbar).css("display", "block");
-          }
-        });
-        $(".minor .bar li").click(function () {
-          let mintxt = $(this).text();
-          // console.log(txt);
-          $("#category2").find("span").text(mintxt);
-          $(minbar).css("display", "none");
-          let index = $(this).index();
-          // console.log(index);
-          $(".search strong")
-            .off("click")
-            .on("click", function () {
-              $(".job>li").eq(index).css("display", "block");
-              $("body").css("overflow", "hidden");
-            });
-          $(".job .close")
-            .off("click")
-            .on("click", function () {
-              $(".job>li").eq(index).css("display", "none");
-              $("body").css("overflow", "visible");
-            });
-        });
-        $(".major .all").click(function () {
-          $(".minor .medi").css("display", "block");
-          $(".minor .non").css("display", "block");
-        });
-        $(".major .medi").click(function () {
-          $(".minor .non").css("display", "none");
-          $(".minor .medi").css("display", "block");
-        });
-        $(".major .non").click(function () {
-          $(".minor .medi").css("display", "none");
-          $(".minor .non").css("display", "block");
-        });
-        $(".minor .medi").click(function () {
-          $("#category1").find("span").html("의료");
-        });
-        $(".minor .non").click(function () {
-          $("#category1").find("span").html("비의료");
-        });
-        $(".people li").click(function () {
-          $(".storyBox li blockquote").removeClass("on");
-          $(".people li").removeClass("on");
-          $(".people li .worker .bdRed").removeClass("on");
-          $(".people li .worker .bdRed img").removeClass("on");
-          $(".people li .name").removeClass("on");
-          let p = $(this).index();
-          $(".storyBox li").eq(p).find("blockquote").addClass("on");
-          $(".people li").eq(p).addClass("on");
-          $(".people li").eq(p).find(".worker .bdRed").addClass("on");
-          $(".people li").eq(p).find(".worker .bdRed img").addClass("on");
-          $(".people li").eq(p).find(".name").addClass("on");
-        });
-        let num = 1;
-        setTimeout(function () {
-          $(".people li").eq(0).trigger("click");
-        });
-        setInterval(function () {
-          $(".people li").eq(num).trigger("click");
-          num = (num + 1) % $(".people li").length;
-        }, 3000);
-        $(".slide-all").css("height", "560px");
-        $(".inputBox").click(function () {
-          let lab = $(this).find("input");
-          lab.toggleClass("on");
-          if (
-            $("#medi").hasClass("on") == true &&
-            $("#non").hasClass("on") == false
-          ) {
-            $(".slide-all").css("height", "0");
-            $(".slide-medi").css("height", "560px");
-            $(".slide-non").css("height", "0");
-          } else if (
-            $("#medi").hasClass("on") == false &&
-            $("#non").hasClass("on") == true
-          ) {
-            $(".slide-all").css("height", "0");
-            $(".slide-medi").css("height", "0");
-            $(".slide-non").css("height", "560px");
-          } else if (
-            $("#medi").hasClass("on") == true &&
-            $("#non").hasClass("on") == true
-          ) {
-            $(".slide-all").css("height", "560px");
-            $(".slide-medi").css("height", "0");
-            $(".slide-non").css("height", "0");
-          } else if (
-            $("#medi").hasClass("on") == false &&
-            $("#non").hasClass("on") == false
-          ) {
-            $(".slide-all").css("height", "560px");
-            $(".slide-medi").css("height", "0");
-            $(".slide-non").css("height", "0");
-          }
-        });
-        $(".qa li").click(function () {
-          let q = $(this).index();
-          console.log(q);
-          if ($(".qa li").eq(q).find(".answer").css("height") == "112px") {
-            $(".qa li").eq(q).find(".quest span").removeClass("on");
-            $(".qa li").eq(q).find(".answer").css("height", "0");
-          } else {
-            $(".quest span").removeClass("on");
-            $(".qa li").eq(q).find(".quest span").addClass("on");
-            $(".answer").css("height", "0");
-            $(".qa li").eq(q).find(".answer").css("height", "112px");
-          }
-        });
-        $(".recruit .checklist li").click(function () {
-          let span = $(this).find("span");
-          if (span.css("background-color") == "rgb(227, 0, 18)") {
-            span
-              .css({ backgroundColor: "#fafafa", borderColor: "#e0e0e0" })
-              .html('<img src="images/checkboxbl.svg" alt="checkboxbl"/>');
-          } else {
-            span
-              .css({ backgroundColor: "#e30012", borderColor: "#e30012" })
-              .html('<img src="images/checkboxwh.svg" alt="checkboxwh"/>');
-          }
-        });
-      });
-    </script>
   </head>
   <body>
     <header>
@@ -210,7 +66,7 @@
               </label>
               <ul class="bar">
                 <li class="all">전체</li>
-                <li class="medi">의료</li>
+                <li class="med">의료</li>
                 <li class="non">비의료</li>
               </ul>
               <input type="radio" id="field1" />
@@ -221,20 +77,20 @@
                 <img src="images/maininputarrow.svg" alt="maininputarrow" />
               </label>
               <ul class="bar">
-                <li class="medi">간호사</li>
+                <li class="med">간호사</li>
                 <li class="non">공급망 관리자</li>
                 <li class="non">기술직 활동가</li>
-                <li class="medi">마취과 전문의</li>
-                <li class="medi">보건증진 담당자</li>
-                <li class="medi">산부인과 전문의</li>
-                <li class="medi">소아과 전문의</li>
+                <li class="med">마취과 전문의</li>
+                <li class="med">보건증진 담당자</li>
+                <li class="med">산부인과 전문의</li>
+                <li class="med">소아과 전문의</li>
                 <li class="non">식수·위생 관리자</li>
-                <li class="medi">약사</li>
-                <li class="medi">역학자</li>
-                <li class="medi">외과 전문의</li>
-                <li class="medi">일반의</li>
-                <li class="medi">정신건강 활동 관리자</li>
-                <li class="medi">조산사</li>
+                <li class="med">약사</li>
+                <li class="med">역학자</li>
+                <li class="med">외과 전문의</li>
+                <li class="med">일반의</li>
+                <li class="med">정신건강 활동 관리자</li>
+                <li class="med">조산사</li>
                 <li class="non">프로젝트 재무 및 인력 관리자</li>
               </ul>
               <input type="radio" id="field2" />
@@ -442,9 +298,9 @@
         </h1>
         <div class="btn">
           <div class="left">
-            <div class="inputBox medi">
-              <input type="checkbox" id="medi" />
-              <label for="medi">
+            <div class="inputBox med">
+              <input type="checkbox" id="med" />
+              <label for="med">
                 <h6>의료 직군</h6>
                 <span></span>
               </label>
@@ -465,7 +321,7 @@
         <div class="swiper-container">
           <div class="swiper slide-all">
             <div class="swiper-wrapper">
-              <div class="swiper-slide medi job1">
+              <div class="swiper-slide med job1">
                 <div class="imgBox">
                   <img src="images/job1.jpg" alt="job1" />
                   <span>©Andrii Ovod</span>
@@ -516,7 +372,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job4">
+              <div class="swiper-slide med job4">
                 <div class="imgBox">
                   <img src="images/job4.jpg" alt="job4" />
                   <span>©국경없는의사회</span>
@@ -533,7 +389,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job5">
+              <div class="swiper-slide med job5">
                 <div class="imgBox">
                   <img src="images/job5.jpg" alt="job5" />
                   <span>©Simon Ming_MSF</span>
@@ -550,7 +406,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job6">
+              <div class="swiper-slide med job6">
                 <div class="imgBox">
                   <img src="images/job6.jpg" alt="job6" />
                   <span>©Severine Sajous_MSF</span>
@@ -567,7 +423,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job7">
+              <div class="swiper-slide med job7">
                 <div class="imgBox">
                   <img src="images/job7.jpg" alt="job7" />
                   <span>©Oliver Bath_MSF</span>
@@ -604,7 +460,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job9">
+              <div class="swiper-slide med job9">
                 <div class="imgBox">
                   <img src="images/job9.jpg" alt="job9" />
                   <span>©Atul Loke</span>
@@ -621,7 +477,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job10">
+              <div class="swiper-slide med job10">
                 <div class="imgBox">
                   <img src="images/job10.jpg" alt="job10" />
                   <span>©MSF_Pape Cire Kane</span>
@@ -638,7 +494,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job11">
+              <div class="swiper-slide med job11">
                 <div class="imgBox">
                   <img src="images/job11.jpg" alt="job11" />
                   <span>©Peter Caton</span>
@@ -655,7 +511,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job12">
+              <div class="swiper-slide med job12">
                 <div class="imgBox">
                   <img src="images/job12.jpg" alt="job12" />
                   <span>©Andrii Ovod</span>
@@ -672,7 +528,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job13">
+              <div class="swiper-slide med job13">
                 <div class="imgBox">
                   <img src="images/job13.jpg" alt="job13" />
                   <span>©Anna Pantelia_MSF</span>
@@ -689,7 +545,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job14">
+              <div class="swiper-slide med job14">
                 <div class="imgBox">
                   <img src="images/job14.jpg" alt="job14" />
                   <span>©Peter Bräunig</span>
@@ -728,9 +584,9 @@
               </div>
             </div>
           </div>
-          <div class="swiper slide-medi">
+          <div class="swiper slide-med">
             <div class="swiper-wrapper">
-              <div class="swiper-slide medi job1">
+              <div class="swiper-slide med job1">
                 <div class="imgBox">
                   <img src="images/job1.jpg" alt="job1" />
                   <span>©Andrii Ovod</span>
@@ -747,7 +603,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job4">
+              <div class="swiper-slide med job4">
                 <div class="imgBox">
                   <img src="images/job4.jpg" alt="job4" />
                   <span>©국경없는의사회</span>
@@ -764,7 +620,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job5">
+              <div class="swiper-slide med job5">
                 <div class="imgBox">
                   <img src="images/job5.jpg" alt="job5" />
                   <span>©Simon Ming_MSF</span>
@@ -781,7 +637,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job6">
+              <div class="swiper-slide med job6">
                 <div class="imgBox">
                   <img src="images/job6.jpg" alt="job6" />
                   <span>©Severine Sajous_MSF</span>
@@ -798,7 +654,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job7">
+              <div class="swiper-slide med job7">
                 <div class="imgBox">
                   <img src="images/job7.jpg" alt="job7" />
                   <span>©Oliver Bath_MSF</span>
@@ -815,7 +671,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job9">
+              <div class="swiper-slide med job9">
                 <div class="imgBox">
                   <img src="images/job9.jpg" alt="job9" />
                   <span>©Atul Loke</span>
@@ -832,7 +688,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job10">
+              <div class="swiper-slide med job10">
                 <div class="imgBox">
                   <img src="images/job10.jpg" alt="job10" />
                   <span>©MSF_Pape Cire Kane</span>
@@ -849,7 +705,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job11">
+              <div class="swiper-slide med job11">
                 <div class="imgBox">
                   <img src="images/job11.jpg" alt="job11" />
                   <span>©Peter Caton</span>
@@ -866,7 +722,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job12">
+              <div class="swiper-slide med job12">
                 <div class="imgBox">
                   <img src="images/job12.jpg" alt="job12" />
                   <span>©Andrii Ovod</span>
@@ -883,7 +739,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job13">
+              <div class="swiper-slide med job13">
                 <div class="imgBox">
                   <img src="images/job13.jpg" alt="job13" />
                   <span>©Anna Pantelia_MSF</span>
@@ -900,7 +756,7 @@
                   >
                 </div>
               </div>
-              <div class="swiper-slide medi job14">
+              <div class="swiper-slide med job14">
                 <div class="imgBox">
                   <img src="images/job14.jpg" alt="job14" />
                   <span>©Peter Bräunig</span>
@@ -4349,6 +4205,7 @@
         <div class="close"></div>
       </li>
     </ul>
+    <script src="js/index.js"></script>
     <script>
       var TxtType = function (el, toRotate, period) {
         this.toRotate = toRotate;
@@ -4422,7 +4279,7 @@
           1980: { slidesPerView: 7 },
         },
       });
-      var swiper2 = new Swiper(".slide-medi", {
+      var swiper2 = new Swiper(".slide-med", {
         slidesPerView: "auto",
         spaceBetween: 32,
         centeredSlides: true,
