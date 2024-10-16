@@ -259,7 +259,9 @@ $("#fullpage").fullpage({
     }
   },
 });
-// 햄버거 버튼이 풀페이지 시 변경은 잘 됐으나, 스와이퍼에도 적용하려 하니 버튼이 눌리지 않음
+
+// 햄버거 버튼이 풀페이지 시 변경은 잘 됐으나, 스와이퍼에도 적용하려 하니 버튼이 눌리지 않음 (현재 우선적으로 .sec2에 적용하던 중)
+
 var length2 = $(".sec2 .swiper-slide").length;
 var swiper2 = new Swiper(".sec2 .swiper-container", {
   slidesPerView: 1,
