@@ -216,10 +216,16 @@ header .head .blank {
   border-radius: 50%;
   cursor: pointer;
 }
+.headRight .hamberger.on {
+  border-color: #000;
+}
 .headRight .hamberger div {
   position: absolute;
   height: 1px;
   background-color: #fff;
+}
+.headRight .hamberger div.on {
+  background-color: #000;
 }
 .headRight .hamberger .bar1 {
   left: 15px;

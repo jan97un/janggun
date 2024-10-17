@@ -54,55 +54,54 @@ $("#fullpage").fullpage({
       $("header .head  .tel .telBg div").addClass("on");
       $(".headRight .hamberger").css("border-color", "#000");
       $(".headRight .hamberger div").css("background-color", "#000");
-      $(".gnb").hover(
-        function () {
-          $("header .head .logo a").addClass("on");
-          $("header .head .gnb .dep1 > li > a").css("color", "#333");
-          $("header .head .tel").css("color", "#000");
-          $("header .head .tel .telBg").css({
-            borderColor: "#000",
-            backgroundColor: "#000",
-          });
-          $("header .head .tel .telBg div").addClass("on");
-          $(".headRight .hamberger").css("border-color", "#000");
-          $(".headRight .hamberger div").css("background-color", "#000");
-        },
-        function () {
-          $("header .head .logo a").addClass("on");
-          $("header .head .gnb .dep1 > li > a").css("color", "#333");
-          $("header .head .tel").css("color", "#000");
-          $("header .head .tel .telBg").css({
-            borderColor: "#000",
-            backgroundColor: "#000",
-          });
-          $("header .head .tel .telBg div").addClass("on");
-          $(".headRight .hamberger").css("border-color", "#000");
-          $(".headRight .hamberger div").css("background-color", "#000");
-        }
-      );
-      $("header .head .tel").hover(
-        function () {
-          $("header .head .tel .tel1").css("display", "none");
-          $("header .head .tel .tel2").css("display", "block");
-          $("header .head .tel .telBg").css({
-            width: "215px",
-            borderColor: "#000",
-            backgroundColor: "transparent",
-          });
-          $("header .head .tel .telBg div").removeClass("on");
-        },
-        function () {
-          $("header .head .tel .tel1").css("display", "block");
-          $("header .head .tel .tel2").css("display", "none");
-          $("header .head .tel .telBg").css({
-            width: "50px",
-            borderColor: "#000",
-            backgroundColor: "#000",
-          });
-          $("header .head .tel .telBg div").addClass("on");
-        }
-      );
-      $(".hamNav").css("display", "none");
+      // $(".gnb").hover(
+      //   function () {
+      //     $("header .head .logo a").addClass("on");
+      //     $("header .head .gnb .dep1 > li > a").css("color", "#333");
+      //     $("header .head .tel").css("color", "#000");
+      //     $("header .head .tel .telBg").css({
+      //       borderColor: "#000",
+      //       backgroundColor: "#000",
+      //     });
+      //     $("header .head .tel .telBg div").addClass("on");
+      //     $(".headRight .hamberger").css("border-color", "#000");
+      //     $(".headRight .hamberger div").css("background-color", "#000");
+      //   },
+      //   function () {
+      //     $("header .head .logo a").addClass("on");
+      //     $("header .head .gnb .dep1 > li > a").css("color", "#333");
+      //     $("header .head .tel").css("color", "#000");
+      //     $("header .head .tel .telBg").css({
+      //       borderColor: "#000",
+      //       backgroundColor: "#000",
+      //     });
+      //     $("header .head .tel .telBg div").addClass("on");
+      //     $(".headRight .hamberger").css("border-color", "#000");
+      //     $(".headRight .hamberger div").css("background-color", "#000");
+      //   }
+      // );
+      // $("header .head .tel").hover(
+      //   function () {
+      //     $("header .head .tel .tel1").css("display", "none");
+      //     $("header .head .tel .tel2").css("display", "block");
+      //     $("header .head .tel .telBg").css({
+      //       width: "215px",
+      //       borderColor: "#000",
+      //       backgroundColor: "transparent",
+      //     });
+      //     $("header .head .tel .telBg div").removeClass("on");
+      //   },
+      //   function () {
+      //     $("header .head .tel .tel1").css("display", "block");
+      //     $("header .head .tel .tel2").css("display", "none");
+      //     $("header .head .tel .telBg").css({
+      //       width: "50px",
+      //       borderColor: "#000",
+      //       backgroundColor: "#000",
+      //     });
+      //     $("header .head .tel .telBg div").addClass("on");
+      //   }
+      // );
       $(".headRight .hamberger").click(function () {
         if ($(".hamNav").css("display") == "block") {
           $(".headRight").css("right", "6.3%");
@@ -203,7 +202,6 @@ $("#fullpage").fullpage({
           $("header .head .tel .telBg div").removeClass("on");
         }
       );
-      $(".hamNav").css("display", "none");
       $(".headRight .hamberger").click(function () {
         if ($(".hamNav").css("display") == "block") {
           $(".headRight").css("right", "6.3%");
@@ -261,9 +259,6 @@ $("#fullpage").fullpage({
     }
   },
 });
-
-// 햄버거 버튼이 풀페이지 시 변경은 잘 됐으나, 스와이퍼에도 적용하려 하니 버튼이 눌리지 않음 (현재 우선적으로 .sec2에 적용하던 중)
-
 var length2 = $(".sec2 .swiper-slide").length;
 var swiper2 = new Swiper(".sec2 .swiper-container", {
   slidesPerView: 1,
@@ -337,47 +332,6 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
             $("header .head .tel .telBg div").addClass("on");
           }
         );
-        $(".headRight .hamberger").click(function () {
-          if ($(".hamNav").css("display") == "block") {
-            $(".headRight").css("right", "6.3%");
-            $(".headRight .hamberger").css({
-              borderColor: "#000",
-              backgroundColor: "transparent",
-            });
-            $(".headRight .hamberger div").css("background-color", "#000");
-            $(".headRight .hamberger .bar1").css({
-              left: "15px",
-              top: "18px",
-              transform: "rotate(0)",
-            });
-            $(".headRight .hamberger .bar2").css("display", "block");
-            $(".headRight .hamberger .bar3").css({
-              left: "15px",
-              bottom: "17px",
-              transform: "rotate(0)",
-            });
-            $(".hamNav").css("display", "none");
-          } else {
-            $(".headRight").css("right", "1.5%");
-            $(".headRight .hamberger").css({
-              borderColor: "#000",
-              backgroundColor: "#000",
-            });
-            $(".headRight .hamberger div").css("background-color", "#fff");
-            $(".headRight .hamberger .bar1").css({
-              left: "14px",
-              top: "calc(50% - 0.5px)",
-              transform: "rotate(45deg)",
-            });
-            $(".headRight .hamberger .bar2").css("display", "none");
-            $(".headRight .hamberger .bar3").css({
-              left: "14px",
-              bottom: "calc(50% - 0.5px)",
-              transform: "rotate(-45deg)",
-            });
-            $(".hamNav").css("display", "block");
-          }
-        });
       }
       if (i == 1) {
         $("header .head .logo a").removeClass("on");
@@ -438,47 +392,47 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
             $("header .head .tel .telBg div").removeClass("on");
           }
         );
-        $(".headRight .hamberger").click(function () {
-          if ($(".hamNav").css("display") == "block") {
-            $(".headRight").css("right", "6.3%");
-            $(".headRight .hamberger").css({
-              borderColor: "#fff",
-              backgroundColor: "transparent",
-            });
-            $(".headRight .hamberger div").css("background-color", "#fff");
-            $(".headRight .hamberger .bar1").css({
-              left: "15px",
-              top: "18px",
-              transform: "rotate(0)",
-            });
-            $(".headRight .hamberger .bar2").css("display", "block");
-            $(".headRight .hamberger .bar3").css({
-              left: "15px",
-              bottom: "17px",
-              transform: "rotate(0)",
-            });
-            $(".hamNav").css("display", "none");
-          } else {
-            $(".headRight").css("right", "1.5%");
-            $(".headRight .hamberger").css({
-              borderColor: "#000",
-              backgroundColor: "#000",
-            });
-            $(".headRight .hamberger div").css("background-color", "#fff");
-            $(".headRight .hamberger .bar1").css({
-              left: "14px",
-              top: "calc(50% - 0.5px)",
-              transform: "rotate(45deg)",
-            });
-            $(".headRight .hamberger .bar2").css("display", "none");
-            $(".headRight .hamberger .bar3").css({
-              left: "14px",
-              bottom: "calc(50% - 0.5px)",
-              transform: "rotate(-45deg)",
-            });
-            $(".hamNav").css("display", "block");
-          }
-        });
+        // $(".headRight .hamberger").click(function () {
+        //   if ($(".hamNav").css("display") == "block") {
+        //     $(".headRight").css("right", "6.3%");
+        //     $(".headRight .hamberger").css({
+        //       borderColor: "#fff",
+        //       backgroundColor: "transparent",
+        //     });
+        //     $(".headRight .hamberger div").css("background-color", "#fff");
+        //     $(".headRight .hamberger .bar1").css({
+        //       left: "15px",
+        //       top: "18px",
+        //       transform: "rotate(0)",
+        //     });
+        //     $(".headRight .hamberger .bar2").css("display", "block");
+        //     $(".headRight .hamberger .bar3").css({
+        //       left: "15px",
+        //       bottom: "17px",
+        //       transform: "rotate(0)",
+        //     });
+        //     $(".hamNav").css("display", "none");
+        //   } else {
+        //     $(".headRight").css("right", "1.5%");
+        //     $(".headRight .hamberger").css({
+        //       borderColor: "#000",
+        //       backgroundColor: "#000",
+        //     });
+        //     $(".headRight .hamberger div").css("background-color", "#fff");
+        //     $(".headRight .hamberger .bar1").css({
+        //       left: "14px",
+        //       top: "calc(50% - 0.5px)",
+        //       transform: "rotate(45deg)",
+        //     });
+        //     $(".headRight .hamberger .bar2").css("display", "none");
+        //     $(".headRight .hamberger .bar3").css({
+        //       left: "14px",
+        //       bottom: "calc(50% - 0.5px)",
+        //       transform: "rotate(-45deg)",
+        //     });
+        //     $(".hamNav").css("display", "block");
+        //   }
+        // });
       }
     },
     slideChangeTransitionEnd: function () {

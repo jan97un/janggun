@@ -110,11 +110,16 @@ $(".inputBox").click(function () {
     $(".slide-non").css("height", "0");
   }
 });
+let medLength = $(".slide-med .swiper-wrapper").children().length;
+// console.log(medLength);
+$(".inputBox.med span").html("(" + medLength + ")");
+let nonLength = $(".slide-non .swiper-wrapper").children().length / 2;
+$(".inputBox.non span").html("(" + nonLength + ")");
 $(".slide-all .swiper-wrapper>div").click(function () {
   let cl = $(this).attr("class");
   //   console.log(cl);
   let clnum = parseInt(cl.replace(/\D/g, ""));
-  console.log(clnum);
+  // console.log(clnum);
   $(".job>li")
     .eq(clnum - 1)
     .css("display", "block");
@@ -122,6 +127,38 @@ $(".slide-all .swiper-wrapper>div").click(function () {
   $(".job .close").click(function () {
     $(".job>li")
       .eq(clnum - 1)
+      .css("display", "none");
+    $("body").css("overflow", "visible");
+  });
+});
+$(".slide-med .swiper-wrapper .med").click(function () {
+  let clmed = $(this).attr("class");
+  // console.log(clmed);
+  let mednum = parseInt(clmed.replace(/\D/g, ""));
+  console.log(mednum);
+  $(".job>li")
+    .eq(mednum - 1)
+    .css("display", "block");
+  $("body").css("overflow", "hidden");
+  $(".job .close").click(function () {
+    $(".job>li")
+      .eq(mednum - 1)
+      .css("display", "none");
+    $("body").css("overflow", "visible");
+  });
+});
+$(".slide-non .swiper-wrapper .non").click(function () {
+  let clnon = $(this).attr("class");
+  // console.log(clmed);
+  let nonnum = parseInt(clnon.replace(/\D/g, ""));
+  console.log(nonnum);
+  $(".job>li")
+    .eq(nonnum - 1)
+    .css("display", "block");
+  $("body").css("overflow", "hidden");
+  $(".job .close").click(function () {
+    $(".job>li")
+      .eq(nonnum - 1)
       .css("display", "none");
     $("body").css("overflow", "visible");
   });

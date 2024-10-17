@@ -221,6 +221,7 @@ header {
 .scrollTrigger {
   position: relative;
   width: 100%;
+  height: 100vh;
 }
 .main2 {
   width: 100%;
@@ -243,8 +244,8 @@ header {
   left: 50%;
   top: 352px;
   transform: translateX(-50%);
-  width: 25.2233%;
-  height: 34.6964%;
+  width: 25%;
+  height: 35%;
 }
 .main2 .videoBox video {
   width: 100%;
@@ -468,7 +469,8 @@ header {
   align-items: center;
   cursor: pointer;
 }
-.main5 .btn .left .inputBox label h6 {
+.main5 .btn .left .inputBox label h6,
+.main5 .btn .left .inputBox label span {
   position: relative;
   font-size: 18px;
   font-weight: 700;
@@ -525,6 +527,7 @@ header {
 .main5 .swiper-slide {
   cursor: pointer;
 }
+
 .main5 .swiper-slide .imgBox {
   position: relative;
   width: 280px;
@@ -538,6 +541,11 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.main5 .swiper-slide:hover .imgBox img {
+  transform: scale(1.1);
 }
 .main5 .swiper-slide .imgBox span {
   position: absolute;
