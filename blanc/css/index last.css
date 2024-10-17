@@ -102,6 +102,9 @@ header .head .gnb .dep1 > li > a {
   color: #fff;
   transition: 0.3s ease-out;
 }
+header .head .gnb .dep1 > li > a.on {
+  color: #333;
+}
 header .head .gnb .dep1 > li > .dep2 {
   position: absolute;
   left: 0;
