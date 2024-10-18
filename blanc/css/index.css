@@ -102,11 +102,15 @@ header .head .gnb .dep1 > li > a {
   color: #fff;
   transition: 0.3s ease-out;
 }
+header .head .gnb .dep1 > li > a.on {
+  color: #333;
+}
 header .head .gnb .dep1 > li > .dep2 {
   position: absolute;
   left: 0;
   top: 120px;
   width: 100%;
+  height: 210px;
   z-index: 9000;
 }
 header .head .gnb .dep1 > li > .dep2 li {
@@ -122,9 +126,6 @@ header .head .gnb .dep1 > li .dep2 li a {
   opacity: 0;
   transition: 0.3s;
 }
-
-/* head nav background */
-
 header .head .gnb .bgWhite {
   position: absolute;
   left: 0;
@@ -134,84 +135,142 @@ header .head .gnb .bgWhite {
   z-index: 1010;
   transition: 0.3s;
 }
-header .head .gnb:hover .dep1 ~ .bgWhite {
+header .head .gnb .dep1:hover ~ .bgWhite {
   height: 210px;
   background: #fff;
   border-top: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
 }
-header .head .gnb:hover .dep1 > li .dep2 li a {
+header .head .gnb .dep1:hover > li .dep2 li a {
   opacity: 1;
 }
-
-/* headRight */
-
-header .head .headRight {
-  display: flex;
-  gap: 10px;
-}
-header .head .headRight .tel {
+header .head .tel {
+  position: absolute;
+  right: calc(6.3% + 60px);
   width: 215px;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
   color: #fff;
   align-items: center;
   cursor: pointer;
 }
-header .head .headRight .tel p {
+header .head .tel .tel1 {
   font-family: "FuturaStdMedium", sans-serif;
   font-size: 12px;
-  margin-right: 15px;
-  transition: 0.3s ease-out;
+  padding-right: 65px;
 }
-header .head .headRight .tel .telBg {
-  position: relative;
+header .head .tel .tel1.on {
+  color: #000;
+}
+header .head .tel .tel1.act {
+  display: none;
+}
+header .head .tel .tel2 {
+  font-family: "FuturaStdMedium", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-right: 65px;
+  display: none;
+}
+header .head .tel .tel2.act {
+  display: block;
+}
+header .head .tel .tel2.black {
+  color: #000;
+}
+header .head .tel .telBg {
+  position: absolute;
   width: 50px;
   height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 50px;
   transition: 0.3s ease-out;
 }
-header .head .headRight .tel .telBg div {
+header .head .tel .telBg.on {
+  border-color: #000;
+  background-color: #000;
+}
+header .head .tel .telBg.act {
+  width: 215px;
+  background-color: transparent;
+}
+header .head .tel .telBg div {
   background: url(../images/telblack.png) center no-repeat;
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 50px;
   height: 50px;
 }
-header .head .headRight .tel .telBg div.on {
+header .head .tel .telBg div.on {
   background: url(../images/telwhite.png) center no-repeat;
 }
-header .head .headRight .hamberger {
+header .head .blank {
+  width: 215px;
+  height: 100%;
+}
+
+/* headRight */
+
+.headRight {
+  position: fixed;
+  width: 50px;
+  height: 120px;
+  right: 6.3%;
+  top: 0;
+  z-index: 9999;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-out;
+}
+.headRight .hamberger {
   position: relative;
   width: 50px;
   height: 50px;
   border-width: 1px;
   border-style: solid;
   border-color: #fff;
+  background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
 }
-header .head .headRight .hamberger div {
+.headRight .hamberger.on {
+  border-color: #000;
+}
+.headRight .hamberger.bg {
+  background-color: #000;
+}
+.headRight .hamberger div {
   position: absolute;
   height: 1px;
-  background: #fff;
+  background-color: #fff;
 }
-header .head .headRight .hamberger .bar1 {
+.headRight .hamberger div.on {
+  background-color: #000;
+}
+.headRight .hamberger .bar1 {
   left: 15px;
   top: 18px;
   width: 20px;
+  transition: 0.3s ease-out;
 }
-header .head .headRight .hamberger .bar2 {
+.headRight .hamberger .bar2 {
   left: 23px;
   top: 50%;
   width: 12px;
+  transition: 0.3s ease-out;
 }
-header .head .headRight .hamberger .bar3 {
+.headRight .hamberger .bar3 {
   left: 15px;
   bottom: 17px;
   width: 20px;
+  transition: 0.3s ease-out;
 }
 
 /* hamNav(fixed) */
@@ -224,6 +283,7 @@ header .head .headRight .hamberger .bar3 {
   height: 100vh;
   background-color: #fff;
   z-index: 9000;
+  display: none;
 }
 .hamNav .dep1 {
   display: flex;
@@ -336,6 +396,20 @@ header .head .headRight .hamberger .bar3 {
   width: 100%;
   height: 100%;
   z-index: 1;
+  /* transform: scale(1);
+  transition: scale 3s 0s, translateY 1.7s 2.8s; */
+  animation: s1bg 4.5s 0s;
+}
+@keyframes s1bg {
+  0% {
+    transform: scale(1.5) translateY(200px);
+  }
+  50% {
+    transform: scale(1) translateY(200px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
 }
 #section0 .shadow {
   position: absolute;
