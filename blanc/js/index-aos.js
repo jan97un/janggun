@@ -63,13 +63,11 @@ $("header .head .tel").hover(
     $("header .head .tel .tel1").addClass("act");
     $("header .head .tel .tel2").addClass("act");
     $("header .head .tel .telBg").addClass("act");
-    // $("header .head .tel .telBg div").removeClass("on");
   },
   function () {
     $("header .head .tel .tel1").removeClass("act");
     $("header .head .tel .tel2").removeClass("act");
     $("header .head .tel .telBg").removeClass("act");
-    // $("header .head .tel .telBg div").removeClass("on");
   }
 );
 let bool = true;
@@ -108,13 +106,6 @@ $(".headRight .hamberger").click(function () {
   bool = !bool;
 });
 const sectionLength = $(".section").length;
-// function init() {
-//   $(".section").eq(0).find("[data-aos]").removeClass("aos-animate");
-//   setTimeout(() => {
-//     $(".section").eq(0).addClass("start");
-//     $(".section").eq(0).find("[data-aos]").addClass("aos-animate");
-//   }, 2200);
-// }
 var wheelCount = 0;
 $("#fullpage").fullpage({
   anchors: [
@@ -149,9 +140,9 @@ $("#fullpage").fullpage({
       $(".section")
         .eq(index - 1)
         .addClass("after-load");
-      // if (!$(".section").eq(index).hasClass("after-load")) {
-      //   AOS.init();
-      // }
+      if (!$(".section").eq(index).hasClass("after-load")) {
+        AOS.init();
+      }
       white();
       remove();
       telwh();
@@ -188,12 +179,7 @@ $("#fullpage").fullpage({
       }
     }
   },
-  onLeave: function (origin, destination, direction) {
-    if (origin == 1 && wheelCount < 1) {
-      setTimeout(() => {
-        $(".txt1").find("[data-aos]").removeClass("aos-animate");
-      }, 750);
-    }
+  onLeave: function (origin, destination, direction, index) {
     $(".section").eq(origin).find("[data-aos]").removeClass("aos-animate");
     $("#fullpage").on("scroll touchmove mousewheel", function (event) {
       event.preventDefault();

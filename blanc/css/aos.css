@@ -914,3 +914,24 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 [data-aos="flip-down"].aos-animate {
   transform: perspective(2500px) rotateX(0);
 }
+
+/* jg */
+
+[data-aos="s1bg-scale"] {
+  transform: scale(1.3);
+}
+[data-aos="s1bg-scale"].aos-animate {
+  transform: scale(1);
+}
+[data-aos="s1bg-y"] {
+  transform: translateY(0);
+}
+[data-aos="s1bg-y"].aos-animate {
+  transform: translateY(-200px);
+}
+[data-aos="s1wh"] {
+  transform: translateY(290px);
+}
+[data-aos="s1wh"].aos-animate {
+  transform: translateY(0);
+}
