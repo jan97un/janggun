@@ -917,21 +917,27 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
 
 /* jg */
 
-[data-aos="s1bg-scale"] {
+[data-aos="bg-scale"] {
   transform: scale(1.3);
 }
-[data-aos="s1bg-scale"].aos-animate {
+[data-aos="bg-scale"].aos-animate {
   transform: scale(1);
 }
-[data-aos="s1bg-y"] {
+[data-aos="bg-y"] {
   transform: translateY(0);
 }
-[data-aos="s1bg-y"].aos-animate {
+[data-aos="bg-y"].aos-animate {
   transform: translateY(-200px);
 }
-[data-aos="s1wh"] {
+[data-aos="wh-y"] {
   transform: translateY(290px);
 }
-[data-aos="s1wh"].aos-animate {
+[data-aos="wh-y"].aos-animate {
   transform: translateY(0);
+}
+[data-aos="bg-scale2"] {
+  transform: scale(1.2);
+}
+[data-aos="bg-scale2"].aos-animate {
+  transform: scale(1);
 }

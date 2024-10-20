@@ -847,8 +847,12 @@ header .head .blank {
   font-size: 222px;
   font-weight: 800;
   line-height: 100%;
-  letter-spacing: 50px;
+  letter-spacing: 0px;
   text-align: center;
+}
+#section7 .mainTxt .txtBox h1.on {
+  letter-spacing: 50px;
+  transition: 1s 1s;
 }
 #section7 .mainTxt .txtBox p {
   font-size: 14px;
@@ -902,17 +906,17 @@ header .head .blank {
   font-family: "FuturaStdHeavy", sans-serif;
   margin: 15px 0 35px;
 }
-.amenityWh .mainTxt .txtBox p:nth-of-type(1) {
+.amenityWh .mainTxt .txtBox p {
   font-size: 14px;
   line-height: 180%;
 }
-#section8 .mainTxt .txtBox p:nth-of-type(2) {
+#section8 .mainTxt .subImg {
   position: absolute;
   left: 50%;
   bottom: -50px;
   transform: translateX(-50%);
 }
-.amenityWh .mainImg p img {
+.amenityWh .mainImg img {
   width: 100%;
   height: 100%;
 }
@@ -989,7 +993,7 @@ header .head .blank {
   height: 100%;
   text-align: right;
 }
-#section10 .mainTxt .txtBox p:nth-of-type(2) {
+#section10 .mainTxt .subImg {
   position: absolute;
   right: 50px;
   bottom: -80px;
@@ -1071,7 +1075,10 @@ header .head .blank {
 
 /* section13 */
 
-#section13 {
+#section13 .mainBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background: url(../images/section13.jpg) center/cover no-repeat;
 }
 .high {
@@ -1106,7 +1113,10 @@ header .head .blank {
 
 /* section14 */
 
-#section14 {
+#section14 .mainBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background: url(../images/section14.jpg) center/cover no-repeat;
 }
 #section14 .high {

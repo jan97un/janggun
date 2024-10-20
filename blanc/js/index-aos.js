@@ -177,6 +177,11 @@ $("#fullpage").fullpage({
         $("header .head .tel p").css("visibility", "visible");
         $("header .head .tel .telBg").css("visibility", "visible");
       }
+      if (index == 5) {
+        $("#section7 .mainTxt .txtBox h1").addClass("on");
+      } else {
+        $("#section7 .mainTxt .txtBox h1").removeClass("on");
+      }
     }
   },
   onLeave: function (origin, destination, direction, index) {
