@@ -32,6 +32,9 @@
   text-transform: uppercase;
   box-sizing: border-box;
 }
+html {
+  overflow: hidden;
+}
 ul {
   list-style: none;
 }
@@ -202,8 +205,8 @@ header .head .tel .telBg.act {
 header .head .tel .telBg div {
   background: url(../images/telblack.png) center no-repeat;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -1px;
+  top: -1px;
   width: 50px;
   height: 50px;
 }
@@ -228,6 +231,9 @@ header .head .blank {
   display: flex;
   align-items: center;
   transition: 0.3s ease-out;
+}
+.headRight.on {
+  right: 1.5%;
 }
 .headRight .hamberger {
   position: relative;
@@ -255,20 +261,22 @@ header .head .blank {
   background-color: #000;
 }
 .headRight .hamberger .bar1 {
-  left: 15px;
-  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35%;
   width: 20px;
   transition: 0.3s ease-out;
 }
 .headRight .hamberger .bar2 {
-  left: 23px;
+  left: 45%;
   top: 50%;
   width: 12px;
   transition: 0.3s ease-out;
 }
 .headRight .hamberger .bar3 {
-  left: 15px;
-  bottom: 17px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 32%;
   width: 20px;
   transition: 0.3s ease-out;
 }
@@ -283,7 +291,39 @@ header .head .blank {
   height: 100vh;
   background-color: #fff;
   z-index: 9000;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+.hamNav .navBg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9001;
+  display: flex;
+  justify-content: flex-start;
+}
+.hamNav .navBg li {
+  position: relative;
+  width: 13.5%;
+  height: 100%;
+}
+.hamNav .navBg li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  transform: scaleX(1);
+  transition: transform 0.6s cubic-bezier(0.47, 0, 0.31, 1.04) 0.2s;
+  transform-origin: right top;
+}
+.hamNav .navBg li.on::before {
+  transform: scaleX(0);
 }
 .hamNav .dep1 {
   display: flex;
@@ -294,7 +334,6 @@ header .head .blank {
   height: 100%;
   background-color: #fff;
   border-right: 1px solid #dedede;
-  z-index: 9001;
   position: relative;
 }
 .hamNav .dep1 > li:hover {
@@ -395,7 +434,7 @@ header .head .blank {
   position: absolute;
   background: url(../images/section0.jpg) bottom/cover no-repeat;
   left: 0;
-  top: 0px;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -581,6 +620,10 @@ header .head .blank {
   height: 40px;
   background: #000;
   opacity: 0.3;
+}
+#section1 .mainTxt .txtBot div:after {
+  bottom: 25px;
+  height: 35px;
 }
 
 /* section2 */
@@ -940,6 +983,10 @@ header .head .blank {
 .amenityBl .conWrap {
   position: relative;
 }
+.amenityBl .conWrap p img {
+  width: 100%;
+  height: 100%;
+}
 .amenityBl h1 {
   font-size: 44px;
   font-weight: 600;
@@ -1178,6 +1225,55 @@ header .head .blank {
 }
 #section15 .mainBox .map {
   margin-top: 40px;
+  font-size: 0;
+}
+#section15 .mainBox .map .mapImg {
+  position: relative;
+}
+#section15 .mainBox .map .mapImg .line {
+  position: absolute;
+  transition: 0.5s;
+  background-color: #563f34;
+}
+#section15 .mainBox .map .mapImg .lineTop {
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: 0% 0%;
+}
+#section15 .mainBox .map .mapImg .lineRight {
+  width: 1px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: 100% 0%;
+}
+#section15 .mainBox .map .mapImg .lineBot {
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: 100% 100%;
+}
+#section15 .mainBox .map .mapImg .lineLeft {
+  width: 1px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transform-origin: 0% 100%;
+}
+#section15 .mainBox .map .mapImg:hover .lineTop,
+#section15 .mainBox .map .mapImg:hover .lineBot {
+  transform: scaleX(1);
+}
+#section15 .mainBox .map .mapImg:hover .lineRight,
+#section15 .mainBox .map .mapImg:hover .lineLeft {
+  transform: scaleY(1);
 }
 #section15 .mainBox .map .mapLink {
   display: flex;
@@ -1358,3 +1454,106 @@ footer h6:last-child {
   font-weight: normal;
   line-height: 100%;
 }
+
+/* @media (max-width: 1439px) {
+  header {
+    height: 100px;
+  }
+  header .head .logo {
+    transform: scale(0.9);
+  }
+  header .head .gnb {
+    display: none;
+  }
+  header .head .tel {
+    right: calc(5% + 50px);
+    width: 180px;
+  }
+  header .head .tel .tel1 {
+    padding-right: 55px;
+  }
+  header .head .tel .tel2 {
+    font-size: 16px;
+    line-height: 40px;
+    padding-right: 40px;
+  }
+  header .head .tel .telBg {
+    width: 40px;
+    height: 40px;
+  }
+  header .head .tel .telBg.act {
+    width: 180px;
+  }
+  header .head .tel .telBg div {
+    width: 40px;
+    height: 40px;
+  }
+  .headRight {
+    width: 40px;
+    height: 100px;
+    right: 5%;
+  }
+  .headRight.on {
+    right: 1.3%;
+  }
+  .headRight .hamberger {
+    width: 40px;
+    height: 40px;
+  }
+  .headRight .hamberger .bar1 {
+    width: 16px;
+  }
+  .headRight .hamberger .bar2 {
+    width: 10px;
+  }
+  .headRight .hamberger .bar3 {
+    width: 16px;
+  }
+  #section0 .mainTxt p:nth-of-type(1) {
+    font-size: 18px;
+  }
+  #section0 .mainTxt .line {
+    height: 50px;
+    margin: 25px auto 20px;
+  }
+  #section0 .mainTxt p:nth-of-type(2) {
+    font-size: 25px;
+  }
+  #section0 .mainTxt p:nth-of-type(3) {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  #section0 .whiteBox .flex .txtLeft p:first-child {
+    font-size: 22px;
+  }
+  #section0 .whiteBox .flex .txtLeft p:last-child {
+    font-size: 12px;
+  }
+  #section0 .whiteBox .flex .txtRight p:first-child {
+    font-size: 18px;
+  }
+  #section0 .whiteBox .flex .txtRight p:last-child {
+    font-size: 26px;
+  }
+  #section1 .mainTxt .txtTop h1 {
+    font-size: 38px;
+    line-height: 46px;
+    letter-spacing: -3px;
+  }
+  #section1 .mainTxt .txtTop p {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+  #section1 .mainTxt .txtBot {
+    margin-top: 140px;
+  }
+  #section1 .mainTxt .txtBot div {
+    padding: 0 20px;
+  }
+  #section1 .mainTxt .txtBot div p {
+    font-size: 12px;
+  }
+  #section1 .mainTxt .txtBot div h1 {
+    font-size: 77px;
+  }
+} */

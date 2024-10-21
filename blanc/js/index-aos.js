@@ -73,35 +73,37 @@ $("header .head .tel").hover(
 let bool = true;
 $(".headRight .hamberger").click(function () {
   if (bool) {
-    $(".hamNav").css("display", "block");
-    $(".headRight").css("right", "1.5%");
+    $(".headRight").addClass("on");
     $(".headRight .hamberger").addClass("bg");
     $(".headRight .hamberger .bar1").css({
-      left: "14px",
+      left: "30%",
       top: "calc(50% - 0.5px)",
       transform: "rotate(45deg)",
     });
     $(".headRight .hamberger .bar2").css("display", "none");
     $(".headRight .hamberger .bar3").css({
-      left: "14px",
+      left: "30%",
       bottom: "calc(50% - 0.5px)",
       transform: "rotate(-45deg)",
     });
+    $(".hamNav").css({ visibility: "visible", opacity: "1" });
+    $(".hamNav .navBg li").addClass("on");
   } else {
-    $(".hamNav").css("display", "none");
-    $(".headRight").css("right", "6.3%");
+    $(".headRight").removeClass("on");
     $(".headRight .hamberger").removeClass("bg");
     $(".headRight .hamberger .bar1").css({
-      left: "15px",
-      top: "18px",
-      transform: "rotate(0)",
+      left: "50%",
+      top: "32%",
+      transform: "translateX(-50%) rotate(0)",
     });
     $(".headRight .hamberger .bar2").css("display", "block");
     $(".headRight .hamberger .bar3").css({
-      left: "15px",
-      bottom: "17px",
-      transform: "rotate(0)",
+      left: "50%",
+      bottom: "32%",
+      transform: "translateX(-50%) rotate(0)",
     });
+    $(".hamNav").css({ visibility: "hidden", opacity: "0" });
+    $(".hamNav .navBg li").removeClass("on");
   }
   bool = !bool;
 });
