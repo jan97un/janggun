@@ -225,7 +225,13 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
         telwh();
       }
     },
+    // slideChangeTransitionStart: function () {
+    //   $("#section2 .mainBox .mainLeft")
+    //     .removeClass("aos-init")
+    //     .removeClass("aos-animate");
+    // },
     slideChangeTransitionEnd: function () {
+      // AOS.init();
       var i = this.activeIndex;
       if (i == 0 || i >= length2 - 1) $.fn.fullpage.setAllowScrolling(true);
     },
