@@ -142,36 +142,64 @@
                 <source src="video/wave.mp4" type="video/mp4" />
               </video>
             </div>
-            <ul class="scrollBox">
-              <li>
-                <div class="imgBox"></div>
-                <div class="txtBox">
-                  <h3></h3>
-                  <p></p>
-                </div>
-              </li>
-              <li>
-                <div class="imgBox"></div>
-                <div class="txtBox">
-                  <h3></h3>
-                  <p></p>
-                </div>
-              </li>
-              <li>
-                <div class="imgBox"></div>
-                <div class="txtBox">
-                  <h3></h3>
-                  <p></p>
-                </div>
-              </li>
-              <li>
-                <div class="imgBox"></div>
-                <div class="txtBox">
-                  <h3></h3>
-                  <p></p>
-                </div>
-              </li>
-            </ul>
+            <div class="scrollBox">
+              <ul class="flex">
+                <li>
+                  <div class="imgBox">
+                    <img src="images/mainhistory1.jpg" alt="mainhistory1" />
+                  </div>
+                  <div class="txtBox">
+                    <h3>1971년 시작된 발걸음</h3>
+                    <p>
+                      국경없는의사회는 1971년 ‘활동’과 ‘발언’, ‘치료’와
+                      ‘증언’이라는<br />
+                      핵심 표어를 바탕으로 프랑스 의사들과 의학 전문
+                      언론인들에<br />
+                      의해 설립되었습니다.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="imgBox">
+                    <img src="images/mainhistory2.jpg" alt="mainhistory2" />
+                  </div>
+                  <div class="txtBox">
+                    <h3>70개국 이상에서 이어지는 활동</h3>
+                    <p>
+                      75개가 넘는 국가에서 독립적으로 활동하며 인종, 종교,<br />
+                      성별이나 정치적 성향에 관계없이 필요만을 기반으로 한
+                      지원을<br />
+                      제공합니다.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="imgBox">
+                    <img src="images/mainhistory3.jpg" alt="mainhistory3" />
+                  </div>
+                  <div class="txtBox">
+                    <h3>49,029명과 함께하는 여정</h3>
+                    <p>
+                      무력분쟁, 전염병 창궐 현장, 의료사각지대, 자연재해 등
+                      위기에<br />대응하기 위하여 전 세계 약 4만 명의 직원이
+                      함께하고 있습니다.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div class="imgBox">
+                    <img src="images/mainhistory4.jpg" alt="mainhistory4" />
+                  </div>
+                  <div class="txtBox">
+                    <h3>16,272,300회의 연간 환자 진료</h3>
+                    <p>
+                      국제 인도주의 의료 구호 단체로서 지난 1년간 1천6백만<br />
+                      회가 넘는 외래환자 진료를 마쳤습니다.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -4312,19 +4340,19 @@
     <script>
       const video1 = gsap.timeline();
       video1
-        .to(".videoBox", {
+        .from(".main2 .videoBox", {
           width: "25%",
           height: "35%",
         })
         .to(".main2 .mainTxt", {
           display: "none",
         })
-        .to(".videoBox", {
+        .to(".main2 .videoBox", {
           top: 0,
           width: "100%",
           height: "100%",
         })
-        .to(".videoBox video", {
+        .to(".main2 .videoBox video", {
           borderRadius: 0,
         });
       ScrollTrigger.create({
@@ -4344,8 +4372,8 @@
         animation: video2,
         trigger: ".scrollTrigger2",
         markers: true,
-        // start: "20% 20%",
-        // end: "+=3000",
+        start: "top top",
+        end: "+=3000",
         pin: true,
         anticipatePin: 1,
         autoRemoveChildren: true,
