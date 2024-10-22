@@ -100,7 +100,7 @@
           <!-- <span class="mob">검색</span> -->
         </div>
       </div>
-      <div class="scrollTrigger">
+      <div class="m2Pc scrollTrigger1">
         <div class="main2">
           <div class="mainTxt">
             <h1>
@@ -115,7 +115,7 @@
           </div>
         </div>
       </div>
-      <div class="mob">
+      <div class="m2Mob mob">
         <div class="mainTxt">
           <h1>
             하지만<br />
@@ -129,10 +129,51 @@
         </div>
       </div>
       <div class="main3">
-        <h1 class="tit">
-          국경없는의사회 구호활동가가 된다는 것은<br />
-          직업 그 이상의 의미를 가집니다
-        </h1>
+        <div class="tit">
+          <h2>
+            국경없는의사회 구호활동가가 된다는 것은<br />
+            직업 그 이상의 의미를 가집니다
+          </h2>
+        </div>
+        <div class="scrollTrigger2">
+          <div class="mainBox">
+            <div class="videoBox">
+              <video muted autoplay loop playsinline>
+                <source src="video/wave.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <ul class="scrollBox">
+              <li>
+                <div class="imgBox"></div>
+                <div class="txtBox">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </li>
+              <li>
+                <div class="imgBox"></div>
+                <div class="txtBox">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </li>
+              <li>
+                <div class="imgBox"></div>
+                <div class="txtBox">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </li>
+              <li>
+                <div class="imgBox"></div>
+                <div class="txtBox">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="main4">
         <div class="mainBox">
@@ -4269,8 +4310,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const video = gsap.timeline();
-      video
+      const video1 = gsap.timeline();
+      video1
         .to(".videoBox", {
           width: "25%",
           height: "35%",
@@ -4287,14 +4328,28 @@
           borderRadius: 0,
         });
       ScrollTrigger.create({
-        animation: video,
-        trigger: ".scrollTrigger",
-        markers: true,
+        animation: video1,
+        trigger: ".scrollTrigger1",
+        // markers: true,
         start: "20% 20%",
         end: "+=3000",
         pin: true,
         anticipatePin: 1,
         autoRemoveChildren: true,
+        scrub: 1,
+      });
+      const video2 = gsap.timeline();
+      video2;
+      ScrollTrigger.create({
+        animation: video2,
+        trigger: ".scrollTrigger2",
+        markers: true,
+        // start: "20% 20%",
+        // end: "+=3000",
+        pin: true,
+        anticipatePin: 1,
+        autoRemoveChildren: true,
+        scrub: 1,
       });
     </script>
     <script>
