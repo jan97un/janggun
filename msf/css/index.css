@@ -258,7 +258,6 @@ header {
 .main3 {
   position: relative;
   background-color: #fbf4f4;
-  overflow: hidden;
 }
 .main3 .tit {
   max-width: 1216px;
@@ -272,6 +271,7 @@ header {
 }
 .main3 .scrollTrigger2 {
   position: relative;
+  overflow: hidden;
 }
 .main3 .scrollTrigger2 .mainBox {
   width: 100%;
@@ -301,14 +301,18 @@ header {
   gap: 100px;
 }
 .main3 .scrollTrigger2 .mainBox .scrollBox .flex li {
+  position: relative;
   width: 32%;
   margin-left: 160px;
-}
-.main3 .scrollTrigger2 .mainBox .scrollBox .flex li {
   transform: translateY(100%);
+  transition: 1s;
 }
-.main3 .scrollTrigger2 .mainBox .scrollBox .flex li:nth-child(1) {
+.main3 .scrollTrigger2 .mainBox .scrollBox .flex .history1 {
   transform: translateY(20%);
+}
+.main3 .scrollTrigger2 .mainBox .scrollBox .flex .history4 {
+  margin-left: 0;
+  margin-right: 100px;
 }
 .main3 .scrollTrigger2 .mainBox .scrollBox .flex li .imgBox img {
   width: 100%;

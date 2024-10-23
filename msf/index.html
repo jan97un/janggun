@@ -144,7 +144,7 @@
             </div>
             <div class="scrollBox">
               <ul class="flex">
-                <li>
+                <li class="history1">
                   <div class="imgBox">
                     <img src="images/mainhistory1.jpg" alt="mainhistory1" />
                   </div>
@@ -159,7 +159,7 @@
                     </p>
                   </div>
                 </li>
-                <li>
+                <li class="history2">
                   <div class="imgBox">
                     <img src="images/mainhistory2.jpg" alt="mainhistory2" />
                   </div>
@@ -173,7 +173,7 @@
                     </p>
                   </div>
                 </li>
-                <li>
+                <li class="history3">
                   <div class="imgBox">
                     <img src="images/mainhistory3.jpg" alt="mainhistory3" />
                   </div>
@@ -186,7 +186,7 @@
                     </p>
                   </div>
                 </li>
-                <li>
+                <li class="history4">
                   <div class="imgBox">
                     <img src="images/mainhistory4.jpg" alt="mainhistory4" />
                   </div>
@@ -4340,10 +4340,6 @@
     <script>
       const video1 = gsap.timeline();
       video1
-        .from(".main2 .videoBox", {
-          width: "25%",
-          height: "35%",
-        })
         .to(".main2 .mainTxt", {
           display: "none",
         })
@@ -4367,15 +4363,56 @@
         scrub: 1,
       });
       const video2 = gsap.timeline();
-      video2;
+      video2.to(".main3 .scrollTrigger2 .mainBox .scrollBox", {
+        transform: "translateX(-118%)",
+      });
       ScrollTrigger.create({
         animation: video2,
         trigger: ".scrollTrigger2",
-        markers: true,
+        // markers: true,
         start: "top top",
         end: "+=3000",
         pin: true,
         anticipatePin: 1,
+        autoRemoveChildren: true,
+        scrub: 1,
+      });
+      // const h1y = gsap.timeline();
+      // h1y
+      //   .to(".main3 .scrollTrigger2 .mainBox .scrollBox .flex .history1", {
+      //     transform: "translateY(50%)",
+      //   })
+      const h1scale = gsap.timeline();
+      h1scale.to(
+        ".main3 .scrollTrigger2 .mainBox .scrollBox .flex .history1 .imgBox img",
+        {
+          borderRadius: 0,
+          transform: "scale(1)",
+        }
+      );
+      ScrollTrigger.create({
+        animation: h1scale,
+        trigger: ".scrollTrigger2",
+        // markers: true,
+        start: "top top",
+        end: "+=100",
+        autoRemoveChildren: true,
+        scrub: 1,
+      });
+      const h2scale = gsap.timeline();
+      h2scale.to(
+        ".main3 .scrollTrigger2 .mainBox .scrollBox .flex .history2 .imgBox img",
+        {
+          borderRadius: 0,
+          transform: "scale(1)",
+        }
+      );
+      ScrollTrigger.create({
+        animation: h2scale,
+        trigger: ".scrollTrigger2",
+        // markers: true,
+        start: "top top",
+        end: "+=2100",
         autoRemoveChildren: true,
         scrub: 1,
       });
