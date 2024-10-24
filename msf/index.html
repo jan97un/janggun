@@ -4377,45 +4377,6 @@
         autoRemoveChildren: true,
         scrub: 1,
       });
-      // const h1y = gsap.timeline();
-      // h1y
-      //   .to(".main3 .scrollTrigger2 .mainBox .scrollBox .flex .history1", {
-      //     transform: "translateY(50%)",
-      //   })
-      const h1scale = gsap.timeline();
-      h1scale.to(
-        ".main3 .scrollTrigger2 .mainBox .scrollBox .flex .history1 .imgBox img",
-        {
-          borderRadius: 0,
-          transform: "scale(1)",
-        }
-      );
-      ScrollTrigger.create({
-        animation: h1scale,
-        trigger: ".scrollTrigger2",
-        // markers: true,
-        start: "top top",
-        end: "+=100",
-        autoRemoveChildren: true,
-        scrub: 1,
-      });
-      const h2scale = gsap.timeline();
-      h2scale.to(
-        ".main3 .scrollTrigger2 .mainBox .scrollBox .flex .history2 .imgBox img",
-        {
-          borderRadius: 0,
-          transform: "scale(1)",
-        }
-      );
-      ScrollTrigger.create({
-        animation: h2scale,
-        trigger: ".scrollTrigger2",
-        // markers: true,
-        start: "top top",
-        end: "+=2100",
-        autoRemoveChildren: true,
-        scrub: 1,
-      });
     </script>
     <script>
       var swiper1 = new Swiper(".slide-all", {

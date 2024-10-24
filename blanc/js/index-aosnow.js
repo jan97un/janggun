@@ -148,27 +148,14 @@ $("#fullpage").fullpage({
       white();
       remove();
       telwh();
-      $("#section1 .mainTxt .txtTop").removeClass("on");
-      $("#section1 .mainTxt .txtBot").removeClass("on");
-      $("#section2 .mainBox .mainLeft").removeClass("on");
-      $("#section2 .mainBox .mainRight p").removeClass("on");
-      $("#section3 .mainBox .mainLeft").removeClass("on");
-      $("#section3 .mainBox .mainRight .flower").removeClass("on");
-      $("#section3 .mainBox .mainRight .tower").removeClass("on");
-      $("#section4 .videoBox .txtTop").removeClass("on");
-      $("#section4 .videoBox .txtBot").removeClass("on");
-      $("#section5 .mainBox .mainLeft").removeClass("on");
-      $("#section5 .mainBox .mainRight > div p").removeClass("on");
-      $("#section5 .mainBox .mainRight ul li:nth-child(1) p").removeClass("on");
-      $("#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox").removeClass(
-        "on"
-      );
-      $("#section5 .mainBox .mainRight ul li:nth-child(2) p").removeClass("on");
-      $("#section5 .mainBox .mainRight ul li:nth-child(2) .txtBox").removeClass(
-        "on"
-      );
+      $(".sec2 .Ani h1.titleani").removeClass("on");
     } else {
       $(".section").eq(realIndex).find("[data-aos]").addClass("aos-animate");
+      if (index == 2) {
+        $(".sec2 .Ani h1.titleani").eq(0).addClass("on");
+      } else {
+        $(".sec2 .Ani h1.titleani").removeClass("on");
+      }
       if (
         index == 2 ||
         index == 3 ||
@@ -184,52 +171,6 @@ $("#fullpage").fullpage({
         white();
         remove();
         telwh();
-      }
-      if (index == 2) {
-        $("#section1 .mainTxt .txtTop").addClass("on");
-        $("#section1 .mainTxt .txtBot").addClass("on");
-        $("#section3 .mainBox .mainLeft").addClass("on");
-        $("#section3 .mainBox .mainRight .flower").addClass("on");
-        $("#section3 .mainBox .mainRight .tower").addClass("on");
-      } else {
-        $("#section1 .mainTxt .txtTop").removeClass("on");
-        $("#section1 .mainTxt .txtBot").removeClass("on");
-        $("#section2 .mainBox .mainLeft").removeClass("on");
-        $("#section2 .mainBox .mainRight p").removeClass("on");
-        $("#section3 .mainBox .mainLeft").removeClass("on");
-        $("#section3 .mainBox .mainRight .flower").removeClass("on");
-        $("#section3 .mainBox .mainRight .tower").removeClass("on");
-      }
-      if (index == 3) {
-        $("#section4 .videoBox .txtTop").addClass("on");
-        $("#section4 .videoBox .txtBot").addClass("on");
-        $("#section5 .mainBox .mainLeft").addClass("on");
-        $("#section5 .mainBox .mainRight > div p").addClass("on");
-        $("#section5 .mainBox .mainRight ul li:nth-child(1) p").addClass("on");
-        $("#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox").addClass(
-          "on"
-        );
-        $("#section5 .mainBox .mainRight ul li:nth-child(2) p").addClass("on");
-        $("#section5 .mainBox .mainRight ul li:nth-child(2) .txtBox").addClass(
-          "on"
-        );
-      } else {
-        $("#section4 .videoBox .txtTop").removeClass("on");
-        $("#section4 .videoBox .txtBot").removeClass("on");
-        $("#section5 .mainBox .mainLeft").removeClass("on");
-        $("#section5 .mainBox .mainRight > div p").removeClass("on");
-        $("#section5 .mainBox .mainRight ul li:nth-child(1) p").removeClass(
-          "on"
-        );
-        $(
-          "#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox"
-        ).removeClass("on");
-        $("#section5 .mainBox .mainRight ul li:nth-child(2) p").removeClass(
-          "on"
-        );
-        $(
-          "#section5 .mainBox .mainRight ul li:nth-child(2) .txtBox"
-        ).removeClass("on");
       }
       if (index == 9) {
         $("header .head .logo").css("visibility", "hidden");
@@ -275,42 +216,32 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
   on: {
     slideChange: function () {
       var i = this.activeIndex;
+      if (i == 0) {
+      }
       console.log(i);
       if (this.activeIndex != 0 && i != length2)
         $.fn.fullpage.setAllowScrolling(false);
       if (length2 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
-      $("#section1 .mainTxt .txtTop").removeClass("on");
-      $("#section1 .mainTxt .txtBot").removeClass("on");
-      $("#section2 .mainBox .mainLeft").removeClass("on");
-      $("#section2 .mainBox .mainRight p").removeClass("on");
-      $("#section3 .mainBox .mainLeft").removeClass("on");
-      $("#section3 .mainBox .mainRight .flower").removeClass("on");
-      $("#section3 .mainBox .mainRight .tower").removeClass("on");
       if (i == 0 || i == 2) {
         black();
         add();
         telbl();
       }
-      if (i == 0) {
-        $("#section1 .mainTxt .txtTop").addClass("on");
-        $("#section1 .mainTxt .txtBot").addClass("on");
-      }
       if (i == 1) {
         white();
         remove();
         telwh();
-        $("#section2 .mainBox .mainLeft").addClass("on");
-        $("#section2 .mainBox .mainRight p").addClass("on");
       }
-      if (i == 2) {
-        $("#section3 .mainBox .mainLeft").addClass("on");
-        $("#section3 .mainBox .mainRight .flower").addClass("on");
-        $("#section3 .mainBox .mainRight .tower").addClass("on");
-      }
+      $(".sec2 .Ani h1.titleani").removeClass("on");
+      $(".sec2 .Ani h1.titleani").eq(i).addClass("on");
+    },
+    slideChangeTransitionStart: function () {
+      // AOS.init();
     },
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
       if (i == 0 || i >= length2 - 1) $.fn.fullpage.setAllowScrolling(true);
+      // AOS.init();
     },
   },
 });
@@ -327,34 +258,6 @@ var swiper3 = new Swiper(".sec3 .swiper-container", {
       if (this.activeIndex != 0 && i != length3)
         $.fn.fullpage.setAllowScrolling(false);
       if (length3 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
-      $("#section4 .videoBox .txtTop").removeClass("on");
-      $("#section4 .videoBox .txtBot").removeClass("on");
-      $("#section5 .mainBox .mainLeft").removeClass("on");
-      $("#section5 .mainBox .mainRight > div p").removeClass("on");
-      $("#section5 .mainBox .mainRight ul li:nth-child(1) p").removeClass("on");
-      $("#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox").removeClass(
-        "on"
-      );
-      $("#section5 .mainBox .mainRight ul li:nth-child(2) p").removeClass("on");
-      $("#section5 .mainBox .mainRight ul li:nth-child(2) .txtBox").removeClass(
-        "on"
-      );
-      if (i == 0) {
-        $("#section4 .videoBox .txtTop").addClass("on");
-        $("#section4 .videoBox .txtBot").addClass("on");
-      }
-      if (i == 1) {
-        $("#section5 .mainBox .mainLeft").addClass("on");
-        $("#section5 .mainBox .mainRight > div p").addClass("on");
-        $("#section5 .mainBox .mainRight ul li:nth-child(1) p").addClass("on");
-        $("#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox").addClass(
-          "on"
-        );
-        $("#section5 .mainBox .mainRight ul li:nth-child(2) p").addClass("on");
-        $("#section5 .mainBox .mainRight ul li:nth-child(2) .txtBox").addClass(
-          "on"
-        );
-      }
     },
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
@@ -442,3 +345,4 @@ var swiper7 = new Swiper(".sec7 .swiper-container", {
     },
   },
 });
+AOS.init();

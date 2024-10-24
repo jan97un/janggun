@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+@keyframes fadeOnly {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeOutRight {
+  0% {
+    left: -100px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeOutUp {
+  0% {
+    bottom: -100px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeOutDown {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeOutUpRight {
+  0% {
+    bottom: -100px;
+    left: -100px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeOutDownLeft {
+  0% {
+    top: -100px;
+    right: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes scale2 {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#section1 .mainTxt .txtTop.on {
+  animation: fadeOutRight 1s 0.4s forwards;
+}
+#section1 .mainTxt .txtBot.on {
+  animation: fadeOutUp 1s 0.6s forwards;
+}
+#section2 .mainBox .mainLeft.on {
+  animation: fadeOutDown 1s 0.4s forwards;
+}
+#section2 .mainBox .mainRight .col1 p.on:nth-child(1) {
+  animation: fadeOutDown 1s 0.4s forwards;
+}
+#section2 .mainBox .mainRight .col1 p.on:nth-child(2) {
+  animation: fadeOutDown 1s 0.6s forwards;
+}
+#section2 .mainBox .mainRight .col1 p.on:nth-child(3) {
+  animation: fadeOutDown 1s 0.8s forwards;
+}
+#section2 .mainBox .mainRight .col2 p.on:nth-child(1) {
+  animation: fadeOutDown 1s 1s forwards;
+}
+#section2 .mainBox .mainRight .col2 p.on:nth-child(2) {
+  animation: fadeOutDown 1s 1.2s forwards;
+}
+#section2 .mainBox .mainRight .col3 p.on:nth-child(1) {
+  animation: fadeOutDown 1s 1.4s forwards;
+}
+#section2 .mainBox .mainRight .col3 p.on:nth-child(2) {
+  animation: fadeOutDown 1s 1.6s forwards;
+}
+#section3 .mainBox .mainLeft.on {
+  animation: fadeOutRight 1s 0.4s forwards;
+}
+#section3 .mainBox .mainRight .flower.on {
+  animation: fadeOutUpRight 1s 0.6s forwards;
+}
+#section3 .mainBox .mainRight .tower.on {
+  animation: fadeOutDownLeft 1s 0.8s forwards;
+}
+#section4 .videoBox .txtTop.on {
+  animation: fadeOutRight 1s 0.4s forwards;
+}
+#section4 .videoBox .txtBot.on {
+  animation: fadeOutLeft 1s 0.4s forwards;
+}
+#section5 .mainBox .mainLeft.on {
+  animation: scale2 2.5s 0s forwards;
+}
+#section5 .mainBox .mainRight > div p.on {
+  animation: fadeOnly 1s 0.4s forwards;
+}
+#section5 .mainBox .mainRight ul li:nth-child(1) p.on {
+  animation: fadeOnly 1s 0.6s forwards;
+}
+#section5 .mainBox .mainRight ul li:nth-child(2) p.on {
+  animation: fadeOnly 1s 0.8s forwards;
+}
+#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox.on {
+  animation: fadeOnly 1s 1s forwards;
+}
+#section5 .mainBox .mainRight ul li:nth-child(2) .txtBox.on {
+  animation: fadeOnly 1s 1.2s forwards;
+}

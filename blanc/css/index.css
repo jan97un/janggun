@@ -566,6 +566,11 @@ header .head .blank {
   top: 200px;
   height: calc(100vh - 200px);
 }
+#section1 .mainTxt .txtTop {
+  position: relative;
+  left: -100px;
+  opacity: 0;
+}
 #section1 .mainTxt .txtTop h1 {
   font-size: 52px;
   font-weight: 700;
@@ -580,6 +585,9 @@ header .head .blank {
   margin-top: 45px;
 }
 #section1 .mainTxt .txtBot {
+  position: relative;
+  bottom: -100px;
+  opacity: 0;
   display: flex;
   justify-content: flex-end;
   margin-top: 200px;
@@ -644,6 +652,9 @@ header .head .blank {
   mix-blend-mode: screen;
 }
 #section2 .mainBox .mainLeft {
+  position: relative;
+  top: -100px;
+  opacity: 0;
   flex: 1 1 55%;
 }
 #section2 .mainBox .mainLeft h1 {
@@ -664,6 +675,9 @@ header .head .blank {
   flex: 1 1 45%;
   display: flex;
   justify-content: space-between;
+}
+#section2 .mainBox .mainRight p {
+  opacity: 0;
 }
 #section2 .mainBox .mainRight .col1 p:nth-child(1) {
   margin: 160px 0 30px;
@@ -715,6 +729,8 @@ header .head .blank {
 #section3 .mainBox .mainLeft {
   position: relative;
   margin-top: 20px;
+  left: -100px;
+  opacity: 0;
   z-index: 1;
 }
 #section3 .mainBox .mainLeft h1 {
@@ -747,6 +763,12 @@ header .head .blank {
   display: flex;
   gap: 20px;
 }
+#section3 .mainBox .mainRight .flower {
+  position: relative;
+  bottom: -100px;
+  left: -100px;
+  opacity: 0;
+}
 #section3 .mainBox .mainRight .flower p:first-child {
   margin-top: 30px;
 }
@@ -754,6 +776,12 @@ header .head .blank {
   position: absolute;
   left: -190px;
   bottom: -50px;
+}
+#section3 .mainBox .mainRight .tower {
+  position: relative;
+  top: -100px;
+  right: -100px;
+  opacity: 0;
 }
 
 /* section4 */
@@ -769,9 +797,15 @@ header .head .blank {
   z-index: 1;
 }
 .videoBox .txtTop {
+  position: relative;
+  left: -100px;
+  opacity: 0;
   margin-top: 200px;
 }
 .videoBox .txtBot {
+  position: relative;
+  right: -100px;
+  opacity: 0;
   display: flex;
   align-items: flex-end;
   margin-bottom: 150px;
@@ -809,7 +843,6 @@ header .head .blank {
   width: 42%;
 }
 #section5 .mainBox .mainLeft p {
-  /* overflow: hidden; */
 }
 #section5 .mainBox .mainLeft p img {
   width: 100%;
@@ -824,11 +857,20 @@ header .head .blank {
   margin: 0 auto;
   padding-top: 50px;
 }
+#section5 .mainBox .mainRight > div p {
+  opacity: 0;
+}
 #section5 .mainBox .mainRight ul {
   display: flex;
   justify-content: space-between;
 }
-#section5 .mainBox .mainRight ul li h3 {
+#section5 .mainBox .mainRight ul li p {
+  opacity: 0;
+}
+#section5 .mainBox .mainRight ul li .txtBox {
+  opacity: 0;
+}
+#section5 .mainBox .mainRight ul li .txtBox h3 {
   font-size: 20px;
   font-weight: 700;
   line-height: 120%;
@@ -837,7 +879,7 @@ header .head .blank {
   border-bottom: 1px solid #ababab;
   box-sizing: border-box;
 }
-#section5 .mainBox .mainRight ul li h5 {
+#section5 .mainBox .mainRight ul li .txtBox h5 {
   font-size: 13px;
   font-weight: 400;
   line-height: 180%;

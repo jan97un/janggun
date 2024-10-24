@@ -301,7 +301,6 @@ header {
   gap: 100px;
 }
 .main3 .scrollTrigger2 .mainBox .scrollBox .flex li {
-  position: relative;
   width: 32%;
   margin-left: 160px;
   transform: translateY(100%);
@@ -310,6 +309,10 @@ header {
 .main3 .scrollTrigger2 .mainBox .scrollBox .flex .history1 {
   transform: translateY(20%);
 }
+/* .main3 .scrollTrigger2 .mainBox .scrollBox .flex .history2,
+.main3 .scrollTrigger2 .mainBox .scrollBox .flex .history4 {
+  transform: translateY(10%);
+} */
 .main3 .scrollTrigger2 .mainBox .scrollBox .flex .history4 {
   margin-left: 0;
   margin-right: 100px;
