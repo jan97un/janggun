@@ -74,7 +74,7 @@ let bool = true;
 $(".headRight .hamberger").click(function () {
   if (bool) {
     $(".headRight").addClass("on");
-    $(".headRight .hamberger").addClass("bg");
+    $(".headRight .hamberger").addClass("on bg");
     $(".headRight .hamberger .bar1").css({
       left: "30%",
       top: "calc(50% - 0.5px)",
@@ -90,7 +90,7 @@ $(".headRight .hamberger").click(function () {
     $(".hamNav .navBg li").addClass("on");
   } else {
     $(".headRight").removeClass("on");
-    $(".headRight .hamberger").removeClass("bg");
+    $(".headRight .hamberger").removeClass("on bg");
     $(".headRight .hamberger .bar1").css({
       left: "50%",
       top: "32%",
@@ -157,7 +157,7 @@ $("#fullpage").fullpage({
       $("#section3 .mainBox .mainRight .tower").removeClass("on");
       $("#section4 .videoBox .txtTop").removeClass("on");
       $("#section4 .videoBox .txtBot").removeClass("on");
-      $("#section5 .mainBox .mainLeft").removeClass("on");
+      $("#section5 .mainBox .mainLeft p").removeClass("on");
       $("#section5 .mainBox .mainRight > div p").removeClass("on");
       $("#section5 .mainBox .mainRight ul li:nth-child(1) p").removeClass("on");
       $("#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox").removeClass(
@@ -167,6 +167,34 @@ $("#fullpage").fullpage({
       $("#section5 .mainBox .mainRight ul li:nth-child(2) .txtBox").removeClass(
         "on"
       );
+      $("#section7 .mainTxt .txtBox h4").removeClass("on");
+      $("#section7 .mainTxt .txtBox div").removeClass("on");
+      $("#section7 .mainTxt .txtBox div h1").removeClass("on");
+      $("#section7 .mainTxt .txtBox p").removeClass("on");
+      $("#section8 .mainBox .mainTxt .txtBox").removeClass("on");
+      $("#section8 .mainBox .mainTxt .subImg img").removeClass("on");
+      $("#section8 .mainBox .mainImg").removeClass("on");
+      $("#section9 .mainBox .con1 .titBox").addClass("on");
+      $("#section9 .mainBox .con1 .conWrap").removeClass("on");
+      $("#section9 .mainBox .con2").removeClass("on");
+      $("#section9 .mainBox .con3").removeClass("on");
+      $("#section10 .mainBox .mainImg").removeClass("on");
+      $("#section10 .mainBox .mainTxt .txtBox").removeClass("on");
+      $("#section10 .mainBox .mainTxt .subImg img").removeClass("on");
+      $("#section11 .mainBox .con1 .titBox").removeClass("on");
+      $("#section11 .mainBox .con1 .conWrap").removeClass("on");
+      $("#section11 .mainBox .con2").removeClass("on");
+      $("#section11 .mainBox .con3").removeClass("on");
+      $("#section12 .mainBox .whiteWrap .top").removeClass("on");
+      $("#section12 .mainBox .whiteWrap .right").removeClass("on");
+      $("#section12 .mainBox .whiteWrap .bot").removeClass("on");
+      $("#section12 .mainBox .whiteWrap .left").removeClass("on");
+      $("#section12 .mainBox .mainTxt .mainLeft").removeClass("on");
+      $("#section12 .mainBox .mainTxt .mainRight").removeClass("on");
+      $("#section13 .mainBg").removeClass("on");
+      $("#section13 .high .flex").removeClass("on");
+      $("#section14 .mainBg").removeClass("on");
+      $("#section14 .high .flex").removeClass("on");
     } else {
       $(".section").eq(realIndex).find("[data-aos]").addClass("aos-animate");
       if (
@@ -203,7 +231,7 @@ $("#fullpage").fullpage({
       if (index == 3) {
         $("#section4 .videoBox .txtTop").addClass("on");
         $("#section4 .videoBox .txtBot").addClass("on");
-        $("#section5 .mainBox .mainLeft").addClass("on");
+        $("#section5 .mainBox .mainLeft p").addClass("on");
         $("#section5 .mainBox .mainRight > div p").addClass("on");
         $("#section5 .mainBox .mainRight ul li:nth-child(1) p").addClass("on");
         $("#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox").addClass(
@@ -216,7 +244,7 @@ $("#fullpage").fullpage({
       } else {
         $("#section4 .videoBox .txtTop").removeClass("on");
         $("#section4 .videoBox .txtBot").removeClass("on");
-        $("#section5 .mainBox .mainLeft").removeClass("on");
+        $("#section5 .mainBox .mainLeft p").removeClass("on");
         $("#section5 .mainBox .mainRight > div p").removeClass("on");
         $("#section5 .mainBox .mainRight ul li:nth-child(1) p").removeClass(
           "on"
@@ -231,6 +259,64 @@ $("#fullpage").fullpage({
           "#section5 .mainBox .mainRight ul li:nth-child(2) .txtBox"
         ).removeClass("on");
       }
+      if (index == 5) {
+        $("#section7 .mainTxt .txtBox h4").addClass("on");
+        $("#section7 .mainTxt .txtBox div").addClass("on");
+        $("#section7 .mainTxt .txtBox div h1").addClass("on");
+        $("#section7 .mainTxt .txtBox p").addClass("on");
+        $("#section9 .mainBox .con1 .titBox").addClass("on");
+        $("#section9 .mainBox .con1 .conWrap").addClass("on");
+        $("#section9 .mainBox .con2").addClass("on");
+        $("#section9 .mainBox .con3").addClass("on");
+      } else {
+        $("#section7 .mainTxt .txtBox h4").removeClass("on");
+        $("#section7 .mainTxt .txtBox div").removeClass("on");
+        $("#section7 .mainTxt .txtBox div h1").removeClass("on");
+        $("#section7 .mainTxt .txtBox p").removeClass("on");
+        $("#section8 .mainBox .mainTxt .txtBox").removeClass("on");
+        $("#section8 .mainBox .mainTxt .subImg img").removeClass("on");
+        $("#section8 .mainBox .mainImg").removeClass("on");
+        $("#section9 .mainBox .con1 .titBox").removeClass("on");
+        $("#section9 .mainBox .con1 .conWrap").removeClass("on");
+        $("#section9 .mainBox .con2").removeClass("on");
+        $("#section9 .mainBox .con3").removeClass("on");
+      }
+      if (index == 6) {
+        $("#section10 .mainBox .mainImg").addClass("on");
+        $("#section10 .mainBox .mainTxt .txtBox").addClass("on");
+        $("#section10 .mainBox .mainTxt .subImg img").addClass("on");
+        $("#section12 .mainBox .whiteWrap .top").addClass("on");
+        $("#section12 .mainBox .whiteWrap .right").addClass("on");
+        $("#section12 .mainBox .whiteWrap .bot").addClass("on");
+        $("#section12 .mainBox .whiteWrap .left").addClass("on");
+        $("#section12 .mainBox .mainTxt .mainLeft").addClass("on");
+        $("#section12 .mainBox .mainTxt .mainRight").addClass("on");
+      } else {
+        $("#section10 .mainBox .mainImg").removeClass("on");
+        $("#section10 .mainBox .mainTxt .txtBox").removeClass("on");
+        $("#section10 .mainBox .mainTxt .subImg img").removeClass("on");
+        $("#section11 .mainBox .con1 .titBox").removeClass("on");
+        $("#section11 .mainBox .con1 .conWrap").removeClass("on");
+        $("#section11 .mainBox .con2").removeClass("on");
+        $("#section11 .mainBox .con3").removeClass("on");
+        $("#section12 .mainBox .whiteWrap .top").removeClass("on");
+        $("#section12 .mainBox .whiteWrap .right").removeClass("on");
+        $("#section12 .mainBox .whiteWrap .bot").removeClass("on");
+        $("#section12 .mainBox .whiteWrap .left").removeClass("on");
+        $("#section12 .mainBox .mainTxt .mainLeft").removeClass("on");
+        $("#section12 .mainBox .mainTxt .mainRight").removeClass("on");
+      }
+      if (index == 7) {
+        $("#section13 .mainBg").addClass("on");
+        $("#section13 .high .flex").addClass("on");
+        $("#section14 .mainBg").addClass("on");
+        $("#section14 .high .flex").addClass("on");
+      } else {
+        $("#section13 .mainBg").removeClass("on");
+        $("#section13 .high .flex").removeClass("on");
+        $("#section14 .mainBg").removeClass("on");
+        $("#section14 .high .flex").removeClass("on");
+      }
       if (index == 9) {
         $("header .head .logo").css("visibility", "hidden");
         $("header .head .gnb").css("visibility", "hidden");
@@ -243,11 +329,6 @@ $("#fullpage").fullpage({
         $("header .head .tel").css("cursor", "pointer");
         $("header .head .tel p").css("visibility", "visible");
         $("header .head .tel .telBg").css("visibility", "visible");
-      }
-      if (index == 5) {
-        $("#section7 .mainTxt .txtBox h1").addClass("on");
-      } else {
-        $("#section7 .mainTxt .txtBox h1").removeClass("on");
       }
     }
   },
@@ -286,12 +367,10 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
       $("#section3 .mainBox .mainLeft").removeClass("on");
       $("#section3 .mainBox .mainRight .flower").removeClass("on");
       $("#section3 .mainBox .mainRight .tower").removeClass("on");
-      if (i == 0 || i == 2) {
+      if (i == 0) {
         black();
         add();
         telbl();
-      }
-      if (i == 0) {
         $("#section1 .mainTxt .txtTop").addClass("on");
         $("#section1 .mainTxt .txtBot").addClass("on");
       }
@@ -303,6 +382,9 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
         $("#section2 .mainBox .mainRight p").addClass("on");
       }
       if (i == 2) {
+        black();
+        add();
+        telbl();
         $("#section3 .mainBox .mainLeft").addClass("on");
         $("#section3 .mainBox .mainRight .flower").addClass("on");
         $("#section3 .mainBox .mainRight .tower").addClass("on");
@@ -329,7 +411,7 @@ var swiper3 = new Swiper(".sec3 .swiper-container", {
       if (length3 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
       $("#section4 .videoBox .txtTop").removeClass("on");
       $("#section4 .videoBox .txtBot").removeClass("on");
-      $("#section5 .mainBox .mainLeft").removeClass("on");
+      $("#section5 .mainBox .mainLeft p").removeClass("on");
       $("#section5 .mainBox .mainRight > div p").removeClass("on");
       $("#section5 .mainBox .mainRight ul li:nth-child(1) p").removeClass("on");
       $("#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox").removeClass(
@@ -344,7 +426,7 @@ var swiper3 = new Swiper(".sec3 .swiper-container", {
         $("#section4 .videoBox .txtBot").addClass("on");
       }
       if (i == 1) {
-        $("#section5 .mainBox .mainLeft").addClass("on");
+        $("#section5 .mainBox .mainLeft p").addClass("on");
         $("#section5 .mainBox .mainRight > div p").addClass("on");
         $("#section5 .mainBox .mainRight ul li:nth-child(1) p").addClass("on");
         $("#section5 .mainBox .mainRight ul li:nth-child(1) .txtBox").addClass(
@@ -375,15 +457,42 @@ var swiper5 = new Swiper(".sec5 .swiper-container", {
       if (this.activeIndex != 0 && i != length5)
         $.fn.fullpage.setAllowScrolling(false);
       if (length5 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
+      $("#section7 .mainTxt .txtBox h4").removeClass("on");
+      $("#section7 .mainTxt .txtBox div").removeClass("on");
+      $("#section7 .mainTxt .txtBox div h1").removeClass("on");
+      $("#section7 .mainTxt .txtBox p").removeClass("on");
+      $("#section8 .mainBox .mainTxt .txtBox").removeClass("on");
+      $("#section8 .mainBox .mainTxt .subImg img").removeClass("on");
+      $("#section8 .mainBox .mainImg").removeClass("on");
+      $("#section9 .mainBox .con1 .titBox").removeClass("on");
+      $("#section9 .mainBox .con1 .conWrap").removeClass("on");
+      $("#section9 .mainBox .con2").removeClass("on");
+      $("#section9 .mainBox .con3").removeClass("on");
+      if (i == 0) {
+        white();
+        remove();
+        telwh();
+        $("#section7 .mainTxt .txtBox h4").addClass("on");
+        $("#section7 .mainTxt .txtBox div").addClass("on");
+        $("#section7 .mainTxt .txtBox div h1").addClass("on");
+        $("#section7 .mainTxt .txtBox p").addClass("on");
+      }
       if (i == 1) {
         black();
         add();
         telbl();
+        $("#section8 .mainBox .mainTxt .txtBox").addClass("on");
+        $("#section8 .mainBox .mainTxt .subImg img").addClass("on");
+        $("#section8 .mainBox .mainImg").addClass("on");
       }
-      if (i == 0 || i == 2) {
+      if (i == 2) {
         white();
         remove();
         telwh();
+        $("#section9 .mainBox .con1 .titBox").addClass("on");
+        $("#section9 .mainBox .con1 .conWrap").addClass("on");
+        $("#section9 .mainBox .con2").addClass("on");
+        $("#section9 .mainBox .con3").addClass("on");
       }
     },
     slideChangeTransitionEnd: function () {
@@ -405,15 +514,46 @@ var swiper6 = new Swiper(".sec6 .swiper-container", {
       if (this.activeIndex != 0 && i != length6)
         $.fn.fullpage.setAllowScrolling(false);
       if (length6 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
-      if (i == 0 || i == 2) {
+      $("#section10 .mainBox .mainImg").removeClass("on");
+      $("#section10 .mainBox .mainTxt .txtBox").removeClass("on");
+      $("#section10 .mainBox .mainTxt .subImg img").removeClass("on");
+      $("#section11 .mainBox .con1 .titBox").removeClass("on");
+      $("#section11 .mainBox .con1 .conWrap").removeClass("on");
+      $("#section11 .mainBox .con2").removeClass("on");
+      $("#section11 .mainBox .con3").removeClass("on");
+      $("#section12 .mainBox .whiteWrap .top").removeClass("on");
+      $("#section12 .mainBox .whiteWrap .right").removeClass("on");
+      $("#section12 .mainBox .whiteWrap .bot").removeClass("on");
+      $("#section12 .mainBox .whiteWrap .left").removeClass("on");
+      $("#section12 .mainBox .mainTxt .mainLeft").removeClass("on");
+      $("#section12 .mainBox .mainTxt .mainRight").removeClass("on");
+      if (i == 0) {
         black();
         add();
         telbl();
+        $("#section10 .mainBox .mainImg").addClass("on");
+        $("#section10 .mainBox .mainTxt .txtBox").addClass("on");
+        $("#section10 .mainBox .mainTxt .subImg img").addClass("on");
       }
       if (i == 1) {
         white();
         remove();
         telwh();
+        $("#section11 .mainBox .con1 .titBox").addClass("on");
+        $("#section11 .mainBox .con1 .conWrap").addClass("on");
+        $("#section11 .mainBox .con2").addClass("on");
+        $("#section11 .mainBox .con3").addClass("on");
+      }
+      if (i == 2) {
+        black();
+        add();
+        telbl();
+        $("#section12 .mainBox .whiteWrap .top").addClass("on");
+        $("#section12 .mainBox .whiteWrap .right").addClass("on");
+        $("#section12 .mainBox .whiteWrap .bot").addClass("on");
+        $("#section12 .mainBox .whiteWrap .left").addClass("on");
+        $("#section12 .mainBox .mainTxt .mainLeft").addClass("on");
+        $("#section12 .mainBox .mainTxt .mainRight").addClass("on");
       }
     },
     slideChangeTransitionEnd: function () {
@@ -435,6 +575,18 @@ var swiper7 = new Swiper(".sec7 .swiper-container", {
       if (this.activeIndex != 0 && i != length7)
         $.fn.fullpage.setAllowScrolling(false);
       if (length7 == 2 && i == 0) $.fn.fullpage.setAllowScrolling(false);
+      $("#section13 .mainBg").removeClass("on");
+      $("#section13 .high .flex").removeClass("on");
+      $("#section14 .mainBg").removeClass("on");
+      $("#section14 .high .flex").removeClass("on");
+      if (i == 0) {
+        $("#section13 .mainBg").addClass("on");
+        $("#section13 .high .flex").addClass("on");
+      }
+      if (i == 1) {
+        $("#section14 .mainBg").addClass("on");
+        $("#section14 .high .flex").addClass("on");
+      }
     },
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
