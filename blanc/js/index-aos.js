@@ -75,6 +75,7 @@ $(".headRight .hamberger").click(function () {
   if (bool) {
     $(".headRight").addClass("on");
     $(".headRight .hamberger").addClass("on bg");
+    $(".headRight .hamberger div").removeClass("on");
     $(".headRight .hamberger .bar1").css({
       left: "30%",
       top: "calc(50% - 0.5px)",
