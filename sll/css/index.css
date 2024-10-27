@@ -51,6 +51,7 @@
   padding: 0;
   word-break: keep-all;
   text-transform: uppercase;
+  box-sizing: border-box;
 }
 body {
   letter-spacing: -0.5px;
@@ -60,6 +61,15 @@ ul {
 }
 a {
   text-decoration: none;
+}
+.pc {
+  display: block;
+}
+.tab {
+  display: none;
+}
+.mob {
+  display: none;
 }
 
 /* header(fixed) */
@@ -150,12 +160,10 @@ header .head .headRight:hover li a span {
   height: 100%;
 }
 .section {
-  /* overflow: hidden; */
   color: #fff;
 }
 #section0 {
   overflow: hidden;
-  /*solves problem with overflowing video in Mac with Chrome */
 }
 .myVideo {
   position: absolute;
@@ -179,7 +187,6 @@ header .head .headRight:hover li a span {
   z-index: 4;
   margin: 0 auto;
   padding-top: 150px;
-  box-sizing: border-box;
 }
 .mainBox h1,
 .blackBox h1 {
@@ -279,8 +286,15 @@ header .head .headRight:hover li a span {
 
 /* section5 */
 
-#section5 {
+#section5 .man.pc {
+  width: 100%;
+  height: 100%;
   background: url(../images/main6-1.webp) center/cover no-repeat;
+}
+#section5 .man.tab {
+  width: 100%;
+  height: 100%;
+  background: url(../images/main6-1tab.webp) top/cover no-repeat;
 }
 #section5 .people img {
   position: absolute;
@@ -298,13 +312,11 @@ header .head .headRight:hover li a span {
   display: flex;
   align-items: center;
   padding-left: 260px;
-  box-sizing: border-box;
 }
 #section5 .blackBox .txtBox {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 0;
 }
 #section5 .blackBox .txtBox h1 {
   opacity: 0.1;
@@ -341,7 +353,7 @@ footer a {
   color: #fff;
 }
 footer .foot {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 40px 0 80px;
 }
@@ -574,6 +586,27 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
+  #section0 .mainBox,
+  #section1 .mainBox,
+  #section2 .mainBox,
+  #section3 .mainBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #section4 .mainBox .txtBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #section4 .mainBox .imgBox {
+    height: calc(100% - 150px);
+    padding-bottom: 180px;
+  }
+  .mainBox .txt {
+    margin-top: 0;
+    padding-bottom: 180px;
+  }
   .mainBox h1,
   .blackBox h1 {
     font-size: calc(140 * 100vw / 1920);
@@ -598,34 +631,234 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
   .blackBox .link h3 {
     font-size: 18px;
     line-height: 21px;
+  }
+  #section4 .mainBox .imgBox p:nth-child(1) img,
+  #section4 .mainBox .imgBox p:nth-child(2) img {
+    width: calc(220 * 100vw / 1920);
+    height: auto;
+  }
+  #section4 .mainBox .imgBox p:nth-child(3) img {
+    width: calc(337 * 100vw / 1920);
+    height: auto;
+  }
+  #section4 .mainBox h2 {
+    margin-top: calc(100 * 100vh / 1080);
+  }
+  #section4 .mainBox p {
+    margin-top: calc(40 * 100vh / 1080);
+  }
+  #section4 .mainBox .link {
+    margin-top: calc(80 * 100vh / 1080);
+  }
+  #section5 .people img {
+    right: 200px;
+    width: auto;
+    height: calc(100% - 200px);
+  }
+  #section5 .blackBox {
+    width: calc(100% - (480 * 100vw / 1920));
+    height: 56%;
+    padding-left: calc(260 * 100vw / 1920);
+  }
+  footer .foot {
+    width: calc(1200 * 100vw / 1280);
+  }
+  footer .foot .footTop .global {
+    width: 38%;
+  }
+  footer .foot .footTop .blank {
+    width: 10%;
+  }
+  footer .foot .footTop .footNav {
+    width: 52%;
+  }
+  footer .foot .footBot .logo {
+    width: 38%;
+  }
+  footer .foot .footBot .flex {
+    width: 62%;
   }
 }
-
-/* 수정필 */
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-  .mainBox h1,
+  #fp-nav {
+    display: none;
+  }
+  .pc {
+    display: none;
+  }
+  .tab {
+    display: block;
+  }
+  .mob {
+    display: none;
+  }
+  header .head {
+    width: 94%;
+  }
+  header .head .headLeft .logo a img {
+    width: calc(100vw * (75 / 1024));
+    height: calc(100vw * (36 / 1024));
+  }
+  header .head .headLeft nav .dep1 {
+    gap: calc(100vw * (47 / 1024));
+    padding-left: calc(100vw * (40 / 1024));
+  }
+  .mainBox {
+    width: 95%;
+  }
+  #section0 .mainBox,
+  #section1 .mainBox,
+  #section2 .mainBox,
+  #section3 .mainBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #section4 .mainBox .txtBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #section4 .mainBox .imgBox {
+    height: calc(100% - 150px);
+    padding-bottom: 100px;
+  }
+  .mainBox .txt {
+    margin-top: 0;
+    padding-bottom: 100px;
+  }
+  .mainBox h1 {
+    font-size: calc(100vw * (105 / 768));
+    line-height: calc(100vw * (85 / 768));
+    letter-spacing: calc(100vw * (-1.57 / 768));
+  }
+  .mainBox h2 {
+    font-size: calc(100vw * (38 / 768));
+    line-height: calc(100vw * (55 / 768));
+    letter-spacing: calc(100vw * (-0.57 / 768));
+  }
+  .mainBox p {
+    font-size: calc(100vw * (16 / 768));
+    line-height: calc(100vw * (26 / 768));
+    letter-spacing: calc(100vw * (-0.24 / 768));
+    margin-top: calc(40 * 100vw / 1920);
+  }
+  .mainBox .link {
+    padding-right: calc(100vw * (52 / 768));
+    margin-top: calc(100vw * (36 / 768));
+  }
+  .mainBox .link h3 {
+    font-size: calc(100vw * (16 / 768));
+    line-height: calc(100vw * (18 / 768));
+    letter-spacing: calc(100vw * (-0.24 / 768));
+  }
+  .mainBox .link a .arrowWh {
+    width: calc(100vw * (36 / 768));
+    height: calc(100vw * (21 / 768));
+  }
+  #section4 .mainBox .imgBox p:nth-child(1) img,
+  #section4 .mainBox .imgBox p:nth-child(2) img {
+    width: calc(220 * 100vw / 1920);
+    height: auto;
+  }
+  #section4 .mainBox .imgBox p:nth-child(3) img {
+    width: calc(337 * 100vw / 1920);
+    height: auto;
+  }
+  #section4 .mainBox h2 {
+    margin-top: calc(100 * 100vh / 1080);
+  }
+  #section4 .mainBox p {
+    margin-top: calc(40 * 100vh / 1080);
+  }
+  #section4 .mainBox .link {
+    margin-top: calc(80 * 100vh / 1080);
+  }
+  #section5 .people img {
+    top: calc(100vw * (190 / 1024));
+    right: 0;
+    width: 100%;
+    height: auto;
+  }
+  #section5 .blackBox {
+    width: 100%;
+    padding: 0 32px;
+  }
   .blackBox h1 {
-    font-size: calc(140 * 100vw / 1920);
-    line-height: calc(120 * 100vw / 1920);
+    font-size: calc(105vw * (105 / 1024));
+    line-height: calc(90vw * (105 / 1024));
+    letter-spacing: calc(100vw * (-1.57 / 1024));
   }
-  .mainBox h2,
+  #section5 .blackBox .txtBox .txt {
+    margin-right: 0;
+  }
   .blackBox h2 {
-    font-size: calc(48 * 100vw / 1920);
-    line-height: calc(60 * 100vw / 1920);
+    font-size: calc(100vw * (38 / 1024));
+    line-height: calc(100vw * (48 / 1024));
+    letter-spacing: calc(100vw * (-0.57 / 1024));
   }
-  .mainBox p,
   .blackBox p {
-    font-size: 18px;
-    line-height: calc(18px + 8 * 100vw / 1920);
-    margin-top: calc(40 * 100vw / 1920);
+    font-size: calc(100vw * (16 / 1024));
+    line-height: calc(100vw * (18 / 1024));
+    letter-spacing: calc(100vw * (-0.24 / 1024));
   }
-  .mainBox .link,
   .blackBox .link {
-    margin-top: calc(40 * 100vw / 1920);
+    margin-top: calc(100vw * (36 / 1024));
   }
-  .mainBox .link h3,
   .blackBox .link h3 {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: calc(100vw * (16 / 1024));
+    line-height: calc(100vw * (18 / 1024));
+    letter-spacing: calc(100vw * (-0.24 / 1024));
   }
+  .blackBox .link .arrowWh {
+    width: calc(100vw * (36 / 1024));
+    height: calc(100vw * (21 / 1024));
+  }
+  footer .foot {
+    width: calc(1200 * 100vw / 1280);
+  }
+  footer .foot .footTop .global {
+    width: 25%;
+  }
+  footer .foot .footTop .global h2 {
+    font-size: calc(100vw * (22 / 1024));
+    line-height: calc(100vw * (32 / 1024));
+    letter-spacing: calc(100vw * (-0.33 / 1024));
+  }
+  footer .foot .footTop .blank {
+    width: 10%;
+  }
+  footer .foot .footTop .footNav {
+    width: 65%;
+  }
+  footer .foot .footBot .logo {
+    width: 25%;
+  }
+  footer .foot .footBot .logo h1 {
+    width: calc(100vw * (117 / 1024));
+    height: calc(100vw * (54 / 1024));
+  }
+  footer .foot .footBot .flex {
+    width: 75%;
+    flex-direction: column;
+    gap: 16px;
+  }
+  footer .foot .footBot .flex .txtBox address {
+    width: 100%;
+    margin: 6px 0;
+  }
+  footer .foot .footBot .flex .txtBox address p:last-child {
+    margin-top: 0;
+  }
+  footer .foot .footBot .flex .sns li {
+    gap: calc(100vw * (16 / 1024));
+  }
+  footer .foot .footBot .flex .sns li a {
+    width: calc(100vw * (24 / 1024));
+    height: calc(100vw * (24 / 1024));
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+}
+@media screen and (max-width: 767px) {
 }

@@ -212,7 +212,6 @@ header .head .hamberger {
 
 #section0 {
   overflow: hidden;
-  /*solves problem with overflowing video in Mac with Chrome */
 }
 #myVideo {
   position: absolute;
@@ -572,7 +571,6 @@ footer .foot .footBot p {
   width: 24px;
   height: 24px;
   transform: translate(-50%, -50%);
-  /* display: block; */
 }
 
 @media screen and (max-width: 1024px) {

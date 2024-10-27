@@ -12,103 +12,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script src="js/scrolloverflow.js"></script>
     <script src="js/jquery.fullPage.js"></script>
-    <script>
-      $(function () {
-        $("#fullpage").fullpage({
-          verticalCentered: true,
-          sectionsColor: ["", "", "", "", "#fff", "#fff", "#f00f0f"],
-          scrollingSpeed: 1700,
-          navigation: true,
-          navigationPosition: "right",
-          navigationTooltips: [
-            "First page",
-            "Second page",
-            "Third page",
-            "Fourth page",
-            "Fifth page",
-            "Six and last page",
-          ],
-          afterLoad: function (anchorLink, index) {
-            if (index == 5) {
-              $(".head .logo a").html(
-                '<img src="images/logobl.svg" alt="logobl" />'
-              );
-              $(".head .dep1>li>a")
-                .css({ opacity: "0.6", color: "#191919" })
-                .hover(
-                  function () {
-                    $(this).css("opacity", "1");
-                  },
-                  function () {
-                    $(this).css("opacity", "0.6");
-                  }
-                );
-              $(".head .dep2>li>a")
-                .css({ color: "#191919", opacity: "0.6" })
-                .hover(
-                  function () {
-                    $(this).css("opacity", "1");
-                  },
-                  function () {
-                    $(this).css("opacity", "0.6");
-                  }
-                );
-              $(".headRight li a").css("color", "#191919");
-              $(".headRight span").html(
-                '<img src="images/arrowlangbl.svg" alt="arrowlangbl"/>'
-              );
-            } else {
-              $(".head .logo a").html(
-                '<img src="images/logowh.svg" alt="logowh" />'
-              );
-              $(".head .dep1>li>a")
-                .css({ opacity: "1", color: "#fff" })
-                .hover(
-                  function () {
-                    $(this).css("opacity", "1");
-                  },
-                  function () {
-                    $(this).css("opacity", "1");
-                  }
-                );
-              $(".head .dep2>li>a")
-                .css({ color: "#fff", opacity: "0.6" })
-                .hover(
-                  function () {
-                    $(this).css("opacity", "1");
-                  },
-                  function () {
-                    $(this).css("opacity", "0.6");
-                  }
-                );
-              $(".headRight li a").css("color", "#fff");
-              $(".headRight span").html(
-                '<img src="images/arrowlangwh.svg" alt="arrowlangwh"/>'
-              );
-            }
-          },
-        });
-        $(".family").click(function () {
-          if ($(".family .navBar").css("visibility") == "visible") {
-            $(".family .navBar").css("visibility", "hidden");
-            $(".family label").css("transform", "translateY(-50%) rotate(0)");
-          } else {
-            $(".family .navBar").css("visibility", "visible");
-            $(".family label").css("translateY(-50%) rotate(180deg)");
-          }
-        });
-        $(".family label").click(function () {
-          if ($(".family .navBar").css("visibility") == "visible") {
-            $(".family .navBar").css("visibility", "hidden");
-            $(".family label").css("transform", "translateY(-50%) rotate(0)");
-          } else {
-            $(".family .navBar").css("visibility", "visible");
-            $(".family label").css("translateY(-50%) rotate(180deg)");
-          }
-        });
-        $(".fp-tooltip").html("");
-      });
-    </script>
   </head>
   <body>
     <header>
@@ -298,8 +201,11 @@
         </div>
       </div>
       <div class="section" id="section5">
+        <div class="man pc"></div>
+        <div class="man tab"></div>
         <div class="people">
-          <img src="images/main6-2.webp" alt="main6-2" />
+          <img src="images/main6-2.webp" alt="main6-2" class="pc" />
+          <img src="images/main6-2tab.webp" alt="main6-2tab" class="tab" />
         </div>
         <div class="blackBox">
           <div class="txtBox">
@@ -329,7 +235,7 @@
         <div class="foot">
           <div class="footTop">
             <div class="global">
-              <h2>GLOBAL CREATIVE STUDIO</h2>
+              <h2>GLOBAL <br class="tab" />CREATIVE STUDIO</h2>
             </div>
             <ul class="footNav">
               <li>
@@ -358,7 +264,7 @@
                 </ul>
               </li>
             </ul>
-            <div></div>
+            <div class="blank"></div>
           </div>
           <div class="footBot">
             <div class="logo">
@@ -448,5 +354,6 @@
         </div>
       </footer>
     </main>
+    <script src="js/index.js"></script>
   </body>
 </html>
