@@ -27,6 +27,60 @@ a {
   display: none;
 }
 
+/* arrowAni(fixed) */
+
+.arrowAni {
+  position: fixed;
+  bottom: 48px;
+  right: 48px;
+  z-index: 9999;
+}
+.arrowAni .arrowBd {
+  position: relative;
+  width: 48px;
+  height: 80px;
+  border-radius: 48px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  opacity: 0.8;
+  transition: 1s;
+}
+.arrowAni .arrowBd .arrowWh {
+  position: absolute;
+  left: 50%;
+  top: 33%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 32px;
+  animation: arrowWh 1.6s linear 0s infinite forwards;
+}
+@keyframes arrowWh {
+  0% {
+    transform: translate(-50%, -20%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 20%);
+    opacity: 0;
+  }
+}
+.arrowBd .arrowBl {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 32px;
+}
+
 /* header(fixed) */
 
 header {
@@ -87,6 +141,10 @@ header {
 }
 
 /* main */
+
+main {
+  /* overflow-x: auto; */
+}
 
 /* main1 */
 
@@ -285,7 +343,7 @@ header {
 }
 .main3 .scrollTrigger2 .mainBox .videoBox video {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .main3 .scrollTrigger2 .mainBox .scrollBox {
   position: absolute;
@@ -303,26 +361,15 @@ header {
 .main3 .scrollTrigger2 .mainBox .scrollBox .flex li {
   width: 32%;
   margin-left: 160px;
-  transform: translateY(100%);
-  transition: 1s;
 }
-.main3 .scrollTrigger2 .mainBox .scrollBox .flex .history1 {
+.main3 .scrollTrigger2 .mainBox .scrollBox .flex .history2,
+.main3 .scrollTrigger2 .mainBox .scrollBox .flex .history4 {
   transform: translateY(20%);
-}
-/* .main3 .scrollTrigger2 .mainBox .scrollBox .flex .history2,
-.main3 .scrollTrigger2 .mainBox .scrollBox .flex .history4 {
-  transform: translateY(10%);
-} */
-.main3 .scrollTrigger2 .mainBox .scrollBox .flex .history4 {
-  margin-left: 0;
-  margin-right: 100px;
 }
 .main3 .scrollTrigger2 .mainBox .scrollBox .flex li .imgBox img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 300px;
-  transform: scale(0.5);
 }
 .main3 .scrollTrigger2 .mainBox .scrollBox .flex li .txtBox {
   margin-top: 48px;
@@ -345,9 +392,7 @@ header {
 .main4 {
   position: relative;
   width: 100%;
-  /* height: 100vh; */
-  /* background: #fff; */
-  background: #fff;
+  background-color: #fff;
 }
 .main4 .mainBox {
   max-width: 1216px;

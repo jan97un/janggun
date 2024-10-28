@@ -1,3 +1,32 @@
+$(window).scroll(function () {
+  let scrTop = $(document).scrollTop();
+  console.log(scrTop);
+  if (scrTop >= 400) {
+    $(".arrowAni").css("cursor", "pointer");
+    $(".arrowAni .arrowBd").css({
+      height: "48px",
+      borderColor: "#212121",
+    });
+    $(".arrowAni .arrowBd .arrowWh").css("display", "none");
+    $(".arrowAni .arrowBd .arrowBl").css("display", "block");
+  } else {
+    $(".arrowAni").css("cursor", "default");
+    $(".arrowAni .arrowBd").css({
+      height: "80px",
+      borderColor: "#fff",
+    });
+    $(".arrowAni .arrowBd .arrowWh").css("display", "block");
+    $(".arrowAni .arrowBd .arrowBl").css("display", "none");
+  }
+});
+$(".arrowAni").on("click", function () {
+  $("html, body").animate(
+    {
+      scrollTop: 0,
+    },
+    400
+  );
+});
 let majbar = document.querySelector(".major .bar");
 let minbar = document.querySelector(".minor .bar");
 $("#category1").click(function () {

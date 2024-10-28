@@ -18,6 +18,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
   <body>
+    <div class="arrowAni">
+      <div class="arrowBd">
+        <img
+          class="arrowWh"
+          src="images/maindownarrow.svg"
+          alt="maindownarrow"
+        />
+        <img
+          class="arrowBl"
+          src="images/mainscrollarrow.svg"
+          alt="mainscrollarrow"
+        />
+      </div>
+    </div>
     <header>
       <div class="head">
         <div class="logo">
@@ -4364,7 +4378,7 @@
       });
       const video2 = gsap.timeline();
       video2.to(".main3 .scrollTrigger2 .mainBox .scrollBox", {
-        transform: "translateX(-118%)",
+        transform: "translateX(-100%)",
       });
       ScrollTrigger.create({
         animation: video2,

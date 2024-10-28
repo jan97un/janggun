@@ -148,13 +148,19 @@ $("#fullpage").fullpage({
       white();
       remove();
       telwh();
-      $(".sec2 .Ani h1.titleani").removeClass("on");
+      $(".sec2 #section1 .txtTop").removeClass("on");
+      $(".sec2 #section1 .txtBot").removeClass("on");
+      $(".sec2 #section2 .mainBox .mainLeft").removeClass("on");
     } else {
       $(".section").eq(realIndex).find("[data-aos]").addClass("aos-animate");
       if (index == 2) {
-        $(".sec2 .Ani h1.titleani").eq(0).addClass("on");
+        $(".sec2 #section1 .txtTop").addClass("on");
+        $(".sec2 #section1 .txtBot").addClass("on");
+        $(".sec2 #section2 .mainBox .mainLeft").addClass("on");
       } else {
-        $(".sec2 .Ani h1.titleani").removeClass("on");
+        $(".sec2 #section1 .txtTop").removeClass("on");
+        $(".sec2 #section1 .txtBot").removeClass("on");
+        $(".sec2 #section2 .mainBox .mainLeft").removeClass("on");
       }
       if (
         index == 2 ||
@@ -232,16 +238,16 @@ var swiper2 = new Swiper(".sec2 .swiper-container", {
         remove();
         telwh();
       }
-      $(".sec2 .Ani h1.titleani").removeClass("on");
-      $(".sec2 .Ani h1.titleani").eq(i).addClass("on");
-    },
-    slideChangeTransitionStart: function () {
-      // AOS.init();
     },
     slideChangeTransitionEnd: function () {
       var i = this.activeIndex;
       if (i == 0 || i >= length2 - 1) $.fn.fullpage.setAllowScrolling(true);
-      // AOS.init();
+      $(".sec2 #section1 .txtTop").removeClass("on");
+      $(".sec2 #section1 .txtTop").eq(i).addClass("on");
+      $(".sec2 #section1 .txtBot").removeClass("on");
+      $(".sec2 #section1 .txtBot").eq(i).addClass("on");
+      $(".sec2 #section2 .mainBox .mainLeft").removeClass("on");
+      $(".sec2 #section2 .mainBox .mainLeft").eq(i).addClass("on");
     },
   },
 });
