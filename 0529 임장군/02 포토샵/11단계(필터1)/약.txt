@@ -1,0 +1,21 @@
+1. 약1.psd 파일을 ctrl+a후 ctrl+c하세요
+2. 약2.psd 파일을 선택하고 channel을 클릭한후 +를 클릭하시면
+Alpha1이 생성됩니다. ctrl+v로 붙여넣기한후
+Red채널의 눈을 클릭하고 크기조절 위치를 맞추세요
+3. 다시 Red채널의 눈을 클릭한후 
+
+4. filter-->blur-->Gaussian blur
+5. filter-->stylize-->emboss
+6. Alpha1을 +로 드레그 드롭하여 copy
+
+7. Alpha1copy채널 선택후-->image-->adjustment-->invert
+8. Alpha1,Alpha1copy채널모두
+image-->adjustment-->level-->검정색으로 변경후
+9. RGB채널 이름을 클릭하세요(눈을 클릭하시면 안돼요)
+10. 레이어로 이동후 select메뉴의 Load selection 선택후 
+Alpha1선택후 image-->adjustment-->brightness/contrast
+밝게 변경
+11.select메뉴의 Load selection 선택후 
+Alpha1 copy선택후 image-->adjustment-->brightness/contrast
+어둡게 변경
+
