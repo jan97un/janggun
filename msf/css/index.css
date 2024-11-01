@@ -95,7 +95,6 @@ header {
   margin: 0 auto;
   height: 112px;
   padding: 0 16px;
-  /* box-sizing: border-box; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -245,7 +244,6 @@ main {
   position: absolute;
   width: 100%;
   padding: 16px 16px 0;
-  /* box-sizing: border-box; */
   background-color: #fff;
   cursor: pointer;
   display: none;
@@ -497,7 +495,6 @@ main {
   height: 132px;
   /* line-height: 132px; */
   border-radius: 50%;
-  /* box-sizing: border-box; */
 }
 .story .people li .worker .bdRed.on {
   border: 2px solid #e30012;
@@ -507,7 +504,6 @@ main {
   height: 96px;
   border: 8px solid #fff;
   border-radius: 50%;
-  /* box-sizing: border-box; */
   transform: scale(1);
 }
 .story .people li .worker .bdRed img.on {
@@ -618,7 +614,6 @@ main {
   height: 47px;
   border: 2px solid #fff;
   border-radius: 50%;
-  /* box-sizing: border-box; */
 }
 .main5 .btn .right .swiper-button-next {
   right: 0;
@@ -691,7 +686,6 @@ main {
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   overflow: hidden;
-  /* box-sizing: border-box; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -832,7 +826,6 @@ main {
   height: 24px;
   border: 2px solid #212121;
   border-radius: 50%;
-  /* box-sizing: border-box; */
   background-color: #fbf4f4;
   z-index: 2;
 }
@@ -978,7 +971,6 @@ main {
   line-height: 32px;
   color: #616161;
   padding-bottom: 48px;
-  box-sizing: border-box;
 }
 
 /* main8 */
@@ -1318,7 +1310,6 @@ footer a {
   border-style: solid;
   border-color: #e0e0e0;
   border-radius: 4px;
-  /* box-sizing: border-box; */
   cursor: pointer;
 }
 .recruit .checklist span img {
