@@ -23,9 +23,6 @@ ul {
 a {
   text-decoration: none;
 }
-.mob {
-  display: none;
-}
 
 /* arrowAni(fixed) */
 
@@ -102,41 +99,38 @@ header {
 .head .logo {
   padding-right: 100px;
 }
-.head .nav {
+.head .nav ul {
   display: flex;
   gap: 3rem;
 }
-.head .nav li a {
+.head .nav ul li a {
   font-size: 18px;
   font-weight: 700;
   color: #212121;
 }
-.head .nav li a:hover {
+.head .nav ul li a:hover {
   color: #e30012;
 }
-.head .headRight {
+.head .headRight ul {
   font-size: 16px;
   font-weight: 700;
   display: flex;
   gap: 8px;
 }
-.head .headRight a {
+.head .headRight ul li a {
   padding: 0 24px;
   display: inline-block;
   line-height: 48px;
   border-radius: 50px;
 }
-.head .headRight a:first-child {
+.head .headRight ul li:first-child a {
   background-color: #e30012;
   border: 2px solid #e30012;
   color: #fff;
 }
-.head .headRight a:last-child {
+.head .headRight ul li:last-child a {
   border: 2px solid #000;
   color: #000;
-}
-.head .hamberger {
-  display: none;
 }
 
 /* main */
@@ -177,6 +171,7 @@ main {
 }
 .main1 .mainBox h1 {
   font-size: 48px;
+  line-height: 64px;
 }
 .main1 .mainBox .ani {
   display: flex;
@@ -341,7 +336,7 @@ main {
 }
 .main3 .scrollTrigger2 .mainBox .videoBox video {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .main3 .scrollTrigger2 .mainBox .scrollBox {
   position: absolute;
@@ -1377,3 +1372,85 @@ footer a {
 }
 
 /* mob btn */
+
+@media screen and (min-width: 1024px) {
+  .pc {
+    display: block;
+  }
+  .mob {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .pc {
+    display: none;
+  }
+  .mob {
+    display: block;
+  }
+  .head {
+    width: 100%;
+    height: 32px;
+    padding: 0 16px 0 0;
+    margin: 16px;
+  }
+  .head .logo a img {
+    height: 32px;
+  }
+  .main1 {
+    height: calc(100vh - 48px);
+    background: url(../images/mainmob.jpg) bottom/cover no-repeat;
+  }
+  .main1 .mainBox {
+    padding: 0 16px;
+  }
+  .main1 .mainBox h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .main1 .mainBox .ani {
+    height: 96px;
+    margin-bottom: 56px;
+  }
+  .main1 .mainBox .ani .typewrite .wrap {
+    font-size: 80px;
+    line-height: 96px;
+  }
+  .main1 .search {
+    display: grid;
+    font-size: 16px;
+    line-height: 24px;
+    grid-template-columns: calc(30% - 8px) calc(70% - 8px);
+  }
+  .main1 .search .field:nth-child(1),
+  .main1 .search .field:nth-child(2) {
+    width: auto;
+  }
+  .main1 .search .field label {
+    text-align: left;
+  }
+  .main1 .search .field label span {
+    padding: 8px 0 8px 12px;
+  }
+  .main1 .search .field label img {
+    right: 8px;
+    width: auto;
+    height: 8px;
+  }
+  .main1 .search .field .bar {
+    padding: 12px 12px 0;
+  }
+  .main1 .search .field .bar li {
+    font-size: 16px;
+  }
+  .main1 strong.mob {
+    width: 176px;
+    height: 82px;
+    line-height: 82px;
+    font-size: 16px;
+    text-align: center;
+    background: #e30012;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}
