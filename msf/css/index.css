@@ -78,6 +78,37 @@ a {
   height: 32px;
 }
 
+/* mainBtn.mob(fixed) */
+
+.mainBtn.mob {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 48px;
+  z-index: 9999;
+}
+.mainBtn.mob ul {
+  display: flex;
+  height: 100%;
+}
+.mainBtn.mob ul li {
+  width: 50%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+}
+.mainBtn.mob ul li:first-child {
+  color: #fff;
+  background-color: #e30012;
+  cursor: pointer;
+}
+.mainBtn.mob ul li:last-child a {
+  display: block;
+  color: #fff;
+  background-color: #424242;
+}
+
 /* header(fixed) */
 
 header {
@@ -773,19 +804,18 @@ main {
 .main6 .mainBox {
   max-width: 1216px;
   margin: 0 auto;
-  padding-bottom: 208px;
+  padding: 160px 0 208px;
 }
 .main6 .mainBox h1 {
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
-  padding-top: 160px;
   color: #212121;
 }
 .main6 .proc {
   position: relative;
   display: flex;
-  margin: 152px 0 16px;
+  margin: 152px 0 48px;
 }
 .main6 .proc::before {
   content: "";
@@ -851,7 +881,17 @@ main {
   font-family: "Poppins", serif;
   margin: 24px 0 8px;
 }
-.main6 .subTxt {
+.main6 .proc .tit {
+  margin-bottom: 16px;
+}
+.main6 .proc p {
+  line-height: 24px;
+  opacity: 0.8;
+}
+.main6 .proc p.on {
+  color: #212121;
+}
+/* .main6 .subTxt {
   display: flex;
   margin-bottom: 48px;
 }
@@ -863,7 +903,7 @@ main {
   white-space: wrap;
   line-height: 24px;
   opacity: 0.8;
-}
+} */
 .main6 .grayBox {
   padding: 32px;
   background-color: #4338380d;
@@ -1443,14 +1483,135 @@ footer a {
   .main1 .search .field .bar li {
     font-size: 16px;
   }
-  .main1 strong.mob {
-    width: 176px;
-    height: 82px;
-    line-height: 82px;
+  .main1 .main1btn.mob {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .main1 .main1btn.mob strong {
+    display: block;
+    width: 124px;
+    height: 48px;
+    line-height: 48px;
     font-size: 16px;
     text-align: center;
     background: #e30012;
     border-radius: 50px;
     cursor: pointer;
   }
+  .m2Mob {
+    width: 100%;
+    height: calc(100% - 112px);
+  }
+  .m2Mob .mainTxt {
+    padding-top: 120px;
+    margin-left: 16px;
+    margin-bottom: 48px;
+  }
+  .m2Mob .mainTxt h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+  .m2Mob .videoBox video {
+    height: calc(100vh - 112px - 264px);
+    width: auto;
+  }
+  .main3 .tit {
+    margin: 0;
+    padding-top: 120px;
+  }
+  .main3 .tit h2 {
+    font-size: 36px;
+    padding: 0 16px;
+    margin-bottom: 48px;
+  }
+  .main3 .history{margin: 0 16px;}
+  .main3 .history li .mobImg {
+    width: 100%;
+    height: auto;
+  }
+  .main3 .history li .mobImg img {
+    width: 100%;
+    height: 100%;
+  }
+  .main3 .history li:nth-child(1) .mobImg img{
+    border-radius: 32px;
+  }
+  .main3 .history li:nth-child(2) .mobImg img{
+    border-radius: 50%;
+  }
+  .main3 .history li:nth-child(3) .mobImg img{
+    border-radius: 999px;
+  }
+  .main3 .history li:nth-child(4) .mobImg img{
+    border-radius: 16px;
+  }
+  .main4 .mainBox{
+    margin: 0 16px;
+    padding-top: 120px;
+  }
+  .main4 .mainBox .tit{display: block;margin-bottom: 68px;}
+  .main4 .mainBox .tit h1{font-size: 36px;line-height: 48px;
+  margin-bottom: 24px;}
+  .main4 .story .quote{padding-bottom: 26px;}
+  .main4 .story blockquote{
+    font-size: 18px;
+  }
+  .main4 .story .people{border-top: none;margin-top: 32px;}
+  .main4 .story .people::before{display: none;}
+  
+  .main5 h1{margin: 0 16px 32px;padding-top: 120px;
+  font-size: 36px;line-height: 48px;}
+  .main5 .btn{margin: 0 16px 64px;height: 24px;}
+  .main5 .btn .left{
+    gap: 24px;
+  }
+  .main5 .btn .left .inputBox{gap: 8px;}
+  .main5 .btn .left .inputBox label h6,
+.main5 .btn .left .inputBox label span{
+  font-size: 16px;
 }
+  .main5 > p{padding: 28px 0 48px;text-align: center;}
+  
+  .main6 .mainBox {
+    padding: 120px 16px;
+  }
+  .main6 .mainBox h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .main6 .proc {
+    display: grid;
+    gap: 56px;
+    margin: 48px 0;
+  }
+  .main6 .proc::before {
+    left: 11px;
+    width: 2px;
+    height: 100%;
+  }
+  .main6 .proc li {
+    display: flex;
+    gap: 24px;
+  }
+  .main6 .proc li:last-child::after {
+    left: 8px;
+    top: 64px;
+    width: 9px;
+    height: 14px;
+    transform: rotate(90deg);
+  }
+  .main7 .mainBox{margin: 0 16px;padding: 120px 0;}
+  .main7 h1{font-size: 36px;line-height: 48px;padding-bottom: 64px;
+  }
+  .main7 .qa li .quest{padding: 32px 0 24px;}
+  .main7 .qa li .quest h2{font-size: 20px;line-height: 24px;
+  }
+  .main7 .qa li .quest span{display: none;}
+  .main7 .qa li .answer h5 {
+    padding-top: 12px;
+    padding-bottom: 24px;
+  }
+}
+
