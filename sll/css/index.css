@@ -52,9 +52,7 @@
   word-break: keep-all;
   text-transform: uppercase;
   box-sizing: border-box;
-}
-body {
-  letter-spacing: -0.5px;
+  word-spacing: -1.5px;
 }
 ul {
   list-style: none;
@@ -151,6 +149,264 @@ header .head .headRight li a span img {
 }
 header .head .headRight:hover li a span {
   transform: rotate(180deg);
+}
+header .head .navW767.mob {
+  position: relative;
+  width: calc(100vw * (24 / 375));
+  height: calc(100vw * (24 / 375));
+  background-color: transparent;
+  cursor: pointer;
+}
+header .head .navW767.mob li {
+  position: absolute;
+  left: calc(100vw * (2 / 375));
+  display: block;
+  width: calc(100vw * (20 / 375));
+  height: calc(100vw * (2 / 375));
+  background: #fff;
+  z-index: 9100;
+}
+header .head .navW767.mob li:nth-child(1) {
+  top: calc(100vw * (4 / 375));
+}
+header .head .navW767.mob li:nth-child(2) {
+  top: calc(100vw * (12 / 375));
+}
+header .head .navW767.mob li:nth-child(3) {
+  top: calc(100vw * (20 / 375));
+}
+
+/* navBox(mob) */
+
+.navBox {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: #191919;
+  z-index: 8000;
+  display: none;
+}
+.navBox .flexBox {
+  width: 96%;
+  height: calc(100vw * (56 / 375));
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navBox .flexBox .logo a img {
+  display: block;
+  width: calc(100vw * (56 / 375));
+  height: calc(100vw * (28 / 375));
+}
+.navBox .flexBox .close {
+  position: relative;
+  width: calc(100vw * (24 / 375));
+  height: calc(100vw * (24 / 375));
+  background-color: transparent;
+  cursor: pointer;
+}
+.navBox .flexBox .close li {
+  position: absolute;
+  left: calc(100vw * (2 / 375));
+  display: block;
+  width: calc(100vw * (20 / 375));
+  height: calc(100vw * (2 / 375));
+  background: #fff;
+  z-index: 9900;
+}
+.navBox .close li:nth-child(1) {
+  top: calc(100vw * (12 / 375));
+  transform: rotate(45deg);
+}
+.navBox .close li:nth-child(2) {
+  top: calc(100vw * (12 / 375));
+  transform: rotate(-45deg);
+}
+.navBox nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  /* top: calc(100vw * (56 / 375)); */
+  height: calc(100vh - (100vw * (56 / 375)));
+}
+.navBox nav .dep1 {
+  display: flex;
+  flex-direction: column;
+  gap: calc(100vw * (48 / 375));
+  padding-top: calc(100vw * (64 / 375));
+  padding-left: calc(100vw * (16 / 375));
+  padding-right: calc(100vw * (16 / 375));
+}
+.navBox nav .dep1 > li p {
+  /* display: inline-flex; */
+  position: relative;
+  padding-right: calc(100vw * (26 / 375));
+  font-size: calc(100vw * (20 / 375));
+  line-height: calc(100vw * (20 / 375));
+  font-family: "geomanist-medium", sans-serif;
+  color: #8c8c8c;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.navBox nav .dep1 > li p.on {
+  color: #fff;
+  opacity: 1;
+}
+.navBox nav .dep1 > li p:hover {
+  color: #fff;
+  opacity: 1;
+}
+.navBox nav .dep1 > li p:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100vw * (14 / 375));
+  height: calc(100vw * (6 / 375));
+  background-image: url(../images/arrowgr.svg);
+  background-size: calc(100vw * (14 / 375)) calc(100vw * (6 / 375));
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.navBox nav .dep1 > li p.on:after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.navBox nav .dep1 > li .dep2 {
+  display: none;
+  margin-top: calc(100vw * (24 / 375));
+}
+.navBox nav .dep1 > li .dep2.on {
+  display: block;
+}
+.navBox nav .dep1 > li .dep2 li a {
+  font-size: calc(100vw * (16 / 375));
+  line-height: calc(100vw * (16 / 375));
+  font-family: "geomanist-book", sans-serif;
+  color: #8c8c8c;
+  opacity: 0.6;
+}
+.navBox nav .dep1 > li .dep2 li a:hover {
+  color: #fff;
+  opacity: 1;
+}
+.navBox nav .dep1 > li .dep2 li:nth-child(2),
+.navBox nav .dep1 > li .dep2 li:nth-child(3),
+.navBox nav .dep1 > li .dep2 li:nth-child(4) {
+  margin-top: calc(100vw * (16 / 375));
+}
+.navBox nav .lang {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 calc(100vw * (16 / 375)) calc(100vw * (48 / 375));
+  font-size: calc(100vw * (20 / 375));
+  line-height: calc(100vw * (20 / 375));
+  font-weight: normal;
+  font-family: "geomanist-medium", sans-serif;
+}
+.navBox nav .lang span {
+  cursor: pointer;
+}
+.navBox nav .lang span:first-child {
+  color: #fff;
+  opacity: 1;
+}
+
+.navBox nav .lang span:last-child {
+  position: relative;
+  margin-left: calc(100vw * (22 / 375));
+  color: #8c8c8c;
+  opacity: 0.6;
+}
+.navBox nav .lang span:last-child:after {
+  content: "";
+  position: absolute;
+  left: calc(100vw * (-11 / 375));
+  width: 2px;
+  height: calc(100vw * (14 / 375));
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #8c8c8c;
+}
+
+/* siteBox(mob) */
+
+.siteBox {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  color: #222;
+  background-color: #fff;
+  z-index: 9500;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: none;
+}
+.siteBox .close {
+  position: fixed;
+  right: calc(100vw * (20 / 375));
+  top: calc(100vw * (18 / 375));
+  width: calc(100vw * (18 / 375));
+  height: calc(100vw * (18 / 375));
+  background: url(../images/icoclose.png) center/cover no-repeat;
+  z-index: 9999;
+  cursor: pointer;
+}
+.siteBox .flexBox {
+  width: 100%;
+  margin-top: calc(100vw * (56 / 375));
+  padding-right: calc(100vw * (16 / 375));
+  margin-bottom: calc(100vw * (130 / 375));
+  margin-left: calc(100vw * (16 / 375));
+  display: flex;
+  flex-direction: column;
+  gap: calc(100vw * (50 / 375));
+}
+.siteBox .flexBox h3 {
+  font-size: calc(100vw * (22 / 375));
+  line-height: calc(100vw * (30 / 375));
+  letter-spacing: calc(100vw * (-0.22 / 375));
+  text-transform: none;
+}
+.siteBox .flexBox .dep1 {
+  display: flex;
+  flex-direction: column;
+  gap: calc(100vw * (50 / 375));
+}
+.siteBox .flexBox .dep1 > li h4 {
+  font-size: calc(100vw * (15 / 375));
+  line-height: calc(100vw * (22 / 375));
+  letter-spacing: calc(100vw * (-0.15 / 375));
+  padding-bottom: calc(100vw * (20 / 375));
+}
+.siteBox .flexBox .dep1 > li .dep2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.siteBox .flexBox .dep1 > li .dep2 li {
+  flex: 1 1 50%;
+}
+.siteBox .flexBox .dep1 > li .dep2 li a {
+  font-size: calc(100vw * (15 / 375));
+  line-height: calc(100vw * (22 / 375));
+  letter-spacing: calc(100vw * (-0.15 / 375));
+  color: #222;
+}
+.siteBox .flexBox .dep1 > li:nth-child(1) .dep2 li:nth-child(7) a,
+.siteBox .flexBox .dep1 > li:nth-child(2) .dep2 li:nth-child(3) a,
+.siteBox .flexBox .dep1 > li:nth-child(2) .dep2 li:nth-child(4) a {
+  text-transform: none;
+}
+.siteBox .flexBox .dep1 > li .dep2 li:nth-child(3),
+.siteBox .flexBox .dep1 > li .dep2 li:nth-child(4),
+.siteBox .flexBox .dep1 > li .dep2 li:nth-child(5),
+.siteBox .flexBox .dep1 > li .dep2 li:nth-child(6),
+.siteBox .flexBox .dep1 > li .dep2 li:nth-child(7) {
+  margin-top: calc(100vw * (30 / 375));
 }
 
 /* main */
@@ -296,6 +552,11 @@ header .head .headRight:hover li a span {
   height: 100%;
   background: url(../images/main6-1tab.webp) top/cover no-repeat;
 }
+#section5 .man.mob {
+  width: 100%;
+  height: 100%;
+  background: url(../images/main6-1mob.webp) top/cover no-repeat;
+}
 #section5 .people img {
   position: absolute;
   top: 200px;
@@ -382,9 +643,10 @@ footer .foot .footTop .footNav > li .footSub {
   flex-direction: column;
   gap: 8px;
 }
-footer .foot .footTop .footNav > li .footSub li {
+footer .foot .footTop .footNav > li .footSub li a {
+  white-space: nowrap;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 16px;
   font-family: "geomanist-book", sans-serif;
   opacity: 0.8;
 }
@@ -424,7 +686,7 @@ footer .foot .footBot .flex .txtBox .footLink > li p {
 .footLink > li:nth-child(1):after,
 .footLink > li:nth-child(2):after,
 .footLink > li:nth-child(3):after,
-.footLink > li:nth-child(4):after {
+.footLink > li.management:after {
   content: "";
   position: absolute;
   right: -6.5px;
@@ -445,10 +707,10 @@ footer .foot .footBot .flex .txtBox .footLink > li:nth-child(2) a {
 }
 .footLink .site {
   width: 10px;
-  height: 17px;
+  height: 8px;
   cursor: pointer;
 }
-.footLink .site .navBar {
+.footLink .site .dep1 {
   position: absolute;
   right: 0;
   bottom: 30px;
@@ -460,7 +722,7 @@ footer .foot .footBot .flex .txtBox .footLink > li:nth-child(2) a {
   white-space: nowrap;
   visibility: hidden;
 }
-.footLink .site .navBar h5 {
+.footLink .site .dep1 h5 {
   font-size: 16px;
   font-weight: bold;
   line-height: 23px;
@@ -468,13 +730,13 @@ footer .foot .footBot .flex .txtBox .footLink > li:nth-child(2) a {
   color: #333;
   margin-bottom: 8px;
 }
-.footLink .site .navBar a {
+.footLink .site .dep1 a {
   font-size: 14px;
   line-height: 23px;
   color: #333;
   text-transform: none;
 }
-.footLink .site .navBar > li:nth-child(3) > h5:nth-of-type(2) {
+.footLink .site .dep1 > li:nth-child(3) > h5:nth-of-type(2) {
   margin-top: 20px;
 }
 .footLink .site label {
@@ -539,23 +801,31 @@ footer .foot .footBot .flex .txtBox .copyright {
 footer .foot .footBot .flex .txtBox .copyright span {
   font-family: "JTBCGothic-SemiLight", sans-serif;
 }
-footer .foot .footBot .flex .sns {
+footer .foot .footBot .footLast {
+  display: flex;
+  justify-content: space-between;
+}
+footer .foot .footBot .footLast .footLogo a img {
+  width: calc(100vw * (52 / 375));
+  height: calc(100vw * (24 / 375));
+}
+footer .foot .footBot .footLast .sns {
   display: flex;
   align-items: end;
   gap: 20px;
 }
-footer .foot .footBot .flex .sns li a {
+footer .foot .footBot .footLast .sns li a {
   width: 35px;
   height: 35px;
   display: block;
 }
-footer .foot .footBot .flex .sns li:nth-child(1) a {
+footer .foot .footBot .footLast .sns li:nth-child(1) a {
   background: url(../images/icoin.svg) center/cover no-repeat;
 }
-footer .foot .footBot .flex .sns li:nth-child(2) a {
+footer .foot .footBot .footLast .sns li:nth-child(2) a {
   background: url(../images/icoinsta.svg) center/cover no-repeat;
 }
-footer .foot .footBot .flex .sns li:nth-child(3) a {
+footer .foot .footBot .footLast .sns li:nth-child(3) a {
   background: url(../images/icoyt.svg) center/cover no-repeat;
 }
 
@@ -1084,20 +1354,20 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
     display: none;
   }
   .tab {
+    display: none;
+  }
+  .mob {
     display: block;
   }
-  /* .mob {
-    display: none;
-  } */
   header {
-    height: calc(100vw * (100 / 768));
+    height: calc(100vw * (56 / 375));
   }
   header .head {
-    width: 92%;
+    width: 96%;
   }
   header .head .headLeft .logo a img {
-    width: calc(100vw * (75 / 768));
-    height: calc(100vw * (36 / 768));
+    width: calc(100vw * (56 / 375));
+    height: calc(100vw * (28 / 375));
   }
   header .head .headLeft nav {
     display: none;
@@ -1122,7 +1392,7 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
     line-height: calc(100vw * (15 / 768));
   } */
   .mainBox {
-    width: 92%;
+    width: 96%;
   }
   #section0 .mainBox,
   #section1 .mainBox,
@@ -1132,11 +1402,13 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
     flex-direction: column;
     /* justify-content: space-between; */
     justify-content: start;
+    gap: 60px;
   }
   #section4 .mainBox .txtBox {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: start;
   }
   #section4 .mainBox .imgBox {
     height: calc(100% - 150px);
@@ -1144,36 +1416,36 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
   }
   .mainBox .txt {
     margin-top: 0;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
   .mainBox h1 {
-    font-size: calc(100vw * (105 / 768));
-    line-height: calc(100vw * (85 / 768));
-    letter-spacing: calc(100vw * (-1.57 / 768));
+    font-size: calc(100vh * (80 / 812));
+    line-height: calc(100vh * (70 / 812));
+    letter-spacing: calc(100vh * (-1.2 / 812));
   }
   .mainBox h2 {
-    font-size: calc(100vw * (38 / 768));
-    line-height: calc(100vw * (55 / 768));
-    letter-spacing: calc(100vw * (-0.57 / 768));
+    font-size: calc(100vh * (30 / 812));
+    line-height: calc(100vh * (45 / 812));
+    letter-spacing: calc(100vh * (-0.45 / 812));
   }
   .mainBox p {
-    font-size: calc(100vw * (16 / 768));
-    line-height: calc(100vw * (26 / 768));
-    letter-spacing: calc(100vw * (-0.24 / 768));
-    margin-top: calc(40 * 100vw / 1920);
+    font-size: calc(100vh * (14 / 812));
+    line-height: calc(100vh * (22 / 812));
+    letter-spacing: calc(100vh * (-0.21 / 812));
+    margin-top: calc(100vw * (20 / 375));
   }
   .mainBox .link {
-    padding-right: calc(100vw * (52 / 768));
-    margin-top: calc(100vw * (36 / 768));
+    padding-right: calc(100vw * (38 / 375));
+    margin-top: calc(100vw * (20 / 375));
   }
   .mainBox .link h3 {
-    font-size: calc(100vw * (16 / 768));
-    line-height: calc(100vw * (18 / 768));
-    letter-spacing: calc(100vw * (-0.24 / 768));
+    font-size: calc(100vw * (14 / 375));
+    line-height: calc(100vw * (16 / 375));
+    letter-spacing: calc(100vw * (-0.21 / 375));
   }
   .mainBox .link a .arrowWh {
-    width: calc(100vw * (36 / 768));
-    height: calc(100vw * (21 / 768));
+    width: calc(100vw * (26 / 375));
+    height: calc(100vw * (15 / 375));
   }
   #section4 .mainBox .imgBox p:nth-child(1) img,
   #section4 .mainBox .imgBox p:nth-child(2) img {
@@ -1194,13 +1466,14 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
     margin-top: calc(80 * 100vh / 1080);
   }
   #section5 .people img {
-    top: calc(100vw * (190 / 768));
+    top: calc(100vw * (135 / 375));
     right: 0;
     width: 100%;
     height: auto;
   }
   #section5 .blackBox {
     width: 100%;
+    height: calc(100% - calc(100vw * (270 / 375)));
     padding: 0 32px;
   }
   .blackBox h1 {
@@ -1236,46 +1509,126 @@ footer .foot .footBot .flex .sns li:nth-child(3) a {
     height: calc(100vw * (21 / 768));
   }
   footer .foot {
-    width: calc(1200 * 100vw / 1280);
+    /* width: calc(1200 * 100vw / 1280); */
+    padding: calc(100vw * (50 / 375)) 16px;
+  }
+  footer .foot .footTop {
+    display: block;
   }
   footer .foot .footTop .global {
-    width: 25%;
+    width: 100%;
   }
   footer .foot .footTop .global h2 {
-    font-size: calc(100vw * (22 / 1024));
-    line-height: calc(100vw * (32 / 1024));
-    letter-spacing: calc(100vw * (-0.33 / 1024));
+    font-size: calc(100vw * (24 / 375));
+    line-height: calc(100vw * (24 / 375));
+    letter-spacing: calc(100vw * (-0.36 / 375));
   }
   footer .foot .footTop .blank {
-    width: 10%;
+    display: none;
   }
   footer .foot .footTop .footNav {
-    width: 65%;
+    gap: calc(100vw * (24 / 375));
+    width: 100%;
+    margin-top: calc(100vw * (32 / 375));
+  }
+  footer .foot .footTop .footNav > li a {
+    font-size: calc(100vw * (14 / 375));
+    line-height: calc(100vw * (15 / 375));
+    letter-spacing: calc(100vw * (-0.21 / 375));
+  }
+  footer .foot .footTop .footNav > li .footSub {
+    margin-top: calc(100vw * (20 / 375));
+    gap: calc(100vw * (13 / 375));
+  }
+  footer .foot .footTop .footNav > li .footSub li a {
+    font-size: calc(100vw * (13 / 375));
+    line-height: calc(100vw * (13 / 375));
+    letter-spacing: calc(100vw * (-0.2 / 375));
+  }
+  footer .foot .footBot {
+    margin-top: calc(100vw * (40 / 375));
   }
   footer .foot .footBot .logo {
-    width: 25%;
+    display: none;
   }
   footer .foot .footBot .logo h1 {
     width: calc(100vw * (117 / 1024));
     height: calc(100vw * (54 / 1024));
   }
   footer .foot .footBot .flex {
-    width: 75%;
+    width: 100%;
     flex-direction: column;
-    gap: 16px;
+    gap: calc(100vw * (24 / 375));
+  }
+  footer .foot .footBot .flex .txtBox .footLink {
+    flex-wrap: wrap;
+  }
+  footer .foot .footBot .flex .txtBox .footLink > li {
+    margin-right: calc(100vw * (9 / 375));
+    margin-bottom: calc(100vw * (9 / 375));
+  }
+  footer .foot .footBot .flex .txtBox .footLink > li p {
+    padding-right: calc(100vw * (4 / 375));
+  }
+  .footLink > li:nth-child(1):after,
+  .footLink > li:nth-child(2):after,
+  .footLink > li:nth-child(3):after,
+  .footLink > li.management:after {
+    right: calc(100vw * (-4.5 / 375));
+    height: calc(100vw * (13 / 375));
+  }
+  footer .foot .footBot .flex .txtBox .footLink > li > a {
+    font-size: calc(100vw * (13 / 375));
+    line-height: calc(100vw * (13 / 375));
+  }
+  footer .foot .footBot .flex .txtBox .footLink .family > p {
+    font-size: calc(100vw * (13 / 375));
+    line-height: calc(100vw * (13 / 375));
+    letter-spacing: calc(100vw * (-0.2 / 375));
+  }
+  footer .foot .footBot .flex .txtBox .footLink .site .dep1 {
+    display: none;
+  }
+  footer .foot .footBot .flex .txtBox .footLink .site label {
+    width: calc(100vw * (10 / 375));
+    height: calc(100vw * (8 / 375));
   }
   footer .foot .footBot .flex .txtBox address {
     width: 100%;
     margin: 6px 0;
+    font-size: calc(100vw * (13 / 375));
   }
-  footer .foot .footBot .flex .txtBox address p:last-child {
-    margin-top: 0;
+  footer .foot .footBot .flex .txtBox address span {
+    margin-bottom: calc(100vw * (9 / 375));
   }
-  footer .foot .footBot .flex .sns {
-    gap: calc(100vw * (16 / 1024));
+  footer .foot .footBot .flex .txtBox address p {
+    margin-left: calc(100vw * (8 / 375));
+    margin-bottom: calc(100vw * (9 / 375));
   }
-  footer .foot .footBot .flex .sns li a {
-    width: calc(100vw * (24 / 1024));
-    height: calc(100vw * (24 / 1024));
+  footer .foot .footBot .flex .txtBox address p::before {
+    right: calc(100vw * (-4.5 / 375));
+    height: calc(100vw * (13 / 375));
+  }
+  footer .foot .footBot .flex .txtBox address p:nth-of-type(2):after {
+    right: calc(100vw * (-4.5 / 375));
+    height: calc(100vw * (13 / 375));
+  }
+  footer .foot .footBot .flex .txtBox address p:nth-of-type(3) {
+    margin-left: 0;
+  }
+  footer .foot .footBot .flex .txtBox address p:nth-of-type(3)::before {
+    display: none;
+  }
+  footer .foot .footBot .flex .txtBox .copyright {
+    margin-top: calc(100vw * (8 / 375));
+    font-size: calc(100vw * (13 / 375));
+    line-height: calc(100vw * (16 / 375));
+  }
+  footer .foot .footBot .footLast .sns {
+    gap: calc(100vw * (16 / 375));
+  }
+  footer .foot .footBot .footLast .sns li a {
+    width: calc(100vw * (24 / 375));
+    height: calc(100vw * (24 / 375));
   }
 }

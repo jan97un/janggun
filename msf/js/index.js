@@ -87,6 +87,8 @@ $(".minor .med").click(function () {
 $(".minor .non").click(function () {
   $("#category1").find("span").html("비의료");
 });
+about;
+
 $(".people li").click(function () {
   $(".storyBox li blockquote").removeClass("on");
   $(".people li").removeClass("on");
