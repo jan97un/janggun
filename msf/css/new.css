@@ -154,7 +154,7 @@ header .head .hamberger.mob a img {
 
 /* mainBtn.mob(fixed) */
 
-.mainBtn.mob {
+/* .mainBtn.mob {
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -181,9 +181,11 @@ header .head .hamberger.mob a img {
   display: block;
   color: #fff;
   background-color: #424242;
-}
+} */
 
 /* main */
+
+.con{padding: 0 16px;}
 
 /* main1 */
 
@@ -355,8 +357,7 @@ header .head .hamberger.mob a img {
 .main3 .tit {
   width: 100%;
   margin: 112px auto 0;
-  /* padding-top: 160px; */
-  padding: 160px 0 0;
+  padding-top: 160px;
 }
 .main3 .tit h2 {
   font-size: 48px;
@@ -422,7 +423,7 @@ header .head .hamberger.mob a img {
   line-height: 32px;
   color: #616161;
 }
-.main3 .mainBox.mob .flex {
+/* .main3 .mainBox.mob .flex {
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -459,7 +460,7 @@ header .head .hamberger.mob a img {
   font-weight: 400;
   line-height: 32px;
   color: #616161;
-}
+} */
 
 /* .main4 */
 
@@ -518,11 +519,14 @@ header .head .hamberger.mob a img {
 }
 .main4 .mainBox .story .storyBox li {
   position: relative;
+  width: 100%;
+  display: block;
 }
 .main4 .mainBox .story blockquote {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  /* left: 50%;
+  transform: translateX(-50%); */
   transition: 0.5s;
   font-size: 20px;
   line-height: 32px;
@@ -606,7 +610,6 @@ header .head .hamberger.mob a img {
 .main5 {
   position: relative;
   width: 100%;
-  /* height: 100vh; */
   background-color: #433838;
   color: #fff;
   transition: background-color 0.5s ease;
@@ -1504,7 +1507,7 @@ footer a {
     max-width: 1216px;
   }
 }
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
   .pc {
     display: block;
   }
@@ -1622,23 +1625,27 @@ footer a {
   }
   .main3 .tit {
     margin: 0;
-    padding: 120px 16px 0 16px;
+    padding-top: 120px;
   }
   .main3 .tit h2 {
     font-size: 36px;
-    padding: 0 16px;
+    line-height: 48px;
     margin-bottom: 48px;
-  }
-  .main3 .mainBox.mob {
-    padding: 0 16px;
-  }
-  .main4 .mainBox {
   }
   .main4 .mainBox .tit {
     flex-direction: column;
     align-items: start;
+    gap: 1.5rem;
+    margin-bottom: 68px;
   }
-  .main4 .mainBox .tit h1 {
+  .main4 .mainBox .tit h1 {font-size: 36px;
+    line-height: 48px;
+  }
+  .main4 .mainBox .tit .more a p{
+    
+  }
+  .main4 .mainBox .story blockquote{
+    font-size: 18px;
   }
   .main4 .mainBox .story .people {
     border-top: none;
@@ -1646,4 +1653,61 @@ footer a {
   .main4 .mainBox .story .people:before {
     display: none;
   }
-}
+  .main5 h1{
+    margin: 0 auto 32px;
+    padding-top: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 36px;
+    line-height: 48px;}
+  .main5 .btn{
+    height: 24px;
+    padding: 0 16px;
+  }
+  .main5 .btn .left{
+    align-items: normal;
+    gap: 24px;
+  }
+  .main5 .btn .left .inputBox {
+    gap: 8px;
+  }
+  .main5 .btn .left .inputBox label h6,
+  .main5 .btn .left .inputBox label span {
+    font-size: 16px;
+  }
+  .main5 .btn .right{
+    display: none;
+  }
+  .main5 > p{
+    padding: 28px 16px 48px;
+    text-align: center;
+  }
+  .main6 .mainBox {
+    padding: 120px 0;
+  }
+  .main6 .mainBox h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .main6 .proc {
+    display: grid;
+    gap: 56px;
+    margin: 4rem 0 calc(4rem - 14px);
+  }
+  .main6 .proc::before {
+    left: 11px;
+    width: 2px;
+    height: 100%;
+  }
+  .main6 .proc li {
+    display: flex;
+    gap: 24px;
+  }
+  .main6 .proc li:last-child::after {
+    left: 8px;
+    top: 64px;
+    width: 9px;
+    height: 14px;
+    transform: rotate(90deg);
+  }
+} */
