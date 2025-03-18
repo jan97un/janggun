@@ -27,53 +27,6 @@ $(".arrowAni").on("click", function () {
     400
   );
 });
-var TxtType = function (el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 3000;
-  this.txt = "";
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function () {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-  if (this.isDeleting) {
-    delta /= 2;
-  }
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === "") {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-  setTimeout(function () {
-    that.tick();
-  }, delta);
-};
-window.onload = function () {
-  var elements = document.getElementsByClassName("typewrite");
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = elements[i].getAttribute("data-type");
-    var period = elements[i].getAttribute("data-period");
-    if (toRotate) {
-      new TxtType(elements[i], JSON.parse(toRotate), period);
-    }
-  }
-};
 let majbar = document.querySelector(".major .bar");
 let minbar = document.querySelector(".minor .bar");
 $("#category1").click(function () {
@@ -89,19 +42,6 @@ $(".major .bar li").click(function () {
   $("#category1").find("span").text(majtxt);
   $(majbar).css("display", "none");
 });
-$(".major .all").click(function () {
-  $(".minor .med").css("display", "block");
-  $(".minor .non").css("display", "block");
-});
-$(".major .med").click(function () {
-  $(".minor .non").css("display", "none");
-  $(".minor .med").css("display", "block");
-});
-$(".major .non").click(function () {
-  $(".minor .med").css("display", "none");
-  $(".minor .non").css("display", "block");
-});
-
 $("#category2").click(function () {
   if ($(minbar).css("display") == "block") {
     $(minbar).css("display", "none");
@@ -128,12 +68,18 @@ $(".minor .bar li").click(function () {
       $(".job>li").eq(index).css("display", "none");
       $("body").css("overflow", "visible");
     });
-  //   $(".main1 .mainBox .main1btn.mob strong")
-  //     .off("click")
-  //     .on("click", function () {
-  //       $(".job>li").eq(index).css("display", "block");
-  //       $("body").css("overflow", "hidden");
-  //     });
+});
+$(".major .all").click(function () {
+  $(".minor .med").css("display", "block");
+  $(".minor .non").css("display", "block");
+});
+$(".major .medi").click(function () {
+  $(".minor .non").css("display", "none");
+  $(".minor .med").css("display", "block");
+});
+$(".major .non").click(function () {
+  $(".minor .med").css("display", "none");
+  $(".minor .non").css("display", "block");
 });
 $(".minor .med").click(function () {
   $("#category1").find("span").html("의료");
@@ -141,6 +87,7 @@ $(".minor .med").click(function () {
 $(".minor .non").click(function () {
   $("#category1").find("span").html("비의료");
 });
+
 $(".people li").click(function () {
   $(".storyBox li blockquote").removeClass("on");
   $(".people li").removeClass("on");

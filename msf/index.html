@@ -18,26 +18,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
   <body>
-    <div class="arrowAni">
-      <div class="arrowBd">
-        <img
-          class="arrowWh"
-          src="images/maindownarrow.svg"
-          alt="maindownarrow"
-        />
-        <img
-          class="arrowBl"
-          src="images/mainscrollarrow.svg"
-          alt="mainscrollarrow"
-        />
-      </div>
-    </div>
-    <div class="mainBtn mob">
-      <ul>
-        <li>구호활동가 지원</li>
-        <li><a href="">후원하기</a></li>
-      </ul>
-    </div>
     <header>
       <div class="head">
         <div class="logo">
@@ -64,13 +44,33 @@
             </li>
           </ul>
         </div>
-        <p class="hamberger mob">
-          <img src="images/hamberger.svg" alt="hamberger" />
-        </p>
+        <!-- <div class="hamberger mob">
+          <a href=""><img src="images/hamberger.svg" alt="hamberger" /></a>
+        </div> -->
       </div>
     </header>
+    <div class="arrowAni">
+      <div class="arrowBd">
+        <img
+          class="arrowWh"
+          src="images/maindownarrow.svg"
+          alt="maindownarrow"
+        />
+        <img
+          class="arrowBl"
+          src="images/mainscrollarrow.svg"
+          alt="mainscrollarrow"
+        />
+      </div>
+    </div>
+    <!-- <div class="mainBtn mob">
+      <ul>
+        <li>구호활동가 지원</li>
+        <li><a href="">후원하기</a></li>
+      </ul>
+    </div> -->
     <main>
-      <div class="main1">
+      <div class="main1 con">
         <div class="blend"></div>
         <div class="mainBox">
           <h1>국경없는</h1>
@@ -125,10 +125,10 @@
             </div>
             <strong class="main1btn pc">검색</strong>
           </div>
-          <div class="main1btn mob"><strong>검색</strong></div>
+          <!-- <div class="main1btn mob"><strong>검색</strong></div> -->
         </div>
       </div>
-      <div class="scrollTrigger1 pc">
+      <div class="scrollTrigger1 con pc">
         <div class="main2">
           <div class="mainTxt">
             <h1>
@@ -143,7 +143,7 @@
           </div>
         </div>
       </div>
-      <div class="m2Mob mob">
+      <!-- <div class="m2Mob mob">
         <div class="mainTxt">
           <h1>
             하지만<br class="pc" />
@@ -156,11 +156,11 @@
             <source src="video/mainscroll.mp4" type="video/mp4" />
           </video>
         </div>
-      </div>
-      <div class="main3">
+      </div> -->
+      <div class="main3 con">
         <div class="tit">
           <h2>
-            국경없는의사회 구호활동가가 된다는 것은<br class="pc" />
+            국경없는의사회 구호활동가가 된다는 것은<br />
             직업 그 이상의 의미를 가집니다
           </h2>
         </div>
@@ -231,51 +231,65 @@
             </div>
           </div>
         </div>
-        <ul class="history mob">
-          <li>
-            <div class="mobImg">
-              <img src="images/mainhistory1.jpg" alt="mainhistory1" />
-            </div>
-            <h3>1971년 시작된 발걸음</h3>
-            <p>
-              국경없는의사회는 1971년 ‘활동’과 ‘발언’, ‘치료’와 ‘증언’이라는
-              핵심 표어를 바탕으로 프랑스 의사들과 의학 전문 언론인들에 의해
-              설립되었습니다.
-            </p>
-          </li>
-          <li>
-            <div class="mobImg">
-              <img src="images/mainhistory2.jpg" alt="mainhistory2" />
-            </div>
-            <h3>70개국 이상에서 이어지는 활동</h3>
-            <p>
-              75개가 넘는 국가에서 독립적으로 활동하며 인종, 종교, 성별이나
-              정치적 성향에 관계없이 필요만을 기반으로 한 지원을 제공합니다.
-            </p>
-          </li>
-          <li>
-            <div class="mobImg">
-              <img src="images/mainhistory3.jpg" alt="mainhistory3" />
-            </div>
-            <h3>49,029명과 함께하는 여정</h3>
-            <p>
-              무력분쟁, 전염병 창궐 현장, 의료사각지대, 자연재해 등 위기에
-              대응하기 위하여 전 세계 약 4만 명의 직원이 함께하고 있습니다.
-            </p>
-          </li>
-          <li>
-            <div class="mobImg">
-              <img src="images/mainhistory4.jpg" alt="mainhistory4" />
-            </div>
-            <h3>16,272,300회의 연간 환자 진료</h3>
-            <p>
-              국제 인도주의 의료 구호 단체로서 지난 1년간 1천6백만 회가 넘는
-              외래환자 진료를 마쳤습니다.
-            </p>
-          </li>
-        </ul>
+        <!-- <div class="mainBox mob">
+          <ul class="flex">
+            <li class="history1">
+              <div class="imgBox">
+                <img src="images/mainhistory1.jpg" alt="mainhistory1" />
+              </div>
+              <div class="txtBox">
+                <h3>1971년 시작된 발걸음</h3>
+                <p>
+                  국경없는의사회는 1971년 ‘활동’과 ‘발언’, ‘치료’와
+                  ‘증언’이라는<br  />
+                  핵심 표어를 바탕으로 프랑스 의사들과 의학 전문 언론인들에 의해 설립되었습니다.
+                </p>
+              </div>
+            </li>
+            <li class="history2">
+              <div class="imgBox">
+                <img src="images/mainhistory2.jpg" alt="mainhistory2" />
+              </div>
+              <div class="txtBox">
+                <h3>70개국 이상에서 이어지는 활동</h3>
+                <p>
+                  75개가 넘는 국가에서 독립적으로 활동하며 인종, 
+                  성별이나 정치적 성향에 관계없이 <br>필요만을 기반으로 한 지원을
+                  제공합니다.
+                </p>
+              </div>
+            </li>
+            <li class="history3">
+              <div class="imgBox">
+                <img src="images/mainhistory3.jpg" alt="mainhistory3" />
+              </div>
+              <div class="txtBox">
+                <h3>49,029명과 함께하는 여정</h3>
+                <p>
+                  무력분쟁, 전염병 창궐 현장, 의료사각지대, 자연재해 등
+                  위기에 대응하기 위하여<br>전 세계 약 4만 명의
+                  직원이 함께하고 있습니다.
+                </p>
+              </div>
+            </li>
+            <li class="history4">
+              <div class="imgBox">
+                <img src="images/mainhistory4.jpg" alt="mainhistory4" />
+              </div>
+              <div class="txtBox">
+                <h3>16,272,300회의 연간 환자 진료</h3>
+                <p>
+                  국제 인도주의 의료 구호 단체로서 지난 1년간 1천6백만<br
+                    class="pc"
+                  />
+                  회가 넘는 외래환자 진료를 마쳤습니다.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div> -->
       </div>
-      <div class="main4">
+      <div class="main4 con">
         <div class="mainBox">
           <div
             class="tit"
@@ -312,12 +326,16 @@
               <li>
                 <blockquote>
                   현장에 나갈 때마다 새로운 경험을 하게 됩니다. 새로운 환경에서
-                  나 자신을 발견하고, 다른 이들을 보면서 배우게 되는데요.<br />
+                  나 자신을 발견하고, 다른 이들을 보면서 배우게 되는데요.<br
+                    class="pc"
+                  />
                   매번 새로운 사람들과 색다른 환경을 마주하며 긍정적인 영향을
-                  받기 때문에 이 ‘새로움’이 다음 활동을 가게 만드는 원동력이<br />
+                  받기 때문에 이 ‘새로움’이 다음 활동을 가게 만드는 원동력이<br
+                    class="pc"
+                  />
                   돼요.
                 </blockquote>
-                <div class="mob">
+                <!-- <div class="mob">
                   <div class="worker">
                     <img src="images/worker1.png" alt="worker1" />
                   </div>
@@ -325,16 +343,18 @@
                     <h6>봉선아 활동가</h6>
                     <p>기술직</p>
                   </div>
-                </div>
+                </div> -->
               </li>
               <li>
                 <blockquote>
                   제가 가진 전문성과 역량으로 구호활동에 참여할 수 있다는 사실이
-                  큰 보람이 됐습니다. 현장 생활을 하며 국경없는의사회가<br />
+                  큰 보람이 됐습니다. 현장 생활을 하며 국경없는의사회가<br
+                    class="pc"
+                  />
                   실제로 가장 멀고, 가장 험하고, 가장 필요한 곳에서 일하고
                   있다는 걸 느낄 수 있었습니다.
                 </blockquote>
-                <div class="mob">
+                <!-- <div class="mob">
                   <div class="worker">
                     <img src="images/worker2.png" alt="worker1" />
                   </div>
@@ -342,16 +362,18 @@
                     <h6>황선미 활동가</h6>
                     <p>소송행정직</p>
                   </div>
-                </div>
+                </div> -->
               </li>
               <li>
                 <blockquote>
                   국경없는의사회에서 일하면 온전히 환자만 생각할 수 있는 환경에
-                  놓이게 됩니다. 사기업에서 일하는 것보다 자유로운 점이<br />
+                  놓이게 됩니다. 사기업에서 일하는 것보다 자유로운 점이<br
+                    class="pc"
+                  />
                   있다고 할 수 있죠. 저는 일에 있어 흥미와 보람을 매우 중요하게
                   여기는데, 이를 유지할 수 있어 감사하게 생각해요.
                 </blockquote>
-                <div class="mob">
+                <!-- <div class="mob">
                   <div class="worker">
                     <img src="images/worker3.png" alt="worker1" />
                   </div>
@@ -359,17 +381,21 @@
                     <h6>최정윤 활동가</h6>
                     <p>약사</p>
                   </div>
-                </div>
+                </div> -->
               </li>
               <li>
                 <blockquote>
                   의사로서 사는 삶이 재미가 없어 (웃음) 국경없는의사회 활동을
-                  시작하게 되었어요. 활동가로서의 삶이 이전의 삶보다 훨씬 더<br />
+                  시작하게 되었어요. 활동가로서의 삶이 이전의 삶보다 훨씬 더<br
+                    class="pc"
+                  />
                   만족스럽기에 벌써 10년도 더 넘게 계속하고 있어요. 저마다 다른
-                  이유와 동기를 가지고 계시겠지만 꼭 한 번 참여해 보시면<br />
+                  이유와 동기를 가지고 계시겠지만 꼭 한 번 참여해 보시면<br
+                    class="pc"
+                  />
                   좋겠습니다.
                 </blockquote>
-                <div class="mob">
+                <!-- <div class="mob">
                   <div class="worker">
                     <img src="images/worker4.png" alt="worker1" />
                   </div>
@@ -377,7 +403,7 @@
                     <h6>이효민 활동가</h6>
                     <p>마취통증의학과 전문의</p>
                   </div>
-                </div>
+                </div> -->
               </li>
             </ul>
             <ul class="people">
@@ -1082,7 +1108,7 @@
           <a href="">career.ocb.msf.org</a> 에서 확인하실 수 있습니다.
         </p>
       </div>
-      <div class="main6">
+      <div class="main6 con">
         <div class="mainBox">
           <h1
             data-aos="fade-up"
@@ -1232,7 +1258,7 @@
           </ul>
         </div>
       </div>
-      <div class="main7">
+      <div class="main7 con">
         <div class="mainBox">
           <h1
             data-aos="fade-up"
@@ -1345,7 +1371,7 @@
           </ul>
         </div>
       </div>
-      <div class="main8">
+      <div class="main8 con">
         <div class="mainBox">
           <h1
             data-aos="fade-up"
@@ -4393,55 +4419,6 @@
       </li>
     </ul>
     <script src="js/index.js"></script>
-    <script>
-      var TxtType = function (el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 3000;
-        this.txt = "";
-        this.tick();
-        this.isDeleting = false;
-      };
-
-      TxtType.prototype.tick = function () {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-        if (this.isDeleting) {
-          delta /= 2;
-        }
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === "") {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
-        setTimeout(function () {
-          that.tick();
-        }, delta);
-      };
-      window.onload = function () {
-        var elements = document.getElementsByClassName("typewrite");
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute("data-type");
-          var period = elements[i].getAttribute("data-period");
-          if (toRotate) {
-            new TxtType(elements[i], JSON.parse(toRotate), period);
-          }
-        }
-      };
-    </script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/aos.js"></script>
     <script>
