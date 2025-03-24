@@ -229,7 +229,6 @@ header .head .navW767.mob li:nth-child(3) {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  /* top: calc(100vw * (56 / 375)); */
   height: calc(100vh - (100vw * (56 / 375)));
 }
 .navBox nav .dep1 {
@@ -241,7 +240,6 @@ header .head .navW767.mob li:nth-child(3) {
   padding-right: calc(100vw * (16 / 375));
 }
 .navBox nav .dep1 > li p {
-  /* display: inline-flex; */
   position: relative;
   padding-right: calc(100vw * (26 / 375));
   font-size: calc(100vw * (20 / 375));
@@ -1080,7 +1078,6 @@ footer .foot .footBot .footLast .sns li:nth-child(3) a {
     letter-spacing: calc(100vw * (-1.57 / 1024));
   }
   #section5 .blackBox .txtBox .txt {
-    /* margin-right: 0; */
     justify-content: space-between;
     gap: 0;
   }
@@ -1276,7 +1273,6 @@ footer .foot .footBot .footLast .sns li:nth-child(3) a {
     letter-spacing: calc(100vw * (-1.57 / 768));
   }
   #section5 .blackBox .txtBox .txt {
-    /* margin-right: 0; */
     justify-content: space-between;
     gap: 0;
   }
@@ -1372,25 +1368,9 @@ footer .foot .footBot .footLast .sns li:nth-child(3) a {
   header .head .headLeft nav {
     display: none;
   }
-  /* header .head .headLeft nav .dep1 {
-    gap: calc(100vw * (47 / 768));
-    padding-left: calc(100vw * (47 / 768));
-  }
-  header .head .headLeft nav .dep1 li a,
-  header .head .headLeft nav .dep1 > li:hover .dep2 li a {
-    font-size: calc(100vw * (14 / 768));
-    line-height: calc(100vw * (15 / 768));
-  }
-  header .head .headLeft nav .dep1 > li .dep2 {
-    top: calc(100vw * (100 / 768));
-  } */
   header .head .headRight {
     display: none;
   }
-  /* header .head .headRight li a p {
-    font-size: calc(100vw * (14 / 768));
-    line-height: calc(100vw * (15 / 768));
-  } */
   .mainBox {
     width: 96%;
   }
@@ -1400,14 +1380,12 @@ footer .foot .footBot .footLast .sns li:nth-child(3) a {
   #section3 .mainBox {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     justify-content: start;
     gap: 60px;
   }
   #section4 .mainBox .txtBox {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     justify-content: start;
   }
   #section4 .mainBox .imgBox {
@@ -1416,7 +1394,6 @@ footer .foot .footBot .footLast .sns li:nth-child(3) a {
   }
   .mainBox .txt {
     margin-top: 0;
-    /* padding-bottom: 100px; */
   }
   .mainBox h1 {
     font-size: calc(100vh * (80 / 812));
@@ -1482,7 +1459,6 @@ footer .foot .footBot .footLast .sns li:nth-child(3) a {
     letter-spacing: calc(100vw * (-1.57 / 768));
   }
   #section5 .blackBox .txtBox .txt {
-    /* margin-right: 0; */
     justify-content: space-between;
     gap: 0;
   }
@@ -1509,7 +1485,6 @@ footer .foot .footBot .footLast .sns li:nth-child(3) a {
     height: calc(100vw * (21 / 768));
   }
   footer .foot {
-    /* width: calc(1200 * 100vw / 1280); */
     padding: calc(100vw * (50 / 375)) 16px;
   }
   footer .foot .footTop {

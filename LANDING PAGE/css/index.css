@@ -5,12 +5,8 @@
   src: url(../webfonts/PretendardVariable.woff2) format("woff2");
 }
 @font-face {
-  font-family: "NotoSansKR-Regular";
-  src: url(../webfonts/NotoSansKR-Regular.woff) format("woff");
-}
-@font-face {
   font-family: "KCC-eunyoung-Regular";
-  src: url(../webfonts/KCC-eunyoung-Regular.woff) format("woff");
+  src: url(../webfonts/KCC-eunyoung-Regular.woff) format("woff2");
 }
 
 * {
@@ -22,6 +18,7 @@
   white-space: nowrap;
   box-sizing: border-box;
   text-transform: uppercase;
+  caret-color: transparent;
 }
 ul {
   list-style: none;
@@ -109,60 +106,132 @@ a {
 
 /* sec2 */
 
-.sec2 .swiper-slide {
+.sec2 .site {
+  position: relative;
   width: 100%;
   height: 100vh;
+  background-position: center;
+  background-size: 0;
+  background-repeat: no-repeat;
 }
-.sec2 .mainBox {
-  position: relative;
+.sec2 .site1 {
+  background-image: url(../images/ellepc.png);
+  isolation: isolate;
+}
+.sec2 .site1::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  inset: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+.sec2 .site2 {
+  background-image: url(../images/main.jpg);
+}
+.sec2 .site3 {
+  background-image: url(../images/main6-1.webp);
+}
+.sec2 .site .mainBox {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
 }
-.sec2 .mainBox .wrap {
+.sec2 .site .mainBox .info {
   position: relative;
+  width: 1200px;
+  height: 600px;
+  background-color: #fff;
 }
-.sec2 .mainBox .wrap .title {
+.sec2 .site .mainBox .info .title {
   position: absolute;
   top: -58px;
+  z-index: 2;
 }
-.sec2 .mainBox .wrap .title a {
+.sec2 .site .mainBox .info .title p {
   font-size: 48px;
   font-weight: bold;
   line-height: 58px;
 }
-.sec2 .mainBox .wrap .info {
-  position: relative;
-  width: 1200px;
-  height: 600px;
-}
-.sec2 .mainBox .wrap .info .thumbnail {
+.sec2 .site .mainBox .info .thumbnail {
+  display: block;
   position: absolute;
   left: 0;
   top: 0;
   width: 1200px;
   height: 600px;
-  z-index: 1;
+  z-index: 100;
 }
-.sec2 .mainBox .wrap .info .thumbnail:hover {
-  opacity: 0.4;
-}
-.sec2 .mainBox .wrap .info .thumbnail a {
-  display: block;
-  font-size: 0;
+.sec2 .site .mainBox .info .thumbnail .bd {
+  height: 100%;
   border: 1px solid #ccc;
 }
-.sec2 .mainBox .wrap .info .thumbnail a img {
+.sec2 .site .mainBox .info .thumbnail .bd img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
-.sec2 .mainBox .wrap .info .inner {
+.sec2 .site1 .mainBox .info .inner .brand .brandPc,
+.sec2 .site3 .mainBox .info .inner .content .cont1 {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  width: 500px;
+  height: 250px;
+  z-index: 3;
+}
+.sec2 .site1 .mainBox .info .inner .brand .brandPad,
+.site3 .mainBox .info .inner .content .cont2 {
+  position: absolute;
+  left: 650px;
+  bottom: 50px;
+  width: auto;
+  height: 200px;
+  z-index: 3;
+}
+.sec2 .site1 .mainBox .info .inner .brand .brandMob,
+.site3 .mainBox .info .inner .content .cont3 {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  width: auto;
+  height: 200px;
+  z-index: 3;
+}
+.sec2 .site2 .mainBox .info .inner .story {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.sec2 .site2 .mainBox .info .inner .story .ex {
+  width: auto;
+  height: calc(500px / 3);
+}
+.sec2 .site .mainBox .info .inner .ex img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
+.sec2 .mainBox .info .inner .txtBox {
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  z-index: 3;
+}
+.sec2 .mainBox .info .inner .txtBox p {
+  text-transform: none;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.sec2 .swiper-slide:nth-child(2) .bg {
+  opacity: 0.8;
+}
+
 .swiper-pagination-bullet-active {
   background: rgba(0, 0, 0, 0.9) !important;
 }

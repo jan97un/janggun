@@ -128,12 +128,6 @@ $(".minor .bar li").click(function () {
       $(".job>li").eq(index).css("display", "none");
       $("body").css("overflow", "visible");
     });
-  //   $(".main1 .mainBox .main1btn.mob strong")
-  //     .off("click")
-  //     .on("click", function () {
-  //       $(".job>li").eq(index).css("display", "block");
-  //       $("body").css("overflow", "hidden");
-  //     });
 });
 $(".minor .med").click(function () {
   $("#category1").find("span").html("의료");
@@ -200,7 +194,7 @@ let nonLength = $(".slide-non .swiper-wrapper").children().length / 2;
 $(".inputBox.non span").html("(" + nonLength + ")");
 $(".slide-all .swiper-wrapper>div").click(function () {
   let cl = $(this).attr("class");
-  //   console.log(cl);
+  // console.log(cl);
   let clnum = parseInt(cl.replace(/\D/g, ""));
   // console.log(clnum);
   $(".job>li")
